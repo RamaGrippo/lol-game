@@ -1,24 +1,104 @@
+/* Estilo general del juego */
 .champions-loldle {
-  border: 5px;
-  background-color: aliceblue;
+  border-radius: 15px;
+  background-color: #f5f5f5;
   display: flex;
-  flex-direction: column; /* Cambia a 'row' si prefieres apilar horizontalmente */
-  justify-content: center; /* Centra verticalmente */
-  align-items: center; /* Centra horizontalmente */
-  height: 100px; /* Asegúrate de que el contenedor tenga una altura definida */
-  width: 500px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 1500px;
+  padding: 20px;
+  margin: 20px auto;
 }
 
+.game-layout-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Alinea al principio en vertical (arriba) */
+  width: 100%;
+  max-width: 1500px;
+  padding: 10px;
+}
+
+/* Estilo de los encabezados de los atributos */
 .atributos-header {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr); /* 8 columnas para los atributos */
+  margin-bottom: 15px;
 }
 
-.intento-loldle {
-  display: flex;
-  flex-direction: row;
-}
-
+/* Estilo de cada atributo en el header */
 .atributo {
-  padding: 5px;
+  font-size: 1rem; /* Tamaño de texto consistente */
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  padding: 10px 15px;
+  background-color: #e0e0e0; /* Color gris para los encabezados */
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc; /* Borde gris para los encabezados */
+  width: 120px;
+  height: 70px;
+}
+
+/* Estilo de los intentos */
+.intento-loldle {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr); /* 8 columnas para los atributos */
+  gap: 1px; /* Espacio entre celdas */
+  border-radius: 5px; /* Bordes redondeados para el contenedor */
+  margin-top: 10px;
+}
+
+.intento-loldle .negro {
+  background-color: #333;
+  color: white;
+}
+
+.intento-loldle .atributo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  text-align: center;
+  border: 1px solid #ccc; /* Borde gris para cada celda */
+  font-weight: bold;
+  font-size: 1rem; /* Tamaño consistente con el de los encabezados */
+  color: white;
+  transition: all 0.3s ease;
+  width: 120px;
+  height: 70px;
+  word-wrap: break-word; /* Permite saltar de línea si el texto es largo */
+  white-space: normal; /* Para que el texto pueda romperse en varias líneas */
+  text-align: center; /* Alineación del texto */
+}
+
+/* Estilo de los colores en los intentos */
+.intento-loldle .verde {
+  background-color: #28a745;
+}
+
+.intento-loldle .amarillo {
+  background-color: #ffc107;
+  color: black;
+}
+
+.intento-loldle .rojo {
+  background-color: #dc3545;
+}
+
+/* Agregar un efecto visual para los intentos */
+.intento-loldle .verde:hover,
+.intento-loldle .amarillo:hover,
+.intento-loldle .rojo:hover {
+  transform: scale(1.1);
+}
+
+/* Añadir separación entre cada intento */
+.intento-loldle:not(:last-child) {
+  margin-bottom: 10px;
 }

@@ -116,7 +116,7 @@ function Loldle() {
   return (
     <div className="game-container">
       <div className="game-layout-container">
-        <h2>{randomChampion.nombre}</h2>
+        {/* <h2>{randomChampion.nombre}</h2> */}
         <div className="atributos-header">
           {atributosEstables.map((atributo, index) => (
             <div className="atributo" key={index}>
@@ -130,8 +130,8 @@ function Loldle() {
             intentos={[intento]} // Pasa el intento como un array
           />
         ))}
-        <GameControl onGuess={handleGuess} />
       </div>
+      <GameControl onGuess={handleGuess} />
     </div>
   );
 }

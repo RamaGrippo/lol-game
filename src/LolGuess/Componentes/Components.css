@@ -1,12 +1,50 @@
+/* Contenedor principal de controles del juego */
+.game-control-container {
+  display: flex;
+  flex-direction: row;
+  gap: 15px; /* Espaciado entre los bloques */
+  width: 1000px; /* Ajusta el tamaño según tus necesidades */
+  padding: 20px;
+  margin: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Estilo para el texto de intentos restantes */
+.game-control-container > div:first-child {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+/* Estilo para el contenedor de input y botones */
+.game-control-container > div:nth-child(2) {
+  display: flex;
+  gap: 10px; /* Espaciado entre el input y el botón */
+  justify-content: center; /* Centra los elementos */
+}
+
+/* Estilo para el input de adivinanza */
+.game-control-container input[type="text"] {
+  padding: 10px;
+  font-size: 1rem;
+  width: 180px; /* Ajusta según el diseño */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
 .game-control-container input[type="text"]:focus {
   border-color: #2e7d32; /* Verde oscuro al enfocar */
 }
 
-/* Estilos para el botón */
+/* Estilo para los botones */
 .game-control-container button {
-  margin-left: 10px;
-  padding: 10px 15px;
-  font-size: 16px;
+  padding: 10px 20px;
+  font-size: 1rem;
   color: #fff;
   background-color: #4caf50; /* Verde */
   border: none;
@@ -15,11 +53,22 @@
   transition: background-color 0.3s, transform 0.2s;
 }
 
+/* Efecto hover para los botones */
 .game-control-container button:hover {
   background-color: #2e7d32; /* Verde oscuro al pasar el mouse */
   transform: scale(1.05);
 }
 
+/* Efecto al presionar el botón */
 .game-control-container button:active {
-  transform: scale(0.95); /* Efecto de presionado */
+  transform: scale(0.95);
+}
+
+/* Estilo para el botón "Rendirse" */
+.game-control-container button:last-child {
+  background-color: #dc3545; /* Rojo */
+}
+
+.game-control-container button:last-child:hover {
+  background-color: #c82333; /* Rojo oscuro */
 }

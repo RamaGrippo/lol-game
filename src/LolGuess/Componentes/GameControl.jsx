@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Components.css";
 
 function GameControl({ onGuess }) {
   const [inputValue, setInputValue] = useState("");
