@@ -1,42 +1,73 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Navegación */
+nav a {
+  text-decoration: none;
+  margin: 15px;
+  color: white;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+nav {
+  background-color: #0099ff;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Estilo general para los botones */
+.header button {
+  background-color: #4caf50; /* Verde claro */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Hover y efecto al hacer clic */
+.header button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px); /* Efecto de elevación */
 }
 
-.card {
-  padding: 2em;
+.header button:active {
+  transform: translateY(0); /* Regresar cuando se clickea */
 }
 
-.read-the-docs {
-  color: #888;
+/* Espaciado entre botones */
+.header div {
+  display: flex;
+  gap: 15px;
+}
+
+/* Estilo para los links que envuelven los botones */
+.header a {
+  text-decoration: none;
+}
+
+/* Estilo de la cuadrícula de juegos */
+.grid {
+  display: flex; /* Usar Flexbox */
+  flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+  justify-content: center; /* Centrar elementos horizontalmente */
+  gap: 20px; /* Espacio entre los cuadrados */
+  margin-top: 20px; /* Espacio en la parte superior */
+}
+
+/* Estilo de cada cuadrado (enlace) */
+.square {
+  width: 250px; /* Ancho de cada cuadrado */
+  height: 250px; /* Alto de cada cuadrado */
+  display: flex; /* Usar Flexbox para centrar el texto */
+  justify-content: center; /* Centrar texto horizontalmente */
+  align-items: center; /* Centrar texto verticalmente */
+  border: 2px solid #007bff; /* Borde del cuadrado */
+  border-radius: 10px; /* Esquinas redondeadas */
+  background-color: #f8f9fa; /* Color de fondo */
+  color: #007bff; /* Color del texto */
+  font-weight: bold; /* Texto en negrita */
+  transition: background-color 0.3s; /* Transición suave al cambiar el color de fondo */
+  text-decoration: none;
+}
+
+.square:hover {
+  background-color: #007bff; /* Color de fondo al pasar el mouse */
+  color: white; /* Cambia el color del texto al pasar el mouse */
 }

@@ -1,0 +1,24 @@
+.champions-loldle {
+  border: 5px;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column; /* Cambia a 'row' si prefieres apilar horizontalmente */
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  height: 100px; /* Asegúrate de que el contenedor tenga una altura definida */
+  width: 500px;
+}
+
+.atributos-header {
+  display: flex;
+  flex-direction: row;
+}
+
+.intento-loldle {
+  display: flex;
+  flex-direction: row;
+}
+
+.atributo {
+  padding: 5px;
+}

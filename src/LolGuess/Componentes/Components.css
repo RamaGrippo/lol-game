@@ -1,0 +1,25 @@
+.game-control-container input[type="text"]:focus {
+  border-color: #2e7d32; /* Verde oscuro al enfocar */
+}
+
+/* Estilos para el botón */
+.game-control-container button {
+  margin-left: 10px;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #4caf50; /* Verde */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.game-control-container button:hover {
+  background-color: #2e7d32; /* Verde oscuro al pasar el mouse */
+  transform: scale(1.05);
+}
+
+.game-control-container button:active {
+  transform: scale(0.95); /* Efecto de presionado */
+}

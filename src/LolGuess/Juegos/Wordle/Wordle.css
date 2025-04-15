@@ -1,0 +1,133 @@
+.letters-wordle {
+  border: 5px;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column; /* Cambia a 'row' si prefieres apilar horizontalmente */
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  height: 330px; /* Asegúrate de que el contenedor tenga una altura definida */
+  width: 500px;
+}
+
+.letters-row {
+  display: flex;
+  flex-direction: row;
+  margin: 4px;
+}
+
+.keyboard-wordle {
+  border: 5px;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column; /* Cambia a 'row' si prefieres apilar horizontalmente */
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  height: 180px; /* Asegúrate de que el contenedor tenga una altura definida */
+  width: 500px;
+}
+
+.letra {
+  width: 30px;
+  height: 30px;
+  border: 2px solid black;
+  margin: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.letra-correcta {
+  width: 30px;
+  height: 30px;
+  border: 2px solid black;
+  margin: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+}
+
+.letra-incorrecta {
+  width: 30px;
+  height: 30px;
+  border: 2px solid black;
+  margin: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+.letra-casi-correcta {
+  width: 30px;
+  height: 30px;
+  border: 2px solid black;
+  margin: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+}
+
+.teclado-wordle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.fila {
+  display: flex;
+  justify-content: center;
+  margin: 5px 0;
+}
+
+.tecla {
+  width: 40px; /* Ancho de cada tecla */
+  height: 40px; /* Alto de cada tecla */
+  margin: 2px;
+  background-color: lightgray;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.tecla-incorrecta {
+  width: 40px; /* Ancho de cada tecla */
+  height: 40px; /* Alto de cada tecla */
+  margin: 2px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.tecla-casi-correcta {
+  width: 40px; /* Ancho de cada tecla */
+  height: 40px; /* Alto de cada tecla */
+  margin: 2px;
+  background-color: yellow;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.tecla-correcta {
+  width: 40px; /* Ancho de cada tecla */
+  height: 40px; /* Alto de cada tecla */
+  margin: 2px;
+  background-color: green;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.tecla:hover {
+  background-color: gray; /* Color al pasar el mouse */
+}
