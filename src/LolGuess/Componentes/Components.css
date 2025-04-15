@@ -72,3 +72,24 @@
 .game-control-container button:last-child:hover {
   background-color: #c82333; /* Rojo oscuro */
 }
+
+.autocomplete-dropdown {
+  position: absolute;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  width: 500px;
+  z-index: 10;
+  margin-top: 50px;
+}
+
+.autocomplete-dropdown div {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.autocomplete-dropdown div:hover {
+  background-color: #f0f0f0;
+}
