@@ -2,8 +2,8 @@
 .game-control-container {
   display: flex;
   flex-direction: row;
-  gap: 15px; /* Espaciado entre los bloques */
-  width: 1000px; /* Ajusta el tamaño según tus necesidades */
+  gap: 15px;
+  width: 1000px;
   padding: 20px;
   margin: 20px;
   background-color: #f5f5f5;
@@ -11,7 +11,7 @@
   border: 1px solid #ccc;
 }
 
-/* Estilo para el texto de intentos restantes */
+/* Texto de intentos restantes */
 .game-control-container > div:first-child {
   font-size: 1.2rem;
   font-weight: bold;
@@ -19,18 +19,18 @@
   text-align: center;
 }
 
-/* Estilo para el contenedor de input y botones */
+/* Contenedor del input y botón */
 .game-control-container > div:nth-child(2) {
   display: flex;
-  gap: 10px; /* Espaciado entre el input y el botón */
-  justify-content: center; /* Centra los elementos */
+  gap: 10px;
+  justify-content: center;
 }
 
-/* Estilo para el input de adivinanza */
+/* Estilo del input */
 .game-control-container input[type="text"] {
   padding: 10px;
   font-size: 1rem;
-  width: 180px; /* Ajusta según el diseño */
+  width: 180px;
   border: 1px solid #ccc;
   border-radius: 5px;
   outline: none;
@@ -38,51 +38,60 @@
 }
 
 .game-control-container input[type="text"]:focus {
-  border-color: #2e7d32; /* Verde oscuro al enfocar */
+  border-color: #2e7d32;
 }
 
-/* Estilo para los botones */
+/* Estilo de los botones */
 .game-control-container button {
   padding: 10px 20px;
   font-size: 1rem;
   color: #fff;
-  background-color: #4caf50; /* Verde */
+  background-color: #4caf50;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
 }
 
-/* Efecto hover para los botones */
 .game-control-container button:hover {
-  background-color: #2e7d32; /* Verde oscuro al pasar el mouse */
+  background-color: #2e7d32;
   transform: scale(1.05);
 }
 
-/* Efecto al presionar el botón */
 .game-control-container button:active {
   transform: scale(0.95);
 }
 
-/* Estilo para el botón "Rendirse" */
+/* Botón rendirse */
 .game-control-container button:last-child {
-  background-color: #dc3545; /* Rojo */
+  background-color: #dc3545;
 }
 
 .game-control-container button:last-child:hover {
-  background-color: #c82333; /* Rojo oscuro */
+  background-color: #c82333;
 }
 
+/* NUEVO: Wrapper para posicionar correctamente el dropdown */
+.input-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Dropdown desplegado hacia ARRIBA */
 .autocomplete-dropdown {
   position: absolute;
+  bottom: 100%; /* Esto lo hace aparecer hacia arriba */
+  left: 0;
+  margin-bottom: 5px;
   max-height: 200px;
   overflow-y: auto;
   background-color: white;
   border: 1px solid #ccc;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-  width: 500px;
+  width: 180px;
   z-index: 10;
-  margin-top: 50px;
 }
 
 .autocomplete-dropdown div {

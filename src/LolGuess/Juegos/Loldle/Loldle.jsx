@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import GameControl from "../../Componentes/GameControl";
-import campeonesData from "./LolChampionsLoldle";
+import campeonesData from "../../../DB/LolChampionsComplete";
 import "./Loldle.css";
 import "../../AppContainers.css";
 import IntentoLoldle from "./IntentoLoldle";

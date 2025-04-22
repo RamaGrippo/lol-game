@@ -4969,52 +4969,52 @@ const campeonesData = {
 };
 
 export default campeonesData;
+/*
+const puppeteer = require("puppeteer");
 
-// const puppeteer = require("puppeteer");
+async function fetchChampionStats(champion) {
+  const browser = await puppeteer.launch();
+  const page = await browser.newPage();
 
-// // async function fetchChampionStats(champion) {
-// //   const browser = await puppeteer.launch();
-// //   const page = await browser.newPage();
+  // URL de la página específica del campeón
+  const url = `https://www.leagueofgraphs.com/es/champions/stats/${champion.nombre.toLowerCase()}`;
+  await page.goto(url, { waitUntil: "networkidle2" });
 
-// //   // URL de la página específica del campeón
-// //   const url = `https://www.leagueofgraphs.com/es/champions/stats/${champion.nombre.toLowerCase()}`;
-// //   await page.goto(url, { waitUntil: "networkidle2" });
+  // Extraer el pick rate (popularidad) usando selectores
+  try {
+    const pickRate = await page.evaluate(() => {
+      const element = document.querySelector("#graphDD1 .pie-chart"); // Selector del dato
+      return element ? element.innerText.trim() : null;
+    });
 
-// //   // Extraer el pick rate (popularidad) usando selectores
-// //   try {
-// //     const pickRate = await page.evaluate(() => {
-// //       const element = document.querySelector("#graphDD1 .pie-chart"); // Selector del dato
-// //       return element ? element.innerText.trim() : null;
-// //     });
+    if (pickRate) {
+      champion.pickrate = pickRate;
+      console.log(`Pick rate de ${champion.nombre} actualizado a: ${pickRate}`);
+    } else {
+      console.log(`No se encontró el pick rate para ${champion.nombre}`);
+    }
+  } catch (error) {
+    console.error(`Error al obtener datos de ${champion.nombre}:`, error);
+  }
 
-// //     if (pickRate) {
-// //       champion.pickrate = pickRate;
-// //       console.log(`Pick rate de ${champion.nombre} actualizado a: ${pickRate}`);
-// //     } else {
-// //       console.log(`No se encontró el pick rate para ${champion.nombre}`);
-// //     }
-// //   } catch (error) {
-// //     console.error(`Error al obtener datos de ${champion.nombre}:`, error);
-// //   }
+  await browser.close();
+}
 
-// //   await browser.close();
-// // }
+// Función principal para iterar sobre los campeones
+async function updateChampionStats() {
+  for (let i = 0; i < lolChampions.length; i++) {
+    await fetchChampionStats(lolChampions[i]);
 
-// // // Función principal para iterar sobre los campeones
-// // async function updateChampionStats() {
-// //   for (let i = 0; i < lolChampions.length; i++) {
-// //     await fetchChampionStats(lolChampions[i]);
+    // Espera un tiempo antes de hacer la siguiente consulta
+    // Para evitar ser bloqueado, puedes aumentar el tiempo según sea necesario
+    await new Promise((resolve) => setTimeout(resolve, 60000)); // Espera 1 minuto entre campeones
+  }
+}
 
-// //     // Espera un tiempo antes de hacer la siguiente consulta
-// //     // Para evitar ser bloqueado, puedes aumentar el tiempo según sea necesario
-// //     await new Promise((resolve) => setTimeout(resolve, 60000)); // Espera 1 minuto entre campeones
-// //   }
-// // }
-
-// // // Llamar a la función para actualizar estadísticas
-// // updateChampionStats().then(() => {
-// //   console.log("Datos actualizados para todos los campeones.");
-// // });
+// Llamar a la función para actualizar estadísticas
+updateChampionStats().then(() => {
+  console.log("Datos actualizados para todos los campeones.");
+});
 
 // const aatrox = {
 //   _id: "6293f3354fccc7941b03a333",
@@ -5030,36 +5030,37 @@ export default campeonesData;
 //   pickrate: " ",
 // };
 
-// // Función para hacer scraping y actualizar el dato de Aatrox
-// async function fetchChampionStats(champion) {
-//   const browser = await puppeteer.launch(); // Modo headless (sin UI)
-//   const page = await browser.newPage();
+// Función para hacer scraping y actualizar el dato de Aatrox
+async function fetchChampionStats(champion) {
+  const browser = await puppeteer.launch(); // Modo headless (sin UI)
+  const page = await browser.newPage();
 
-//   const url = `https://www.leagueofgraphs.com/es/champions/stats/${champion.nombre.toLowerCase()}`;
+  const url = `https://www.leagueofgraphs.com/es/champions/stats/${champion.nombre.toLowerCase()}`;
 
-//   try {
-//     await page.goto(url, { waitUntil: "networkidle2", timeout: 60000 });
-//     await page.waitForSelector("#graphDD1", { timeout: 60000 });
+  try {
+    await page.goto(url, { waitUntil: "networkidle2", timeout: 60000 });
+    await page.waitForSelector("#graphDD1", { timeout: 60000 });
 
-//     const pickRate = await page.evaluate(() => {
-//       const element = document.querySelector("#graphDD1");
-//       return element ? element.childNodes[0].nodeValue.trim() : null;
-//     });
+    const pickRate = await page.evaluate(() => {
+      const element = document.querySelector("#graphDD1");
+      return element ? element.childNodes[0].nodeValue.trim() : null;
+    });
 
-//     if (pickRate) {
-//       champion.pickrate = pickRate;
-//       console.log(`Pick rate de ${champion.nombre} actualizado a: ${pickRate}`);
-//     } else {
-//       console.log(`No se encontró el pick rate para ${champion.nombre}`);
-//     }
-//   } catch (error) {
-//     console.error(`Error en la función fetchChampionStats:`, error);
-//   } finally {
-//     await browser.close();
-//   }
-// }
+    if (pickRate) {
+      champion.pickrate = pickRate;
+      console.log(`Pick rate de ${champion.nombre} actualizado a: ${pickRate}`);
+    } else {
+      console.log(`No se encontró el pick rate para ${champion.nombre}`);
+    }
+  } catch (error) {
+    console.error(`Error en la función fetchChampionStats:`, error);
+  } finally {
+    await browser.close();
+  }
+}
 
-// // Llamar a la función para obtener estadísticas de Aatrox
-// fetchChampionStats(aatrox).then(() => {
-//   console.log("Datos actualizados:", aatrox);
-// });
+// Llamar a la función para obtener estadísticas de Aatrox
+fetchChampionStats(aatrox).then(() => {
+  console.log("Datos actualizados:", aatrox);
+});
+*/

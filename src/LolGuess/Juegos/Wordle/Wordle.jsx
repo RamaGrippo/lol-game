@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from "react";
 // import GameInfo from "../Componentes/GameInfo";
 // import GameControl from "../Componentes/GameControl";
-import lolChampions from "./LolChampions.jsx";
+import lolChampions from "../../../DB/LolChampions.jsx";
 import TecladoWordle from "./TecladoWordle.jsx";
 import IntentoWordle from "./IntentoWordle.jsx";
 import "../../AppContainers.css";
