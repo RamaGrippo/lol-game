@@ -1,7 +1,22 @@
 import React, { useState, useEffect } from "react";
-import db from "../../../DB/LolChampionsComplete";
+import db from "../../../DB/LolChampionsComplete.jsx";
 import PositionSlot from "./PositionSlot";
 import GameControl from "../../Componentes/GameControl";
+import "./Rift5.css";
+import Shurima from "./assets/Shurima.jpg";
+import Ionia from "./assets/Ionia.jpg";
+import Noxus from "./assets/Noxus.jpg";
+import Piltover from "./assets/Piltover.jpg";
+import Freljord from "./assets/Freljord.jpg";
+import Targon from "./assets/Targon.jpg";
+import ElVacio from "./assets/El Vacío.jpg"; // Asegúrate de que el archivo no tenga espacios
+import Zaun from "./assets/Zaun.jpg";
+import BandleCity from "./assets/Bandle City.jpg";
+import IslasDeLasSombras from "./assets/Islas de las Sombras.jpg";
+import Demacia from "./assets/Demacia.jpg";
+import Aguasturbias from "./assets/Aguasturbias.jpg";
+import Ixtal from "./assets/Ixtal.jpg";
+import Runeterra from "./assets/Runeterra.jpg";
 
 // 🔹 Barajar un array aleatoriamente
 function shuffleArray(array) {
@@ -10,6 +25,24 @@ function shuffleArray(array) {
 
 // 🔸 Posiciones válidas del juego
 const POSITIONS = ["TOP", "JUNGLA", "MID", "INFERIOR", "SOPORTE"];
+
+// Lista de regiones permitidas
+const REGIONES_PERMITIDAS = [
+  "Shurima",
+  "Ionia",
+  "Noxus",
+  "Piltover",
+  "Freljord",
+  "Targon",
+  "El vacio",
+  "Zaun",
+  "Bandle City",
+  "Islas de las Sombras",
+  "Demacia",
+  "Aguasturbias",
+  "Ixtal",
+  "Runeterra",
+];
 
 function Rift5() {
   const [guessedChampions, setGuessedChampions] = useState({
@@ -25,15 +58,27 @@ function Rift5() {
   const [message, setMessage] = useState("");
   const [regionesUsadas, setRegionesUsadas] = useState([]);
   const [regionesDisponibles, setRegionesDisponibles] = useState([]);
+  const [wasUpdated, setWasUpdated] = useState(false);
 
   // 🔹 Inicializar las regiones al cargar el juego
   useEffect(() => {
+    // Obtener las regiones únicas de los campeones en la base de datos
     const regionesUnicas = Array.from(
       new Set(db.caracCampeones.flatMap((champ) => champ.regiones || []))
     );
 
-    const barajadas = shuffleArray(regionesUnicas);
+    console.log(regionesUnicas);
+
+    // Filtrar las regiones permitidas de la lista REGIONES_PERMITIDAS
+    const regionesPermitidas = regionesUnicas.filter((region) =>
+      REGIONES_PERMITIDAS.includes(region)
+    );
+
+    // Barajar las regiones permitidas
+    const barajadas = shuffleArray(regionesPermitidas);
     setRegionesDisponibles(barajadas);
+
+    // Elegir una región válida
     elegirRegionValida(barajadas, []);
   }, []);
 
@@ -91,54 +136,109 @@ function Rift5() {
       return;
     }
 
-    // 🔸 Verificar posición
-    let updated = false;
-    foundChampion.posiciones.forEach((pos) => {
-      const upperPos = pos.toUpperCase();
-      if (POSITIONS.includes(upperPos) && !guessedChampions[upperPos]) {
-        setGuessedChampions((prev) => ({
-          ...prev,
-          [upperPos]: foundChampion.nombre,
-        }));
-        updated = true;
-
-        // 🔁 Elegir nueva región válida
-        setRegionAdivinada(false);
-        elegirRegionValida(regionesDisponibles, [
-          ...regionesUsadas,
-          regionObjetivo,
-        ]);
-      }
-    });
-
-    if (!updated) {
-      setMessage("Ese campeón no tiene una posición válida");
+    // 🔸 Verificar si el campeón tiene posiciones libres
+    const posicionesLibres = POSITIONS.filter((pos) => !guessedChampions[pos]);
+    const tienePosicionesLibres = foundChampion.posiciones.some((pos) =>
+      posicionesLibres.includes(pos.toUpperCase())
+    );
+    console.log(tienePosicionesLibres);
+    console.log(message);
+    if (!tienePosicionesLibres) {
+      setMessage(`No hay posiciones libres para ${foundChampion.nombre}`);
+      console.log(message);
+      return;
     }
+
+    // 🔸 Verificar posición y actualizar
+    // Obtener posiciones del campeón que están libres
+    const posicionesDisponibles = foundChampion.posiciones
+      .map((pos) => pos.toUpperCase())
+      .filter((pos) => POSITIONS.includes(pos) && !guessedChampions[pos]);
+
+    // Si hay al menos una posición libre
+    if (posicionesDisponibles.length > 0) {
+      const posicionElegida =
+        posicionesDisponibles[
+          Math.floor(Math.random() * posicionesDisponibles.length)
+        ];
+      setGuessedChampions((prev) => ({
+        ...prev,
+        [posicionElegida]: foundChampion.nombre,
+      }));
+      setMessage("");
+      setRegionAdivinada(false);
+      elegirRegionValida(regionesDisponibles, [
+        ...regionesUsadas,
+        regionObjetivo,
+      ]);
+      setWasUpdated(true);
+    } else {
+      setWasUpdated(false);
+      setMessage(`No hay posiciones libres para ${foundChampion.nombre}`);
+    }
+  };
+
+  const regionImages = {
+    Shurima,
+    Ionia,
+    Noxus,
+    Piltover,
+    Freljord,
+    Targon,
+    "El vacio": ElVacio,
+    Zaun,
+    "Bandle City": BandleCity,
+    "Islas de las Sombras": IslasDeLasSombras,
+    Demacia,
+    Aguasturbias,
+    Ixtal,
+    Runeterra,
   };
 
   return (
     <div className="">
-      <h1 className="">RIFT5 - Adivina los campeones</h1>
-
-      <div>
-        Región objetivo: <span>{regionObjetivo}</span>
+      <div className="region-info">
+        <h2 className="region-title">
+          {regionImages[regionObjetivo] && (
+            <img
+              className="region-icon"
+              src={regionImages[regionObjetivo]}
+              alt={regionObjetivo}
+            />
+          )}
+          Región objetivo: <span>{regionObjetivo}</span>
+        </h2>
       </div>
-
-      {regionAdivinada && <div>¡Región adivinada correctamente!</div>}
-
-      <div className="">
-        {POSITIONS.map((pos) => (
+      <div className="rift-map">
+        <div className="pos top">
+          <PositionSlot position="TOP" champion={guessedChampions.TOP} />
+        </div>
+        <div className="pos jg">
+          <PositionSlot position="JUNGLA" champion={guessedChampions.JUNGLA} />
+        </div>
+        <div className="pos mid">
+          <PositionSlot position="MID" champion={guessedChampions.MID} />
+        </div>
+        <div className="pos adc">
           <PositionSlot
-            key={pos}
-            position={pos}
-            champion={guessedChampions[pos]}
+            position="INFERIOR"
+            champion={guessedChampions.INFERIOR}
           />
-        ))}
+        </div>
+        <div className="pos support">
+          <PositionSlot
+            position="SOPORTE"
+            champion={guessedChampions.SOPORTE}
+          />
+        </div>
       </div>
-
+      {message && (
+        <div className="message-box">
+          <span className="icon">❌</span>
+          <p>{message}</p>
+        </div>
+      )}
       <GameControl onGuess={handleGuess} />
-
-      <div className="message-box">{message && <p>{message}</p>}</div>
     </div>
   );
 }

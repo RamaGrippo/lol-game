@@ -17,14 +17,15 @@
   flex-direction: column;
   justify-content: flex-start; /* Alinea al principio en vertical (arriba) */
   width: 100%;
-  max-width: 1500px;
+  max-width: 1700px;
   padding: 10px;
+  overflow-y: auto; /* Habilita el scroll vertical */
 }
 
 /* Estilo de los encabezados de los atributos */
 .atributos-header {
   display: grid;
-  grid-template-columns: repeat(8, 1fr); /* 8 columnas para los atributos */
+  grid-template-columns: repeat(9, 1fr); /* 8 columnas para los atributos */
   margin-bottom: 15px;
 }
 
@@ -48,7 +49,7 @@
 /* Estilo de los intentos */
 .intento-loldle {
   display: grid;
-  grid-template-columns: repeat(8, 1fr); /* 8 columnas para los atributos */
+  grid-template-columns: repeat(9, 1fr); /* 8 columnas para los atributos */
   gap: 1px; /* Espacio entre celdas */
   border-radius: 5px; /* Bordes redondeados para el contenedor */
   margin-top: 10px;

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import caracCampeones from "../../DB/LolChampionsComplete"; // Asumiendo que esta es la BDD de campeones
+import campeonesData from "../../DB/LolChampionsComplete.jsx"; // Asumiendo que esta es la BDD de campeones
 import "./Components.css";
 
 function GameControl({ onGuess }) {
@@ -11,7 +11,7 @@ function GameControl({ onGuess }) {
     const value = e.target.value;
     setInputValue(value);
 
-    const champions = caracCampeones.caracCampeones || [];
+    const champions = campeonesData.caracCampeones || [];
 
     if (value.length >= 1) {
       const filtered = champions.filter((champ) =>

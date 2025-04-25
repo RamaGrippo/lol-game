@@ -1,32 +1,35 @@
 import React from "react";
 
-function IntentoLoldle({ intentos }) {
-  // Asegúrate de que intentos sea un array
+function IntentoLoldle({ intentos, atributosMostrar }) {
   const intentosArray = Array.isArray(intentos) ? intentos : [];
 
   return (
     <>
       {intentosArray.map((intento, index) => (
         <div className="intento-loldle" key={index}>
-          {console.log(intento.atributosEvaluados)}{" "}
-          {/* Mover console.log aquí */}
-          {Object.entries(intento.atributosEvaluados).map(
-            ([atributo, valor], idx) => {
-              // Verificamos si el valor es un array
-              const valorFormateado = Array.isArray(valor.valor)
-                ? valor.valor.join(", ")
-                : valor.valor; // Unir los elementos con coma si es un array
+          {atributosMostrar.map((atributo, idx) => {
+            const dato = intento.atributosEvaluados[atributo];
 
+            if (!dato)
               return (
-                <div
-                  key={atributo}
-                  className={`atributo ${idx === 0 ? "negro" : valor.color}`}
-                >
-                  <p>{`${valorFormateado}`}</p>
+                <div key={atributo} className="atributo rojo">
+                  <p>-</p>
                 </div>
               );
-            }
-          )}
+
+            const valorFormateado = Array.isArray(dato.valor)
+              ? dato.valor.join(", ")
+              : dato.valor;
+
+            return (
+              <div
+                key={atributo}
+                className={`atributo ${idx === 0 ? "negro" : dato.color}`}
+              >
+                <p>{valorFormateado}</p>
+              </div>
+            );
+          })}
         </div>
       ))}
     </>

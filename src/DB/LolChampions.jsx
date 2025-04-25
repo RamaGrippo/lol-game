@@ -92,7 +92,7 @@ const lolChampions = [
   "nidalee",
   "nilah",
   "nocturne",
-  "nunuandwillump",
+  "nunuwillump",
   "olaf",
   "orianna",
   "ornn",
