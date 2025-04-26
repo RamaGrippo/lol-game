@@ -1,12 +1,11 @@
 .letters-wordle {
   border: 5px;
-  border: 2px solid black;
   display: flex;
   flex-direction: column; /* Cambia a 'row' si prefieres apilar horizontalmente */
   justify-content: center; /* Centra verticalmente */
   align-items: center; /* Centra horizontalmente */
-  height: 330px; /* Asegúrate de que el contenedor tenga una altura definida */
-  width: 500px;
+  height: 600px; /* Asegúrate de que el contenedor tenga una altura definida */
+  width: 700px;
 }
 
 .letters-row {
@@ -17,13 +16,12 @@
 
 .keyboard-wordle {
   border: 5px;
-  border: 2px solid black;
   display: flex;
   flex-direction: column; /* Cambia a 'row' si prefieres apilar horizontalmente */
-  justify-content: center; /* Centra verticalmente */
+  justify-content: space-between; /* Centra verticalmente */
   align-items: center; /* Centra horizontalmente */
-  height: 180px; /* Asegúrate de que el contenedor tenga una altura definida */
-  width: 500px;
+  height: 300px; /* Asegúrate de que el contenedor tenga una altura definida */
+  width: 700px;
 }
 
 .letra {
@@ -90,7 +88,7 @@
   background-color: lightgray;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
+  cursor: not-allowed;
   font-size: 16px;
 }
 
@@ -102,7 +100,7 @@
   color: white;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
+  cursor: not-allowed;
   font-size: 16px;
 }
 
@@ -113,7 +111,7 @@
   background-color: yellow;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
+  cursor: not-allowed;
   font-size: 16px;
 }
 
@@ -124,10 +122,103 @@
   background-color: green;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
+  cursor: not-allowed;
   font-size: 16px;
 }
 
 .tecla:hover {
   background-color: gray; /* Color al pasar el mouse */
+}
+
+:root {
+  --correcta: #4caf50;
+  --casi-correcta: #ffc107;
+  --incorrecta: #2c2c2c;
+  --letra: #e0e0e0;
+  --fondo: #1e1e1e;
+  --text: #ffffff;
+  --borde: #555;
+  --fuente: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--fondo);
+  font-family: var(--fuente);
+}
+
+.letra,
+.letra-correcta,
+.letra-incorrecta,
+.letra-casi-correcta {
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  border: 2px solid var(--borde);
+  margin: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.letra {
+  background-color: var(--letra);
+  color: black;
+}
+
+.letra-correcta {
+  background-color: var(--correcta);
+  color: white;
+}
+
+.letra-casi-correcta {
+  background-color: var(--casi-correcta);
+  color: black;
+}
+
+.letra-incorrecta {
+  background-color: var(--incorrecta);
+  color: white;
+}
+
+.tecla,
+.tecla-correcta,
+.tecla-casi-correcta,
+.tecla-incorrecta,
+.tecla.especial {
+  width: 45px;
+  height: 55px;
+  font-size: 18px;
+  margin: 3px;
+  border: none;
+  border-radius: 6px;
+  cursor: not-allowed;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.tecla {
+  background-color: #d3d6da;
+}
+
+.tecla-correcta {
+  background-color: var(--correcta);
+  color: white;
+}
+
+.tecla-casi-correcta {
+  background-color: var(--casi-correcta);
+}
+
+.tecla-incorrecta {
+  background-color: var(--incorrecta);
+  color: white;
+}
+
+.tecla.especial {
+  background-color: #999;
+  width: 70px;
 }

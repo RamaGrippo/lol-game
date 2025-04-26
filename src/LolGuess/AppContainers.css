@@ -3,7 +3,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid black;
   height: 10vh;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -11,7 +10,6 @@
 /* Estilo de la aplicación principal */
 .app {
   height: 90vh;
-  border: 2px solid black;
   display: flex; /* Activar Flexbox para alinear contenido */
   flex-direction: column; /* Alinear elementos en columna */
   align-items: center; /* Centrar contenido */
@@ -28,7 +26,6 @@
 .game-layout-container {
   height: 100%;
   width: 100%;
-  border: 2px solid black;
   display: grid; /* Activar Grid */
   place-items: center; /* Centrar ambos ejes (horizontal y vertical) */
 }
