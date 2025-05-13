@@ -102,3 +102,30 @@
 .autocomplete-dropdown div:hover {
   background-color: #f0f0f0;
 }
+.square {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  background-size: contain; /* CAMBIADO de cover a contain */
+  background-position: center; /* CENTRA la imagen */
+  background-repeat: no-repeat; /* EVITA que se repita */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+  background-color: #222; /* Fondo oscuro por si la imagen no cubre */
+}
+
+.square:hover {
+  transform: scale(1.05);
+  background-color: #333;
+}
+
+.app-container h1 {
+  color: #fff;
+}

@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -43,5 +43,5 @@
   "bugs": {
     "url": "https://github.com/RamaGrippo/lol-game/issues"
   },
-  "homepage": "https://github.com/RamaGrippo/lol-game"
+  "homepage": "https://github.com/RamaGrippo/lol-game#readme"
 }
