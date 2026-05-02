@@ -17,6 +17,7 @@ const atributosCampeonesMedio = [
   "kda",
   "rol",
   "clase",
+  // "pings_partida",
   // "lanzamiento_hechizos_partida",
   // "tiempo_muerto_partida",
   // "asesinatos_solo_partida",

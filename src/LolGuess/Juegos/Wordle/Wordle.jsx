@@ -1,11 +1,7 @@
 import React, { useEffect, useState, useCallback } from "react";
-// import GameInfo from "../Componentes/GameInfo";
-// import GameControl from "../Componentes/GameControl";
 import lolChampions from "../../../DB/LolChampions.jsx";
 import TecladoWordle from "./TecladoWordle.jsx";
 import IntentoWordle from "./IntentoWordle.jsx";
-import "../../AppContainers.css";
-import "./Wordle.css";
 
 function Wordle() {
   const [palabraIntentada, setPalabraIntentada] = useState("");
@@ -22,9 +18,9 @@ function Wordle() {
     const champion =
       lolChampions[Math.floor(Math.random() * lolChampions.length)];
     setRandomChampion(champion);
+    console.log("Objetivo:", champion); // Para debug
   }, []);
 
-  // Función para actualizar el estado de las teclas, usando useCallback
   const updateTeclasEstado = useCallback(() => {
     const newTeclasEstado = { ...teclasEstado };
     palabraIntentada.split("").forEach((letter, index) => {
@@ -43,7 +39,11 @@ function Wordle() {
     (event) => {
       const isLetter = /^[a-zA-Z]$/.test(event.key);
 
-      if (isLetter && palabraIntentada.length < championLength) {
+      if (
+        isLetter &&
+        palabraIntentada.length < championLength &&
+        !estadoPartida
+      ) {
         const newPalabraIntentada = palabraIntentada + event.key.toLowerCase();
         setPalabraIntentada(newPalabraIntentada);
 
@@ -53,7 +53,7 @@ function Wordle() {
           return updatedGuesses;
         });
         setIsGuessed(false);
-      } else if (event.key === "Backspace") {
+      } else if (event.key === "Backspace" && !estadoPartida) {
         const newPalabraIntentada = palabraIntentada.slice(0, -1);
         setPalabraIntentada(newPalabraIntentada);
         setGuesses((prevGuesses) => {
@@ -64,7 +64,8 @@ function Wordle() {
         setIsGuessed(false);
       } else if (
         event.key === "Enter" &&
-        palabraIntentada.length === championLength
+        palabraIntentada.length === championLength &&
+        !estadoPartida
       ) {
         setGuesses((prevGuesses) => {
           const updatedGuesses = [...prevGuesses];
@@ -73,7 +74,6 @@ function Wordle() {
         });
 
         updateTeclasEstado();
-
         setNroIntento((prev) => prev + 1);
         setIsGuessed(true);
 
@@ -81,10 +81,9 @@ function Wordle() {
           setEstadoPartida("Ganaste!");
         } else if (nroIntento + 1 >= maxAttempts) {
           setEstadoPartida(
-            "Perdiste! ... El campeon era: " + randomChampion.toUpperCase()
+            "Perdiste! ... El campeon era: " + randomChampion.toUpperCase(),
           );
         }
-
         setPalabraIntentada("");
       }
     },
@@ -94,7 +93,8 @@ function Wordle() {
       nroIntento,
       randomChampion,
       updateTeclasEstado,
-    ]
+      estadoPartida,
+    ],
   );
 
   useEffect(() => {
@@ -102,20 +102,30 @@ function Wordle() {
     return () => window.removeEventListener("keydown", handleKeyPress);
   }, [handleKeyPress]);
 
-  useEffect(() => {
-    console.log("Intentos actuales:", guesses);
-  }, [guesses]);
-
   return (
-    <div className="game-container">
-      {/* <GameInfo /> */}
-      <div className="game-layout-container">
-        <div className="letters-wordle">
-          {estadoPartida}
+    // Cambiamos justify-center por justify-start y bajamos el padding
+    <div className="flex flex-col items-center justify-start h-full w-full bg-[#010a13] p-2 font-sans overflow-hidden">
+      <div className="max-w-md w-full flex flex-col items-center">
+        {/* 1. Mensaje de Estado: Altura reducida y margen mínimo */}
+        <div className="h-14 flex items-center justify-center w-full mb-2 shrink-0">
+          {estadoPartida && (
+            <div
+              className={`w-full text-center p-2 border-2 animate-bounce font-black uppercase text-[10px] tracking-widest ${
+                estadoPartida.includes("Ganaste")
+                  ? "border-green-500 text-green-400 bg-green-900/20"
+                  : "border-red-600 text-red-500 bg-red-900/20"
+              }`}
+            >
+              {estadoPartida}
+            </div>
+          )}
+        </div>
+
+        {/* 2. Tablero de Intentos: Gap mínimo entre filas */}
+        <div className="flex flex-col gap-1.5 items-center w-full px-2 py-1">
           {Array.from({ length: maxAttempts }).map((_, rowIndex) => (
             <IntentoWordle
               key={rowIndex}
-              className="letters-row"
               word={randomChampion}
               isGuessed={nroIntento > rowIndex ? true : isGuessed}
               championLength={championLength}
@@ -123,11 +133,12 @@ function Wordle() {
             />
           ))}
         </div>
-        <div className="keyboard-wordle">
+
+        {/* 3. Teclado: Eliminamos el mt-4 y lo dejamos pegado */}
+        <div className="w-full shrink-0">
           <TecladoWordle teclasEstado={teclasEstado} />
         </div>
       </div>
-      {/* <GameControl /> */}
     </div>
   );
 }

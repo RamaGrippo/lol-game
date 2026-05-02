@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from "react";
 import GameControl from "../../Componentes/GameControl";
 import campeonesData from "../../../DB/LolChampionsComplete.jsx";
-import "./Loldle.css";
-import "../../AppContainers.css";
 import IntentoLoldle from "./IntentoLoldle";
 
 function Loldle() {
   const [randomChampion, setRandomChampion] = useState({});
   const [atributosAleatorios, setAtributosAleatorios] = useState([]);
+  const [modoAtributos, setModoAtributos] = useState("estables");
+  const [intentos, setIntentos] = useState([]);
+  const [gameOver, setGameOver] = useState(false);
+  const [mensaje, setMensaje] = useState("");
+  const MAX_INTENTOS = 10;
+
   const atributosEstables = [
     "nombre",
     "genero",
@@ -18,13 +22,6 @@ function Loldle() {
     "regiones",
     "lanzamiento",
   ];
-  const [modoAtributos, setModoAtributos] = useState("estables"); // "estables" o "aleatorios"
-  const [intentos, setIntentos] = useState([]);
-
-  const getRandomAttributes = (attributesArray, count) => {
-    const shuffled = [...attributesArray].sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, count);
-  };
 
   useEffect(() => {
     const champion =
@@ -33,35 +30,41 @@ function Loldle() {
       ];
     setRandomChampion(champion);
 
+    const getRandomAttributes = (attributesArray, count) => {
+      const shuffled = [...attributesArray].sort(() => 0.5 - Math.random());
+      return shuffled.slice(0, count);
+    };
+
     const randomFacil = getRandomAttributes(
       campeonesData.atributosCampeonesFacil,
-      3
+      3,
     );
     const randomMedio = getRandomAttributes(
       campeonesData.atributosCampeonesMedio,
-      3
+      3,
     );
     const randomDificil = getRandomAttributes(
       campeonesData.atributosCampeonesDificil,
-      2
+      2,
     );
-    console.log(champion);
     setAtributosAleatorios([...randomFacil, ...randomMedio, ...randomDificil]);
   }, []);
 
+  const handleSurrender = () => {
+    setGameOver(true);
+    setMensaje(`RENDICIÓN. El campeón era: ${randomChampion.nombre}`);
+  };
+
   const handleGuess = (input) => {
+    if (gameOver) return;
     const campeon = campeonesData.caracCampeones.find(
-      (champion) =>
-        champion.nombre.replace(/['\s]/g, "").toLowerCase() ===
-        input.replace(/['\s]/g, "").toLowerCase()
+      (c) =>
+        c.nombre.replace(/['\s]/g, "").toLowerCase() ===
+        input.replace(/['\s]/g, "").toLowerCase(),
     );
 
     if (campeon) {
-      const nuevoIntento = {
-        nombre: campeon.nombre,
-        atributosEvaluados: {},
-      };
-
+      const nuevoIntento = { nombre: campeon.nombre, atributosEvaluados: {} };
       const atributosEvaluar =
         modoAtributos === "estables"
           ? atributosEstables
@@ -71,116 +74,9 @@ function Loldle() {
         const valorAdivinar = randomChampion[atributo];
         const valorIntento = campeon[atributo];
 
-        if (["precio"].includes(atributo)) {
-          const escalonesPrecio = [6300, 4800, 3150, 1350, 450];
-          const indiceAdivinar = escalonesPrecio.indexOf(valorAdivinar);
-          const indiceIntento = escalonesPrecio.indexOf(valorIntento);
-
-          if (indiceAdivinar === indiceIntento) {
-            nuevoIntento.atributosEvaluados[atributo] = {
-              valor: valorIntento,
-              color: "verde",
-            };
-          } else if (Math.abs(indiceAdivinar - indiceIntento) === 1) {
-            nuevoIntento.atributosEvaluados[atributo] = {
-              valor: valorIntento,
-              color: "amarillo",
-            };
-          } else {
-            nuevoIntento.atributosEvaluados[atributo] = {
-              valor: valorIntento,
-              color: "rojo",
-            };
-          }
-        } else if (atributo === "winrate") {
-          const diferencia = Math.abs(
-            parseFloat(valorAdivinar) - parseFloat(valorIntento)
-          );
-
-          if (diferencia <= 1) {
-            nuevoIntento.atributosEvaluados[atributo] = {
-              valor: valorIntento,
-              color: "verde",
-            };
-          } else if (diferencia <= 3) {
-            nuevoIntento.atributosEvaluados[atributo] = {
-              valor: valorIntento,
-              color: "amarillo",
-            };
-          } else {
-            nuevoIntento.atributosEvaluados[atributo] = {
-              valor: valorIntento,
-              color: "rojo",
-            };
-          }
-        } else if (atributo === "pickrate") {
-          const diferencia = Math.abs(
-            parseFloat(valorAdivinar) - parseFloat(valorIntento)
-          );
-
-          if (diferencia <= 3) {
-            nuevoIntento.atributosEvaluados[atributo] = {
-              valor: valorIntento,
-              color: "verde",
-            };
-          } else if (diferencia <= 6) {
-            nuevoIntento.atributosEvaluados[atributo] = {
-              valor: valorIntento,
-              color: "amarillo",
-            };
-          } else {
-            nuevoIntento.atributosEvaluados[atributo] = {
-              valor: valorIntento,
-              color: "rojo",
-            };
-          }
-        } else if (atributo === "banrate") {
-          const diferencia = Math.abs(
-            parseFloat(valorAdivinar) - parseFloat(valorIntento)
-          );
-
-          if (diferencia <= 1) {
-            nuevoIntento.atributosEvaluados[atributo] = {
-              valor: valorIntento,
-              color: "verde",
-            };
-          } else if (diferencia <= 3) {
-            nuevoIntento.atributosEvaluados[atributo] = {
-              valor: valorIntento,
-              color: "amarillo",
-            };
-          } else {
-            nuevoIntento.atributosEvaluados[atributo] = {
-              valor: valorIntento,
-              color: "rojo",
-            };
-          }
-        } else if (["kda", "kdapromedio"].includes(atributo)) {
-          const diferencia = Math.abs(
-            parseFloat(valorAdivinar) - parseFloat(valorIntento)
-          );
-
-          if (diferencia <= 0.5) {
-            nuevoIntento.atributosEvaluados[atributo] = {
-              valor: valorIntento,
-              color: "verde",
-            };
-          } else if (diferencia <= 1.5) {
-            nuevoIntento.atributosEvaluados[atributo] = {
-              valor: valorIntento,
-              color: "amarillo",
-            };
-          } else {
-            nuevoIntento.atributosEvaluados[atributo] = {
-              valor: valorIntento,
-              color: "rojo",
-            };
-          }
-        }
-
-        // Evaluación para otros atributos estándar
-        else if (
+        if (
           [
+            "precio",
             "dureza",
             "movilidad",
             "utilidad",
@@ -188,126 +84,52 @@ function Loldle() {
             "dificultad",
           ].includes(atributo)
         ) {
-          const diferencia = Math.abs(valorAdivinar - valorIntento);
-
-          if (diferencia === 0) {
-            nuevoIntento.atributosEvaluados[atributo] = {
-              valor: valorIntento,
-              color: "verde",
-            };
-          } else if (diferencia === 1) {
-            nuevoIntento.atributosEvaluados[atributo] = {
-              valor: valorIntento,
-              color: "amarillo",
-            };
-          } else {
-            nuevoIntento.atributosEvaluados[atributo] = {
-              valor: valorIntento,
-              color: "rojo",
-            };
-          }
-        }
-
-        // Evaluación para porcentajes (porcentaje_fisico, porcentaje_magico, porcentaje_verdadero)
-        else if (
-          [
-            "porcentaje_fisico",
-            "porcentaje_magico",
-            "porcentaje_verdadero",
-          ].includes(atributo)
-        ) {
-          const valorAdivinarNum = parseFloat(valorAdivinar);
-          const valorIntentoNum = parseFloat(valorIntento);
-          const diferencia = Math.abs(valorAdivinarNum - valorIntentoNum);
-
-          if (diferencia <= 5) {
-            nuevoIntento.atributosEvaluados[atributo] = {
-              valor: valorIntento,
-              color: "verde",
-            };
-          } else if (diferencia <= 10) {
-            nuevoIntento.atributosEvaluados[atributo] = {
-              valor: valorIntento,
-              color: "amarillo",
-            };
-          } else {
-            nuevoIntento.atributosEvaluados[atributo] = {
-              valor: valorIntento,
-              color: "rojo",
-            };
-          }
+          const diff = Math.abs(
+            (Array.isArray(valorAdivinar) ? 0 : valorAdivinar) -
+              (Array.isArray(valorIntento) ? 0 : valorIntento),
+          );
+          nuevoIntento.atributosEvaluados[atributo] = {
+            valor: valorIntento,
+            color: diff === 0 ? "verde" : diff === 1 ? "amarillo" : "rojo",
+          };
         } else if (atributo === "lanzamiento") {
-          const añoAdivinar = new Date(valorAdivinar).getFullYear();
-          const añoIntento = new Date(valorIntento).getFullYear();
-          const diferencia = Math.abs(añoAdivinar - añoIntento);
-
-          if (diferencia === 0) {
-            nuevoIntento.atributosEvaluados[atributo] = {
-              valor: valorIntento,
-              color: "verde",
-            };
-          } else if (diferencia === 1) {
-            nuevoIntento.atributosEvaluados[atributo] = {
-              valor: valorIntento,
-              color: "amarillo",
-            };
-          } else {
-            nuevoIntento.atributosEvaluados[atributo] = {
-              valor: valorIntento,
-              color: "rojo",
-            };
-          }
-        }
-        // Evaluación estándar para el resto de atributos
-        else {
-          if (Array.isArray(valorAdivinar) && Array.isArray(valorIntento)) {
-            if (
-              JSON.stringify(valorAdivinar) === JSON.stringify(valorIntento)
-            ) {
-              nuevoIntento.atributosEvaluados[atributo] = {
-                valor: valorIntento,
-                color: "verde",
-              };
-            } else if (
-              valorIntento.some((item) => valorAdivinar.includes(item))
-            ) {
-              nuevoIntento.atributosEvaluados[atributo] = {
-                valor: valorIntento,
-                color: "amarillo",
-              };
-            } else {
-              nuevoIntento.atributosEvaluados[atributo] = {
-                valor: valorIntento,
-                color: "rojo",
-              };
-            }
-          } else if (
-            typeof valorAdivinar === "string" &&
-            typeof valorIntento === "string"
-          ) {
-            if (valorAdivinar.toLowerCase() === valorIntento.toLowerCase()) {
-              nuevoIntento.atributosEvaluados[atributo] = {
-                valor: valorIntento,
-                color: "verde",
-              };
-            } else {
-              nuevoIntento.atributosEvaluados[atributo] = {
-                valor: valorIntento,
-                color: "rojo",
-              };
-            }
-          } else {
-            nuevoIntento.atributosEvaluados[atributo] = {
-              valor: valorIntento,
-              color: "rojo",
-            };
-          }
+          const yA = new Date(valorAdivinar).getFullYear();
+          const yI = new Date(valorIntento).getFullYear();
+          const diff = Math.abs(yA - yI);
+          nuevoIntento.atributosEvaluados[atributo] = {
+            valor: valorIntento,
+            color: diff === 0 ? "verde" : diff === 1 ? "amarillo" : "rojo",
+          };
+        } else if (
+          Array.isArray(valorAdivinar) &&
+          Array.isArray(valorIntento)
+        ) {
+          const match =
+            valorIntento.every((v) => valorAdivinar.includes(v)) &&
+            valorIntento.length === valorAdivinar.length;
+          const partial = valorIntento.some((v) => valorAdivinar.includes(v));
+          nuevoIntento.atributosEvaluados[atributo] = {
+            valor: valorIntento,
+            color: match ? "verde" : partial ? "amarillo" : "rojo",
+          };
+        } else {
+          nuevoIntento.atributosEvaluados[atributo] = {
+            valor: valorIntento,
+            color: valorAdivinar === valorIntento ? "verde" : "rojo",
+          };
         }
       });
 
-      setIntentos((prevIntentos) => [...prevIntentos, nuevoIntento]);
-    } else {
-      alert("No existe ese campeón");
+      const listaActualizada = [...intentos, nuevoIntento];
+      setIntentos(listaActualizada);
+
+      if (campeon.nombre === randomChampion.nombre) {
+        setGameOver(true);
+        setMensaje("¡VICTORIA!");
+      } else if (listaActualizada.length >= MAX_INTENTOS) {
+        setGameOver(true);
+        setMensaje(`PERDISTE. Era: ${randomChampion.nombre}`);
+      }
     }
   };
 
@@ -317,40 +139,72 @@ function Loldle() {
       : ["nombre", ...atributosAleatorios.filter((a) => a !== "nombre")];
 
   return (
-    <div className="game-container">
-      <div className="game-layout-container">
-        <div className="atributos-selector">
+    <div className="flex flex-col items-center w-full h-full bg-[#010a13] font-sans overflow-hidden">
+      {/* SECCIÓN FIJA SUPERIOR */}
+      <div className="w-full max-w-7xl flex flex-col items-center pt-2 px-4 flex-shrink-0">
+        <div className="flex justify-center gap-4">
           <button
             onClick={() => setModoAtributos("estables")}
-            className={modoAtributos === "estables" ? "activo" : ""}
+            className={`px-4 py-1.5 border-2 text-xs uppercase font-black tracking-widest transition-all ${modoAtributos === "estables" ? "bg-[#c8aa6e] text-[#010a13]" : "text-[#c8aa6e] border-[#785a28]"}`}
           >
-            Atributos Estables
+            Estables
           </button>
           <button
             onClick={() => setModoAtributos("aleatorios")}
-            className={modoAtributos === "aleatorios" ? "activo" : ""}
+            className={`px-4 py-1.5 border-2 text-xs uppercase font-black tracking-widest transition-all ${modoAtributos === "aleatorios" ? "bg-[#c8aa6e] text-[#010a13]" : "text-[#c8aa6e] border-[#785a28]"}`}
           >
-            Atributos Aleatorios
+            Aleatorios
           </button>
         </div>
 
-        <div className="atributos-header">
-          {atributosMostrar.map((atributo, index) => (
-            <div className="atributo" key={index}>
-              <p>{atributo}</p>
+        <div className="h-12 flex items-center justify-center my-1">
+          {mensaje && (
+            <div
+              className={`px-4 py-1.5 border-2 text-xs font-black uppercase tracking-widest animate-fade-in ${mensaje.includes("VICTORIA") ? "bg-green-900/20 border-green-500 text-green-400" : "bg-red-900/20 border-red-500 text-red-400"}`}
+            >
+              {mensaje}
+            </div>
+          )}
+        </div>
+
+        {/* Header de la Tabla */}
+        <div className="grid grid-cols-8 gap-1 w-full border-b border-[#785a28] pb-1">
+          {atributosMostrar.map((a, i) => (
+            <div
+              key={i}
+              className="text-center text-[#c8aa6e] text-[9px] md:text-[10px] font-black uppercase"
+            >
+              {a}
             </div>
           ))}
         </div>
-
-        {intentos.map((intento, rowIndex) => (
-          <IntentoLoldle
-            key={rowIndex}
-            intentos={[intento]}
-            atributosMostrar={atributosMostrar}
-          />
-        ))}
       </div>
-      <GameControl onGuess={handleGuess} />
+
+      {/* ÁREA DE SCROLL */}
+      <div className="w-full max-w-7xl flex-1 overflow-y-auto px-4 py-2 custom-scrollbar">
+        <div className="flex flex-col gap-1">
+          {" "}
+          {/* Bajamos el gap a 1 */}
+          {[...intentos].reverse().map((int, i) => (
+            <IntentoLoldle
+              key={i}
+              intentos={[int]}
+              atributosMostrar={atributosMostrar}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* SECCIÓN FIJA INFERIOR */}
+      <div className="w-full flex-shrink-0 bg-[#010a13] shadow-[0_-10px_25px_rgba(0,0,0,0.9)]">
+        <GameControl
+          onGuess={handleGuess}
+          onSurrender={handleSurrender}
+          attempts={intentos.length}
+          maxAttempts={MAX_INTENTOS}
+          gameOver={gameOver}
+        />
+      </div>
     </div>
   );
 }

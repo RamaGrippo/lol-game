@@ -1,4593 +1,7162 @@
 const caracCampeones = [
   {
-    nombre: "Aatrox",
-    genero: "Masculino",
-    posiciones: ["Top"],
-    especies: ["Darkin"],
-    recurso: "Sin mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Runeterra", "Shurima"],
-    lanzamiento: "2013-06-13",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "80.2%",
-    porcentaje_magico: "17.9%",
-    porcentaje_verdadero: "1.9%",
-    precio: " ",
-    pickrate: "9.6%",
-    winrate: "50.1%",
-    banrate: "11.2%",
-    kda: "5.6/5.7/5.2",
-    kdapromedio: "1.89",
-  },
-  {
-    nombre: "Ahri",
-    genero: "Femenino",
-    posiciones: ["Mid"],
-    especies: ["Vastayan"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Ionia"],
-    lanzamiento: "2011-12-14",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "8.9%",
-    porcentaje_magico: "68.8%",
-    porcentaje_verdadero: "22.3%",
-    precio: " ",
-    pickrate: "12.1%",
-    winrate: "50.5%",
-    banrate: "9.3%",
-    kda: "5.2/4.6/7.4",
-    kdapromedio: "2.74",
-  },
-  {
-    nombre: "Akali",
-    genero: "Femenino",
-    posiciones: ["Top", "Mid"],
-    especies: ["Humano"],
-    recurso: "Energia",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Ionia"],
-    lanzamiento: "2010-05-11",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "6.2%",
-    porcentaje_magico: "88.5%",
-    porcentaje_verdadero: "5.3%",
-    precio: " ",
-    pickrate: "7.4%",
-    winrate: "48.9%",
-    banrate: "8.9%",
-    kda: "7.8/5.5/4.7",
-    kdapromedio: "2.27",
-  },
-  {
-    nombre: "Akshan",
-    genero: "Masculino",
-    posiciones: ["Mid"],
-    especies: ["Humano"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Shurima"],
-    lanzamiento: "2021-07-22",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "79.1%",
-    porcentaje_magico: "14.5%",
-    porcentaje_verdadero: "6.4%",
-    precio: " ",
-    pickrate: "2.5%",
-    winrate: "50.4%",
-    banrate: "2.4%",
-    kda: "8.9/6.3/5.4",
-    kdapromedio: "2.27",
-  },
-  {
-    nombre: "Alistar",
-    genero: "Masculino",
-    posiciones: ["Soporte"],
-    especies: ["Minotauro"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Runeterra"],
-    lanzamiento: "2009-02-21",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "14.4%",
-    porcentaje_magico: "76.2%",
-    porcentaje_verdadero: "9.5%",
-    precio: " ",
-    pickrate: "5.6%",
-    winrate: "49.6%",
-    banrate: "2.0%",
-    kda: "1.7/6.1/13.8",
-    kdapromedio: "2.54",
-  },
-  {
-    nombre: "Ambessa",
-    genero: "Femenino",
-    posiciones: ["Top"],
-    especies: ["Humano"],
-    recurso: "Energia",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Noxus", "Piltover"],
-    lanzamiento: "2024-10-21",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "93.9%",
-    porcentaje_magico: "2.6%",
-    porcentaje_verdadero: "3.5%",
-    precio: " ",
-    pickrate: "4.9%",
-    winrate: "48.2%",
-    banrate: "10.4%",
-    kda: "5.6/5.6/5.2",
-    kdapromedio: "1.93",
-  },
-  {
-    nombre: "Amumu",
-    genero: "Masculino",
-    posiciones: ["Jungla"],
-    especies: ["No muerto", "Yordle"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Shurima"],
-    lanzamiento: "2009-06-26",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "8.8%",
-    porcentaje_magico: "8%",
-    porcentaje_verdadero: "13.2%",
-    precio: " ",
-    pickrate: "4.1%",
-    winrate: "50.9%",
-    banrate: "2.5%",
-    kda: "4.5/6.3/10.6",
-    kdapromedio: "2.40",
-  },
-  {
-    nombre: "Anivia",
-    genero: "Femenino",
-    posiciones: ["Mid"],
-    especies: ["Espiritu", "Dios"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Freljord"],
-    lanzamiento: "2009-07-10",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "7.2%",
-    porcentaje_magico: "87.4%",
-    porcentaje_verdadero: "5.3%",
-    precio: " ",
-    pickrate: "3.0%",
-    winrate: "52.6%",
-    banrate: "2.0%",
-    kda: "5.1/4.6/7.6",
-    kdapromedio: "2.76",
-  },
-  {
-    nombre: "Annie",
-    genero: "Femenino",
-    posiciones: ["Mid"],
-    especies: ["Humano", "Nacido con magia"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Noxus", "Runeterra"],
-    lanzamiento: "2009-02-21",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "4.4%",
-    porcentaje_magico: "90.7%",
-    porcentaje_verdadero: "4.9%",
-    precio: " ",
-    pickrate: "2.2%",
-    winrate: "48.0%",
-    banrate: "0.7%",
-    kda: "5.4/6.3/8.1",
-    kdapromedio: "2.14",
-  },
-  {
-    nombre: "Aphelios",
-    genero: "Masculino",
-    posiciones: ["Inferior"],
-    especies: ["Humano", "Espiritualista"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Targon"],
-    lanzamiento: "2019-12-11",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "93.9%",
-    porcentaje_magico: "4%",
-    porcentaje_verdadero: "2.1%",
-    precio: " ",
-    pickrate: "5.3%",
-    winrate: "49.5%",
-    banrate: "1.4%",
-    kda: "7.3/6.4/5.2",
-    kdapromedio: "1.95",
-  },
-  {
-    nombre: "Ashe",
-    genero: "Femenino",
-    posiciones: ["Inferior"],
-    especies: ["Humano", "Nacido del hielo"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Freljord"],
-    lanzamiento: "2009-02-21",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "86.8%",
-    porcentaje_magico: "11.1%",
-    porcentaje_verdadero: "2.1%",
-    precio: " ",
-    pickrate: "9.3%",
-    winrate: "48.9%",
-    banrate: "3.0%",
-    kda: "5.4/6.3/8.8",
-    kdapromedio: "2.25",
-  },
-  {
-    nombre: "Aurelion Sol",
-    genero: "Masculino",
-    posiciones: ["Mid"],
-    especies: ["Celestial", "Dragon"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Runeterra", "Targon"],
-    lanzamiento: "2016-03-24",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "1.3%",
-    porcentaje_magico: "96.2%",
-    porcentaje_verdadero: "2.5%",
-    precio: " ",
-    pickrate: "2.7%",
-    winrate: "50.2%",
-    banrate: "1.0%",
-    kda: "6.7/5.7/7.9",
-    kdapromedio: "2.56",
-  },
-  {
-    nombre: "Aurora",
-    genero: "Femenino",
-    posiciones: ["Mid", "Top"],
-    especies: ["Vastayan"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Freljord"],
-    lanzamiento: "2024-07-17",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "6.9%",
-    porcentaje_magico: "89.7%",
-    porcentaje_verdadero: "3.5%",
-    precio: " ",
-    pickrate: "3.8%",
-    winrate: "47.8%",
-    banrate: "4.8%",
-    kda: "6/5.3/6.5",
-    kdapromedio: "2.36",
-  },
-  {
-    nombre: "Azir",
-    genero: "Masculino",
-    posiciones: ["Mid"],
-    especies: ["Dios-Warrior"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Shurima"],
-    lanzamiento: "2014-09-16",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "3.3%",
-    porcentaje_magico: "95%",
-    porcentaje_verdadero: "1.7%",
-    precio: " ",
-    pickrate: "3.9%",
-    winrate: "47.3%",
-    banrate: "0.7%",
-    kda: "5.1/5.6/5.8",
-    kdapromedio: "1.95",
-  },
-  {
-    nombre: "Bard",
-    genero: "Masculino",
-    posiciones: ["Soporte"],
-    especies: ["Celestial"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Runeterra"],
-    lanzamiento: "2015-03-12",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "27.6%",
-    porcentaje_magico: "62.6%",
-    porcentaje_verdadero: "9.8%",
-    precio: " ",
-    pickrate: "3.5%",
-    winrate: "50.1%",
-    banrate: "0.7%",
-    kda: "3.1/5.6/13.7",
-    kdapromedio: "3.00",
-  },
-  {
-    nombre: "Bel'Veth",
-    genero: "Femenino",
-    posiciones: ["Jungla"],
-    especies: ["Ser del vacio"],
-    recurso: "Sin mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["El vacio"],
-    lanzamiento: "2022-06-09",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "70.3%",
-    porcentaje_magico: "11.7%",
-    porcentaje_verdadero: "18%",
-    precio: " ",
-    pickrate: "1.7%",
-    winrate: "49.3%",
-    banrate: "2.4%",
-    kda: "6.8/5.4/6.2",
-    kdapromedio: "2.41",
-  },
-  {
-    nombre: "Blitzcrank",
-    genero: "Otro",
-    posiciones: ["Soporte"],
-    especies: ["Golem"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Zaun"],
-    lanzamiento: "2009-09-02",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "29.6%",
-    porcentaje_magico: "61.3%",
-    porcentaje_verdadero: "9.2%",
-    precio: " ",
-    pickrate: "5.8%",
-    winrate: "49.3%",
-    banrate: "17.0%",
-    kda: "2.1/6.2/13.5",
-    kdapromedio: "2.52",
-  },
-  {
-    nombre: "Brand",
-    genero: "Masculino",
-    posiciones: ["Jungla", "Mid", "Soporte"],
-    especies: ["Humano", "Magicamente alterado"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Freljord", "Runeterra"],
-    lanzamiento: "2011-04-12",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "4%",
-    porcentaje_magico: "91.8%",
-    porcentaje_verdadero: "4.3%",
-    precio: " ",
-    pickrate: "4.9%",
-    winrate: "49.1%",
-    banrate: "2.9%",
-    kda: "4.9/6.9/9.2",
-    kdapromedio: "2.04",
-  },
-  {
-    nombre: "Braum",
-    genero: "Masculino",
-    posiciones: ["Soporte"],
-    especies: ["Humano", "Nacido del hielo"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Freljord"],
-    lanzamiento: "2014-05-12",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "18.7%",
-    porcentaje_magico: "74.5%",
-    porcentaje_verdadero: "6.8%",
-    precio: " ",
-    pickrate: "6.7%",
-    winrate: "52.2%",
-    banrate: "5.6%",
-    kda: "1.4/5.4/14.9",
-    kdapromedio: "3.02",
-  },
-  {
-    nombre: "Briar",
-    genero: "Femenino",
-    posiciones: ["Jungla"],
-    especies: ["Golem"],
-    recurso: "Health costs",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Noxus"],
-    lanzamiento: "2023-09-14",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "72.7%",
-    porcentaje_magico: "20.6%",
-    porcentaje_verdadero: "6.7%",
-    precio: " ",
-    pickrate: "3.3%",
-    winrate: "50.5%",
-    banrate: "3.7%",
-    kda: "8/7.1/7.3",
-    kdapromedio: "2.15",
-  },
-  {
-    nombre: "Caitlyn",
-    genero: "Femenino",
-    posiciones: ["Inferior"],
-    especies: ["Humano"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Piltover"],
-    lanzamiento: "2011-01-04",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "94%",
-    porcentaje_magico: "3.3%",
-    porcentaje_verdadero: "2.7%",
-    precio: " ",
-    pickrate: "15.2%",
-    winrate: "49.2%",
-    banrate: "18.3%",
-    kda: "7/6.2/5.9",
-    kdapromedio: "2.08",
-  },
-  {
-    nombre: "Camille",
-    genero: "Femenino",
-    posiciones: ["Top"],
-    especies: ["Humano", "Cyborg"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Piltover"],
-    lanzamiento: "2016-12-07",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "62.3%",
-    porcentaje_magico: "5.8%",
-    porcentaje_verdadero: "31.9%",
-    precio: " ",
-    pickrate: "3.7%",
-    winrate: "49.3%",
-    banrate: "1.6%",
-    kda: "6.1/6.2/5.7",
-    kdapromedio: "1.90",
-  },
-  {
-    nombre: "Cassiopeia",
-    genero: "Femenino",
-    posiciones: ["Top", "Mid"],
-    especies: ["Humano", "Magicamente alterado"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Noxus", "Shurima"],
-    lanzamiento: "2010-12-14",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "2.2%",
-    porcentaje_magico: "96.9%",
-    porcentaje_verdadero: "0.9%",
-    precio: " ",
-    pickrate: "2.2%",
-    winrate: "52.1%",
-    banrate: "2.0%",
-    kda: "6.1/5.9/5.8",
-    kdapromedio: "2.02",
-  },
-  {
-    nombre: "Cho'Gath",
-    genero: "Masculino",
-    posiciones: ["Top"],
-    especies: ["Ser del vacio"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["El vacio"],
-    lanzamiento: "2009-06-26",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "16.4%",
-    porcentaje_magico: "63.6%",
-    porcentaje_verdadero: "20%",
-    precio: " ",
-    pickrate: "5.4%",
-    winrate: "50.7%",
-    banrate: "2.1%",
-    kda: "6.1/5.7/6.1",
-    kdapromedio: "2.14",
-  },
-  {
-    nombre: "Corki",
-    genero: "Masculino",
-    posiciones: ["Mid"],
-    especies: ["Yordle"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Bandle City", "Piltover"],
-    lanzamiento: "2009-09-19",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "63.6%",
-    porcentaje_magico: "23.2%",
-    porcentaje_verdadero: "13.2%",
-    precio: " ",
-    pickrate: "3.5%",
-    winrate: "48.1%",
-    banrate: "1.1%",
-    kda: "6.8/5.7/6.7",
-    kdapromedio: "2.37",
-  },
-  {
-    nombre: "Darius",
-    genero: "Masculino",
-    posiciones: ["Top"],
-    especies: ["Humano"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Noxus"],
-    lanzamiento: "2012-05-23",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "78.1%",
-    porcentaje_magico: "0.4%",
-    porcentaje_verdadero: "21.4%",
-    precio: " ",
-    pickrate: "9.7%",
-    winrate: "49.4%",
-    banrate: "23.8%",
-    kda: "6.9/6.2/4.5",
-    kdapromedio: "1.84",
-  },
-  {
-    nombre: "Diana",
-    genero: "Femenino",
-    posiciones: ["Jungla", "Mid"],
-    especies: ["Humano", "Aspect"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Targon"],
-    lanzamiento: "2012-08-07",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "11.1%",
-    porcentaje_magico: "82.9%",
-    porcentaje_verdadero: "6%",
-    precio: " ",
-    pickrate: "8.1%",
-    winrate: "50.7%",
-    banrate: "3.6%",
-    kda: "7.2/6.3/6.6",
-    kdapromedio: "2.19",
-  },
-  {
-    nombre: "Dr. Mundo",
-    genero: "Masculino",
-    posiciones: ["Top"],
-    especies: ["Humano", "Quimicamente alterado"],
-    recurso: "Health costs",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Zaun"],
-    lanzamiento: "2009-09-02",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "43.9%",
-    porcentaje_magico: "53.9%",
-    porcentaje_verdadero: "2.2%",
-    precio: " ",
-    pickrate: "4.4%",
-    winrate: "51.8%",
-    banrate: "2.4%",
-    kda: "4.4/4.9/6.3",
-    kdapromedio: "2.18",
-  },
-  {
-    nombre: "Draven",
-    genero: "Masculino",
-    posiciones: ["Inferior"],
-    especies: ["Humano"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Noxus"],
-    lanzamiento: "2012-06-06",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "97.5%",
-    porcentaje_magico: "0.5%",
-    porcentaje_verdadero: "2%",
-    precio: " ",
-    pickrate: "4.6%",
-    winrate: "48.6%",
-    banrate: "15.6%",
-    kda: "8.1/6.8/5.3",
-    kdapromedio: "1.97",
-  },
-  {
-    nombre: "Ekko",
-    genero: "Masculino",
-    posiciones: ["Jungla", "Mid"],
-    especies: ["Humano"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Zaun"],
-    lanzamiento: "2015-05-29",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "12%",
-    porcentaje_magico: "79.2%",
-    porcentaje_verdadero: "8.8%",
-    precio: " ",
-    pickrate: "6.4%",
-    winrate: "50.3%",
-    banrate: "1.3%",
-    kda: "7.7/5.6/6.4",
-    kdapromedio: "2.52",
-  },
-  {
-    nombre: "Elise",
-    genero: "Femenino",
-    posiciones: ["Jungla"],
-    especies: ["Humano", "Magicamente alterado"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo", "A distancia"],
-    regiones: ["Islas de las sombras", "Noxus"],
-    lanzamiento: "2012-10-26",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "8.2%",
-    porcentaje_magico: "84.2%",
-    porcentaje_verdadero: "7.7%",
-    precio: " ",
-    pickrate: "4.8%",
-    winrate: "50.4%",
-    banrate: "5.3%",
-    kda: "6.9/6.2/8",
-    kdapromedio: "2.40",
-  },
-  {
-    nombre: "Evelynn",
-    genero: "Femenino",
-    posiciones: ["Jungla"],
-    especies: ["Demonio", "Espiritu"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Runeterra"],
-    lanzamiento: "2009-05-01",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "3.2%",
-    porcentaje_magico: "90.2%",
-    porcentaje_verdadero: "6.6%",
-    precio: " ",
-    pickrate: "2.4%",
-    winrate: "48.4%",
-    banrate: "2.8%",
-    kda: "8.6/5.5/6.7",
-    kdapromedio: "2.78",
-  },
-  {
-    nombre: "Ezreal",
-    genero: "Masculino",
-    posiciones: ["Inferior"],
-    especies: ["Humano", "Nacido con magia"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Piltover"],
-    lanzamiento: "2010-03-16",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "68.1%",
-    porcentaje_magico: "29.6%",
-    porcentaje_verdadero: "2.3%",
-    precio: " ",
-    pickrate: "18.3%",
-    winrate: "47.2%",
-    banrate: "7.3%",
-    kda: "6.6/5.4/6.6",
-    kdapromedio: "2.44",
-  },
-  {
-    nombre: "Fiddlesticks",
-    genero: "Otro",
-    posiciones: ["Jungla"],
-    especies: ["Demonio", "Espiritu"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Runeterra"],
-    lanzamiento: "2009-02-21",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "1.8%",
-    porcentaje_magico: "93.3%",
-    porcentaje_verdadero: "4.8%",
-    precio: " ",
-    pickrate: "4.6%",
-    winrate: "52.0%",
-    banrate: "2.3%",
-    kda: "5.1/5.9/9.9",
-    kdapromedio: "2.54",
-  },
-  {
-    nombre: "Fiora",
-    genero: "Femenino",
-    posiciones: ["Top"],
-    especies: ["Humano"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Demacia"],
-    lanzamiento: "2012-02-29",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "62.1%",
-    porcentaje_magico: "7.1%",
-    porcentaje_verdadero: "30.8%",
-    precio: " ",
-    pickrate: "4.3%",
-    winrate: "50.9%",
-    banrate: "5.3%",
-    kda: "5.5/6.2/4",
-    kdapromedio: "1.53",
-  },
-  {
-    nombre: "Fizz",
-    genero: "Masculino",
-    posiciones: ["Mid"],
-    especies: ["Yordle"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Aguasturbias"],
-    lanzamiento: "2011-11-15",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "12.8%",
-    porcentaje_magico: "77.8%",
-    porcentaje_verdadero: "9.4%",
-    precio: " ",
-    pickrate: "2.9%",
-    winrate: "49.4%",
-    banrate: "3.8%",
-    kda: "8.3/6.1/5.5",
-    kdapromedio: "2.26",
-  },
-  {
-    nombre: "Galio",
-    genero: "Masculino",
-    posiciones: ["Mid"],
-    especies: ["Golem"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Demacia"],
-    lanzamiento: "2010-08-10",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "2.7%",
-    porcentaje_magico: "94.6%",
-    porcentaje_verdadero: "2.8%",
-    precio: " ",
-    pickrate: "5.9%",
-    winrate: "51.2%",
-    banrate: "3.0%",
-    kda: "4/5.2/10",
-    kdapromedio: "2.69",
-  },
-  {
-    nombre: "Gangplank",
-    genero: "Masculino",
-    posiciones: ["Top"],
-    especies: ["Humano"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Aguasturbias"],
-    lanzamiento: "2009-08-19",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "67.9%",
-    porcentaje_magico: "15.3%",
-    porcentaje_verdadero: "16.8%",
-    precio: " ",
-    pickrate: "4.7%",
-    winrate: "49.3%",
-    banrate: "2.7%",
-    kda: "6/5.7/5.9",
-    kdapromedio: "2.09",
-  },
-  {
-    nombre: "Garen",
-    genero: "Masculino",
-    posiciones: ["Top"],
-    especies: ["Humano"],
-    recurso: "Sin mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Demacia"],
-    lanzamiento: "2010-04-27",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "74%",
-    porcentaje_magico: "0.5%",
-    porcentaje_verdadero: "25.5%",
-    precio: " ",
-    pickrate: "6.5%",
-    winrate: "50.2%",
-    banrate: "6.0%",
-    kda: "6.3/5.3/4.1",
-    kdapromedio: "1.96",
-  },
-  {
-    nombre: "Gnar",
-    genero: "Masculino",
-    posiciones: ["Top"],
-    especies: ["Yordle"],
-    recurso: "Furia",
-    rango: ["Cuerpo a cuerpo", "A distancia"],
-    regiones: ["Freljord"],
-    lanzamiento: "2014-08-14",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "80.6%",
-    porcentaje_magico: "17.8%",
-    porcentaje_verdadero: "1.6%",
-    precio: " ",
-    pickrate: "4.2%",
-    winrate: "49.0%",
-    banrate: "1.3%",
-    kda: "4.9/5.7/5.9",
-    kdapromedio: "1.89",
-  },
-  {
-    nombre: "Gragas",
-    genero: "Masculino",
-    posiciones: ["Top", "Jungla"],
-    especies: ["Humano", "Nacido del hielo"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Freljord"],
-    lanzamiento: "2010-02-02",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "8.6%",
-    porcentaje_magico: "88%",
-    porcentaje_verdadero: "3.4%",
-    precio: " ",
-    pickrate: "5.2%",
-    winrate: "50.0%",
-    banrate: "1.7%",
-    kda: "5/5.2/7.2",
-    kdapromedio: "2.35",
-  },
-  {
-    nombre: "Graves",
-    genero: "Masculino",
-    posiciones: ["Jungla"],
-    especies: ["Humano"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Aguasturbias"],
-    lanzamiento: "2011-10-19",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "86%",
-    porcentaje_magico: "3.9%",
-    porcentaje_verdadero: "10.1%",
-    precio: " ",
-    pickrate: "6.4%",
-    winrate: "49.2%",
-    banrate: "4.1%",
-    kda: "8/6/6.4",
-    kdapromedio: "2.40",
-  },
-  {
-    nombre: "Gwen",
-    genero: "Femenino",
-    posiciones: ["Top"],
-    especies: ["Humano", "Magicamente alterado"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Islas de las sombras", "Camavor"],
-    lanzamiento: "2021-04-15",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "14.4%",
-    porcentaje_magico: "69.5%",
-    porcentaje_verdadero: "16.1%",
-    precio: " ",
-    pickrate: "8.9%",
-    winrate: "50.7%",
-    banrate: "25.2%",
-    kda: "6.6/5.8/5.1",
-    kdapromedio: "2.02",
-  },
-  {
-    nombre: "Hecarim",
-    genero: "Masculino",
-    posiciones: ["Jungla"],
-    especies: ["No muerto"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Islas de las sombras", "Camavor"],
-    lanzamiento: "2012-04-18",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "80.8%",
-    porcentaje_magico: "14.9%",
-    porcentaje_verdadero: "4.3%",
-    precio: " ",
-    pickrate: "4.2%",
-    winrate: "49.0%",
-    banrate: "2.6%",
-    kda: "7/5.5/7.9",
-    kdapromedio: "2.71",
-  },
-  {
-    nombre: "Hwei",
-    genero: "Masculino",
-    posiciones: ["Mid", "Soporte"],
-    especies: ["Humano", "Nacido con magia"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Ionia"],
-    lanzamiento: "2023-12-05",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "4.4%",
-    porcentaje_magico: "94.5%",
-    porcentaje_verdadero: "1.1%",
-    precio: " ",
-    pickrate: "6.1%",
-    winrate: "50.7%",
-    banrate: "3.7%",
-    kda: "5.2/5.4/8",
-    kdapromedio: "2.44",
-  },
-  {
-    nombre: "Heimerdinger",
-    genero: "Masculino",
-    posiciones: ["Top", "Mid"],
-    especies: ["Yordle"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Piltover"],
-    lanzamiento: "2009-10-10",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "4.4%",
-    porcentaje_magico: " ",
-    porcentaje_verdadero: "1.6%",
-    precio: " ",
-    pickrate: "2.0%",
-    winrate: "51.4%",
-    banrate: "1.7%",
-    kda: "4.7/6.1/6",
-    kdapromedio: "1.75",
-  },
-  {
-    nombre: "Illaoi",
-    genero: "Femenino",
-    posiciones: ["Top"],
-    especies: ["Humano", "Espiritualista"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Aguasturbias"],
-    lanzamiento: "2015-11-24",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "95.5%",
-    porcentaje_magico: "3.3%",
-    porcentaje_verdadero: "1.2%",
-    precio: " ",
-    pickrate: "2.3%",
-    winrate: "49.9%",
-    banrate: "5.1%",
-    kda: "4.9/6.5/4.3",
-    kdapromedio: "1.42",
-  },
-  {
-    nombre: "Irelia",
-    genero: "Femenino",
-    posiciones: ["Top", "Mid"],
-    especies: ["Humano", "Espiritualista"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Ionia"],
-    lanzamiento: "2010-11-16",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "73.2%",
-    porcentaje_magico: "24.3%",
-    porcentaje_verdadero: "2.4%",
-    precio: " ",
-    pickrate: "6.7%",
-    winrate: "49.9%",
-    banrate: "13.3%",
-    kda: "6.5/7/4.2",
-    kdapromedio: "1.53",
-  },
-  {
-    nombre: "Ivern",
-    genero: "Masculino",
-    posiciones: ["Jungla"],
-    especies: ["Humano", "Magicamente alterado"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Ionia", "Freljord"],
-    lanzamiento: "2016-10-05",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "28.1%",
-    porcentaje_magico: "59.5%",
-    porcentaje_verdadero: "12.4%",
-    precio: " ",
-    pickrate: "1.8%",
-    winrate: "51.2%",
-    banrate: "0.7%",
-    kda: "2.8/4.5/13.1",
-    kdapromedio: "3.53",
-  },
-  {
-    nombre: "Janna",
-    genero: "Femenino",
-    posiciones: ["Soporte"],
-    especies: ["Espiritu", "Dios"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Zaun", "Shurima"],
-    lanzamiento: "2009-09-02",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "14%",
-    porcentaje_magico: "81%",
-    porcentaje_verdadero: "5%",
-    precio: " ",
-    pickrate: "3.9%",
-    winrate: "51.1%",
-    banrate: "1.0%",
-    kda: "1.6/4.9/14.5",
-    kdapromedio: "3.29",
-  },
-  {
-    nombre: "Jarvan IV",
-    genero: "Masculino",
-    posiciones: ["Jungla"],
-    especies: ["Humano"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Demacia"],
-    lanzamiento: "2011-03-01",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "85.3%",
-    porcentaje_magico: "8%",
-    porcentaje_verdadero: "6.7%",
-    precio: " ",
-    pickrate: "6.4%",
-    winrate: "51.2%",
-    banrate: "1.8%",
-    kda: "5.8/5.5/12.2",
-    kdapromedio: "3.27",
-  },
-  {
-    nombre: "Jax",
-    genero: "Masculino",
-    posiciones: ["Top", "Jungla"],
-    especies: ["Unknown"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Runeterra", "Icathia", "Shurima"],
-    lanzamiento: "2009-02-21",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "56.5%",
-    porcentaje_magico: "40.9%",
-    porcentaje_verdadero: "2.5%",
-    precio: " ",
-    pickrate: "6.1%",
-    winrate: "48.4%",
-    banrate: "5.5%",
-    kda: "5.4/6/4.5",
-    kdapromedio: "1.65",
-  },
-  {
-    nombre: "Jayce",
-    genero: "Masculino",
-    posiciones: ["Top", "Mid"],
-    especies: ["Humano"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo", "A distancia"],
-    regiones: ["Piltover"],
-    lanzamiento: "2012-07-07",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "77.2%",
-    porcentaje_magico: "21.4%",
-    porcentaje_verdadero: "1.5%",
-    precio: " ",
-    pickrate: "6.9%",
-    winrate: "48.6%",
-    banrate: "5.8%",
-    kda: "5.6/6.2/5.7",
-    kdapromedio: "1.82",
-  },
-  {
-    nombre: "Jhin",
-    genero: "Masculino",
-    posiciones: ["Inferior"],
-    especies: ["Humano", "Espiritualista"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Ionia"],
-    lanzamiento: "2016-02-01",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "93.1%",
-    porcentaje_magico: "4.9%",
-    porcentaje_verdadero: "2%",
-    precio: " ",
-    pickrate: "19.4%",
-    winrate: "50.5%",
-    banrate: "3.3%",
-    kda: "7.9/5.4/7.4",
-    kdapromedio: "2.83",
-  },
-  {
-    nombre: "Jinx",
-    genero: "Femenino",
-    posiciones: ["Inferior"],
-    especies: ["Humano", "Quimicamente alterado"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Zaun"],
-    lanzamiento: "2013-10-10",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "94.6%",
-    porcentaje_magico: "3.4%",
-    porcentaje_verdadero: "2%",
-    precio: " ",
-    pickrate: "15.8%",
-    winrate: "52.0%",
-    banrate: "5.8%",
-    kda: "7.1/6/6.9",
-    kdapromedio: "2.33",
-  },
-  {
-    nombre: "K'Sante",
-    genero: "Masculino",
-    posiciones: ["Top"],
-    especies: ["Humano"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Shurima"],
-    lanzamiento: "2022-11-02",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "84.3%",
-    porcentaje_magico: "10.4%",
-    porcentaje_verdadero: "5.4%",
-    precio: " ",
-    pickrate: "3.1%",
-    winrate: "47.2%",
-    banrate: "2.6%",
-    kda: "4.3/5/5.9",
-    kdapromedio: "2.04",
-  },
-  {
-    nombre: "Kai'Sa",
-    genero: "Femenino",
-    posiciones: ["Inferior"],
-    especies: ["Humano", "Ser del vacio"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Shurima", "El vacio"],
-    lanzamiento: "2018-03-07",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "61.4%",
-    porcentaje_magico: "36.6%",
-    porcentaje_verdadero: "1.9%",
-    precio: " ",
-    pickrate: "19.3%",
-    winrate: "48.6%",
-    banrate: "2.9%",
-    kda: "8.1/5.8/6.2",
-    kdapromedio: "2.47",
-  },
-  {
-    nombre: "Kalista",
-    genero: "Femenino",
-    posiciones: ["Inferior"],
-    especies: ["No muerto"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Islas de las sombras", "Camavor"],
-    lanzamiento: "2014-11-20",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "83.3%",
-    porcentaje_magico: "9.8%",
-    porcentaje_verdadero: "6.9%",
-    precio: " ",
-    pickrate: "2.1%",
-    winrate: "46.4%",
-    banrate: "0.7%",
-    kda: "7.8/6.7/5.7",
-    kdapromedio: "2.01",
-  },
-  {
-    nombre: "Karma",
-    genero: "Femenino",
-    posiciones: ["Soporte"],
-    especies: ["Humano", "Espiritualista"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Ionia"],
-    lanzamiento: "2011-02-01",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "7.5%",
-    porcentaje_magico: "88.6%",
-    porcentaje_verdadero: "3.9%",
-    precio: " ",
-    pickrate: "8.9%",
-    winrate: "49.7%",
-    banrate: "7.1%",
-    kda: "2.2/5.5/12.7",
-    kdapromedio: "2.71",
-  },
-  {
-    nombre: "Karthus",
-    genero: "Masculino",
-    posiciones: ["Jungla"],
-    especies: ["No muerto"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Islas de las sombras", "Noxus"],
-    lanzamiento: "2009-06-12",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "0.8%",
-    porcentaje_magico: "92.8%",
-    porcentaje_verdadero: "6.3%",
-    precio: " ",
-    pickrate: "2.2%",
-    winrate: "48.9%",
-    banrate: "1.9%",
-    kda: "7.7/7.3/9.1",
-    kdapromedio: "2.30",
-  },
-  {
-    nombre: "Kassadin",
-    genero: "Masculino",
-    posiciones: ["Mid"],
-    especies: ["Humano", "Ser del vacio"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Shurima", "El vacio"],
-    lanzamiento: "2009-08-07",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "7.9%",
-    porcentaje_magico: "87.4%",
-    porcentaje_verdadero: "4.7%",
-    precio: " ",
-    pickrate: "2.0%",
-    winrate: "50.5%",
-    banrate: "1.6%",
-    kda: "7.2/5/5.3",
-    kdapromedio: "2.50",
-  },
-  {
-    nombre: "Katarina",
-    genero: "Femenino",
-    posiciones: ["Mid"],
-    especies: ["Humano"],
-    recurso: "Sin mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Noxus"],
-    lanzamiento: "2009-09-19",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "11.6%",
-    porcentaje_magico: "80.6%",
-    porcentaje_verdadero: "7.7%",
-    precio: " ",
-    pickrate: "5.0%",
-    winrate: "49.0%",
-    banrate: "5.1%",
-    kda: "9.4/6.5/5.5",
-    kdapromedio: "2.29",
-  },
-  {
-    nombre: "Kayle",
-    genero: "Femenino",
-    posiciones: ["Top"],
-    especies: ["Humano", "Magicamente alterado", "Aspect"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo", "A distancia"],
-    regiones: ["Demacia", "Targon"],
-    lanzamiento: "2009-02-21",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "25.7%",
-    porcentaje_magico: "72.2%",
-    porcentaje_verdadero: "2.1%",
-    precio: " ",
-    pickrate: "4.3%",
-    winrate: "51.9%",
-    banrate: "2.3%",
-    kda: "5.4/5.9/5.3",
-    kdapromedio: "1.81",
-  },
-  {
-    nombre: "Kayn",
-    genero: "Masculino",
-    posiciones: ["Jungla"],
-    especies: ["Darkin", "Humano", "Magicamente alterado"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Ionia", "Runeterra", "Noxus", "Shurima"],
-    lanzamiento: "2017-07-12",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "89.5%",
-    porcentaje_magico: "4.6%",
-    porcentaje_verdadero: "5.9%",
-    precio: " ",
-    pickrate: "8.9%",
-    winrate: "50.8%",
-    banrate: "6.8%",
-    kda: "7.5/6.2/7.1",
-    kdapromedio: "2.35",
-  },
-  {
-    nombre: "Kennen",
-    genero: "Masculino",
-    posiciones: ["Top"],
-    especies: ["Yordle"],
-    recurso: "Energia",
-    rango: ["A distancia"],
-    regiones: ["Ionia"],
-    lanzamiento: "2010-04-08",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "10.5%",
-    porcentaje_magico: "87.3%",
-    porcentaje_verdadero: "2.3%",
-    precio: " ",
-    pickrate: "2.6%",
-    winrate: "50.3%",
-    banrate: "1.0%",
-    kda: "5.8/5.8/6.2",
-    kdapromedio: "2.07",
-  },
-  {
-    nombre: "Kha'Zix",
-    genero: "Masculino",
-    posiciones: ["Jungla"],
-    especies: ["Ser del vacio"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["El vacio"],
-    lanzamiento: "2012-09-27",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "87.2%",
-    porcentaje_magico: "6.1%",
-    porcentaje_verdadero: "6.7%",
-    precio: " ",
-    pickrate: "5.5%",
-    winrate: "50.3%",
-    banrate: "3.2%",
-    kda: "8.8/5.8/6",
-    kdapromedio: "2.55",
-  },
-  {
-    nombre: "Kindred",
-    genero: "Otro",
-    posiciones: ["Jungla"],
-    especies: ["Espiritu", "Dios"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Runeterra"],
-    lanzamiento: "2015-10-14",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "74.4%",
-    porcentaje_magico: "15%",
-    porcentaje_verdadero: "10.6%",
-    precio: " ",
-    pickrate: "2.8%",
-    winrate: "49.8%",
-    banrate: "2.0%",
-    kda: "7.7/6.3/6.6",
-    kdapromedio: "2.27",
-  },
-  {
-    nombre: "Kled",
-    genero: "Masculino",
-    posiciones: ["Top"],
-    especies: ["Yordle"],
-    recurso: "CouFuria",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Noxus"],
-    lanzamiento: "2016-08-10",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "95.4%",
-    porcentaje_magico: "0.5%",
-    porcentaje_verdadero: "4.1%",
-    precio: " ",
-    pickrate: "1.5%",
-    winrate: "50.7%",
-    banrate: "0.7%",
-    kda: "6.5/6.1/6.2",
-    kdapromedio: "2.08",
-  },
-  {
-    nombre: "Kog'Maw",
-    genero: "Masculino",
-    posiciones: ["Inferior"],
-    especies: ["Ser del vacio"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["El vacio"],
-    lanzamiento: "2010-06-24",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "39.1%",
-    porcentaje_magico: "50.6%",
-    porcentaje_verdadero: "10.3%",
-    precio: " ",
-    pickrate: "1.9%",
-    winrate: "51.9%",
-    banrate: "0.7%",
-    kda: "7.8/6.7/6.7",
-    kdapromedio: "2.16",
-  },
-  {
-    nombre: "LeBlanc",
-    genero: "Femenino",
-    posiciones: ["Mid"],
-    especies: ["Humano", "Magicamente alterado"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Noxus"],
-    lanzamiento: "2010-11-02",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "6.4%",
-    porcentaje_magico: "85.5%",
-    porcentaje_verdadero: "8.1%",
-    precio: " ",
-    pickrate: "6.5%",
-    winrate: "47.8%",
-    banrate: "18.2%",
-    kda: "7/5.2/6.6",
-    kdapromedio: "2.62",
-  },
-  {
-    nombre: "Lee Sin",
-    genero: "Masculino",
-    posiciones: ["Jungla"],
-    especies: ["Humano", "Espiritualista"],
-    recurso: "Energia",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Ionia"],
-    lanzamiento: "2011-04-01",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "77.9%",
-    porcentaje_magico: "15.5%",
-    porcentaje_verdadero: "6.6%",
-    precio: " ",
-    pickrate: "13.2%",
-    winrate: "48.1%",
-    banrate: "10.6%",
-    kda: "7.1/5.6/8.1",
-    kdapromedio: "2.71",
-  },
-  {
-    nombre: "Leona",
-    genero: "Femenino",
-    posiciones: ["Soporte"],
-    especies: ["Humano", "Aspect"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Targon"],
-    lanzamiento: "2011-07-13",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "29.2%",
-    porcentaje_magico: "61.9%",
-    porcentaje_verdadero: "8.9%",
-    precio: " ",
-    pickrate: "5.9%",
-    winrate: "49.6%",
-    banrate: "5.6%",
-    kda: "1.8/6.3/13.6",
-    kdapromedio: "2.44",
-  },
-  {
-    nombre: "Lillia",
-    genero: "Femenino",
-    posiciones: ["Jungla"],
-    especies: ["Espiritu"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Ionia"],
-    lanzamiento: "2020-07-22",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "3.9%",
-    porcentaje_magico: "76.4%",
-    porcentaje_verdadero: "19.7%",
-    precio: " ",
-    pickrate: "5.5%",
-    winrate: "51.3%",
-    banrate: "4.6%",
-    kda: "6.4/5.1/8.4",
-    kdapromedio: "2.90",
-  },
-  {
-    nombre: "Lissandra",
-    genero: "Femenino",
-    posiciones: ["Mid"],
-    especies: ["Humano", "Nacido del hielo"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Freljord"],
-    lanzamiento: "2013-04-30",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "6.1%",
-    porcentaje_magico: "90%",
-    porcentaje_verdadero: "3.9%",
-    precio: " ",
-    pickrate: "3.4%",
-    winrate: "50.5%",
-    banrate: "1.6%",
-    kda: "5.1/5.8/8.8",
-    kdapromedio: "2.40",
-  },
-  {
-    nombre: "Lucian",
-    genero: "Masculino",
-    posiciones: ["Inferior"],
-    especies: ["Humano"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Demacia", "Islas de las sombras"],
-    lanzamiento: "2013-08-22",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "86.2%",
-    porcentaje_magico: "11.6%",
-    porcentaje_verdadero: "2.2%",
-    precio: " ",
-    pickrate: "12.8%",
-    winrate: "50.8%",
-    banrate: "10.8%",
-    kda: "8/5.8/6",
-    kdapromedio: "2.41",
-  },
-  {
-    nombre: "Lulu",
-    genero: "Femenino",
-    posiciones: ["Soporte"],
-    especies: ["Yordle"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Bandle City"],
-    lanzamiento: "2012-03-20",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "14.8%",
-    porcentaje_magico: "82%",
-    porcentaje_verdadero: "3.2%",
-    precio: " ",
-    pickrate: "13.4%",
-    winrate: "51.4%",
-    banrate: "25.5%",
-    kda: "1.4/4.8/14.2",
-    kdapromedio: "3.25",
-  },
-  {
-    nombre: "Lux",
-    genero: "Femenino",
-    posiciones: ["Mid", "Soporte"],
-    especies: ["Humano", "Nacido con magia"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Demacia"],
-    lanzamiento: "2010-10-19",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "6%",
-    porcentaje_magico: "89.5%",
-    porcentaje_verdadero: "4.5%",
-    precio: " ",
-    pickrate: "12.2%",
-    winrate: "49.2%",
-    banrate: "6.2%",
-    kda: "4.8/6/10.2",
-    kdapromedio: "2.50",
-  },
-  {
-    nombre: "Malphite",
-    genero: "Masculino",
-    posiciones: ["Top", "Mid"],
-    especies: ["Golem"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Ixtal", "Shurima"],
-    lanzamiento: "2009-09-02",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "25%",
-    porcentaje_magico: "72.8%",
-    porcentaje_verdadero: "2.2%",
-    precio: " ",
-    pickrate: "7.0%",
-    winrate: "51.0%",
-    banrate: "7.7%",
-    kda: "4.6/5/7.9",
-    kdapromedio: "2.50",
-  },
-  {
-    nombre: "Malzahar",
-    genero: "Masculino",
-    posiciones: ["Mid"],
-    especies: ["Humano", "Ser del vacio"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Shurima", "El vacio"],
-    lanzamiento: "2010-06-01",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "2.7%",
-    porcentaje_magico: "96.1%",
-    porcentaje_verdadero: "1.2%",
-    precio: " ",
-    pickrate: "6.6%",
-    winrate: "51.5%",
-    banrate: "8.7%",
-    kda: "4.6/5.6/7.3",
-    kdapromedio: "2.13",
-  },
-  {
-    nombre: "Maokai",
-    genero: "Masculino",
-    posiciones: ["Jungla", "Soporte"],
-    especies: ["Espiritu"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Islas de las sombras"],
-    lanzamiento: "2011-02-16",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "12.4%",
-    porcentaje_magico: "82.2%",
-    porcentaje_verdadero: "5.5%",
-    precio: " ",
-    pickrate: "3.0%",
-    winrate: "50.8%",
-    banrate: "0.4%",
-    kda: "2.6/5.8/12",
-    kdapromedio: "2.52",
-  },
-  {
-    nombre: "Master Yi",
-    genero: "Masculino",
-    posiciones: ["Jungla"],
-    especies: ["Humano", "Espiritualista"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Ionia"],
-    lanzamiento: "2009-02-21",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "66.9%",
-    porcentaje_magico: "4.5%",
-    porcentaje_verdadero: "28.5%",
-    precio: " ",
-    pickrate: "5.2%",
-    winrate: "50.0%",
-    banrate: "9.0%",
-    kda: "8.3/6.5/5.3",
-    kdapromedio: "2.09",
-  },
-  {
-    nombre: "Mel",
-    genero: "Femenino",
-    posiciones: ["Mid", "Soporte"],
-    especies: ["Humano", "Magicamente alterado"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Noxus", "Piltover"],
-    lanzamiento: "2025-02-01",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "6.6%",
-    porcentaje_magico: "91.7%",
-    porcentaje_verdadero: "1.6%",
-    precio: " ",
-    pickrate: "10.1%",
-    winrate: "48.1%",
-    banrate: "27.4%",
-    kda: "8/5.8/6.3",
-    kdapromedio: "2.47",
-  },
-  {
-    nombre: "Milio",
-    genero: "Masculino",
-    posiciones: ["Soporte"],
-    especies: ["Humano", "Nacido con magia"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Ixtal"],
-    lanzamiento: "2023-03-23",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "16%",
-    porcentaje_magico: "81.2%",
-    porcentaje_verdadero: "2.8%",
-    precio: " ",
-    pickrate: "6.4%",
-    winrate: "52.2%",
-    banrate: "3.4%",
-    kda: "0.9/4.2/14.4",
-    kdapromedio: "3.64",
-  },
-  {
-    nombre: "Miss Fortune",
-    genero: "Femenino",
-    posiciones: ["Inferior"],
-    especies: ["Humano"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Aguasturbias"],
-    lanzamiento: "2010-09-08",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "91.9%",
-    porcentaje_magico: "5.4%",
-    porcentaje_verdadero: "2.7%",
-    precio: " ",
-    pickrate: "12.0%",
-    winrate: "50.8%",
-    banrate: "3.3%",
-    kda: "7.2/5.9/7.1",
-    kdapromedio: "2.42",
-  },
-  {
-    nombre: "Mordekaiser",
-    genero: "Masculino",
-    posiciones: ["Top"],
-    especies: ["Revenant"],
-    recurso: "Shield",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Noxus", "Islas de las sombras"],
-    lanzamiento: "2010-02-24",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "12.3%",
-    porcentaje_magico: "85.4%",
-    porcentaje_verdadero: "2.4%",
-    precio: " ",
-    pickrate: "7.7%",
-    winrate: "50.7%",
-    banrate: "9.6%",
-    kda: "6.2/5.9/4.7",
-    kdapromedio: "1.85",
-  },
-  {
-    nombre: "Morgana",
-    genero: "Femenino",
-    posiciones: ["Soporte"],
-    especies: ["Humano", "Magicamente alterado", "Aspect"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Demacia", "Targon"],
-    lanzamiento: "2009-02-21",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "6%",
-    porcentaje_magico: "87.9%",
-    porcentaje_verdadero: "6.1%",
-    precio: " ",
-    pickrate: "5.1%",
-    winrate: "50.0%",
-    banrate: "17.6%",
-    kda: "3.2/6.1/12.6",
-    kdapromedio: "2.59",
-  },
-  {
-    nombre: "Naafiri",
-    genero: "Femenino",
-    posiciones: ["Mid"],
-    especies: ["Dog", "Darkin"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Shurima"],
-    lanzamiento: "2023-07-19",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "91.8%",
-    porcentaje_magico: "0.4%",
-    porcentaje_verdadero: "7.9%",
-    precio: " ",
-    pickrate: "9.2%",
-    winrate: "51.4%",
-    banrate: "55.6%",
-    kda: "7.6/5.1/7.1",
-    kdapromedio: "2.88",
-  },
-  {
-    nombre: "Nami",
-    genero: "Femenino",
-    posiciones: ["Soporte"],
-    especies: ["Vastayan"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Runeterra", "Aguasturbias"],
-    lanzamiento: "2012-12-07",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "11.2%",
-    porcentaje_magico: "86.5%",
-    porcentaje_verdadero: "2.3%",
-    precio: " ",
-    pickrate: "11.0%",
-    winrate: "52.0%",
-    banrate: "1.8%",
-    kda: "1.5/5/15.2",
-    kdapromedio: "3.34",
-  },
-  {
-    nombre: "Nasus",
-    genero: "Masculino",
-    posiciones: ["Top"],
-    especies: ["Dios-Warrior"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Shurima"],
-    lanzamiento: "2009-10-01",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "73.2%",
-    porcentaje_magico: "25.2%",
-    porcentaje_verdadero: "1.6%",
-    precio: " ",
-    pickrate: "4.1%",
-    winrate: "50.9%",
-    banrate: "4.1%",
-    kda: "4.8/5.2/5.3",
-    kdapromedio: "1.94",
-  },
-  {
-    nombre: "Nautilus",
-    genero: "Masculino",
-    posiciones: ["Soporte"],
-    especies: ["Revenant"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Aguasturbias"],
-    lanzamiento: "2012-02-14",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "27.6%",
-    porcentaje_magico: "64.2%",
-    porcentaje_verdadero: "8.2%",
-    precio: " ",
-    pickrate: "9.7%",
-    winrate: "49.3%",
-    banrate: "13.1%",
-    kda: "2.1/6.5/13.4",
-    kdapromedio: "2.38",
-  },
-  {
-    nombre: "Neeko",
-    genero: "Femenino",
-    posiciones: ["Mid", "Soporte"],
-    especies: ["Vastayan"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Ixtal"],
-    lanzamiento: "2018-12-05",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "7.5%",
-    porcentaje_magico: "87.8%",
-    porcentaje_verdadero: "4.7%",
-    precio: " ",
-    pickrate: "3.1%",
-    winrate: "49.5%",
-    banrate: "1.1%",
-    kda: "4.1/6/9.7",
-    kdapromedio: "2.30",
-  },
-  {
-    nombre: "Nidalee",
-    genero: "Femenino",
-    posiciones: ["Jungla"],
-    especies: ["Humano", "Espiritualista"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo", "A distancia"],
-    regiones: ["Ixtal"],
-    lanzamiento: "2009-12-17",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "20.4%",
-    porcentaje_magico: "72.6%",
-    porcentaje_verdadero: "7%",
-    precio: " ",
-    pickrate: "4.3%",
-    winrate: "45.5%",
-    banrate: "1.8%",
-    kda: "5.9/5.4/6.8",
-    kdapromedio: "2.35",
-  },
-  {
-    nombre: "Nilah",
-    genero: "Femenino",
-    posiciones: ["Inferior"],
-    especies: ["Humano", "Magicamente alterado"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Aguasturbias"],
-    lanzamiento: "2022-07-13",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "96%",
-    porcentaje_magico: "0.8%",
-    porcentaje_verdadero: "3.2%",
-    precio: " ",
-    pickrate: "1.9%",
-    winrate: "53.4%",
-    banrate: "3.5%",
-    kda: "8.2/6.3/5.8",
-    kdapromedio: "2.22",
-  },
-  {
-    nombre: "Nocturne",
-    genero: "Masculino",
-    posiciones: ["Jungla"],
-    especies: ["Demonio", "Espiritu"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Runeterra"],
-    lanzamiento: "2011-03-15",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "85.9%",
-    porcentaje_magico: "6.5%",
-    porcentaje_verdadero: "7.6%",
-    precio: " ",
-    pickrate: "6.9%",
-    winrate: "52.1%",
-    banrate: "10.5%",
-    kda: "6.7/5.4/8.4",
-    kdapromedio: "2.80",
-  },
-  {
-    nombre: "Nunu Willump",
-    genero: "Masculino",
-    posiciones: ["Jungla"],
-    especies: ["Humano", "Yeti"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Freljord"],
-    lanzamiento: "2009-02-21",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "7.1%",
-    porcentaje_magico: "88%",
-    porcentaje_verdadero: "4.9%",
-    precio: " ",
-    pickrate: "3.3%",
-    winrate: "49.8%",
-    banrate: "0.9%",
-    kda: "5.1/6.1/11.3",
-    kdapromedio: "2.69",
-  },
-  {
-    nombre: "Olaf",
-    genero: "Masculino",
-    posiciones: ["Top"],
-    especies: ["Humano", "Nacido del hielo"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Freljord"],
-    lanzamiento: "2010-06-09",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "72.3%",
-    porcentaje_magico: "0.4%",
-    porcentaje_verdadero: "27.3%",
-    precio: " ",
-    pickrate: "2.0%",
-    winrate: "52.0%",
-    banrate: "1.2%",
-    kda: "6.9/6.2/4.6",
-    kdapromedio: "1.85",
-  },
-  {
-    nombre: "Orianna",
-    genero: "Femenino",
-    posiciones: ["Mid"],
-    especies: ["Golem"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Piltover"],
-    lanzamiento: "2011-06-01",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "6.3%",
-    porcentaje_magico: "92.6%",
-    porcentaje_verdadero: "1.1%",
-    precio: " ",
-    pickrate: "5.7%",
-    winrate: "49.7%",
-    banrate: "1.2%",
-    kda: "4.7/4.8/8.2",
-    kdapromedio: "2.69",
-  },
-  {
-    nombre: "Ornn",
-    genero: "Masculino",
-    posiciones: ["Top"],
-    especies: ["Espiritu", "Dios"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Freljord"],
-    lanzamiento: "2017-08-23",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "34.3%",
-    porcentaje_magico: "64.3%",
-    porcentaje_verdadero: "1.4%",
-    precio: " ",
-    pickrate: "4.2%",
-    winrate: "51.9%",
-    banrate: "0.8%",
-    kda: "3.7/4.8/8.3",
-    kdapromedio: "2.50",
-  },
-  {
-    nombre: "Pantheon",
-    genero: "Masculino",
-    posiciones: ["Top", "Soporte"],
-    especies: ["Humano", "Aspect"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Targon"],
-    lanzamiento: "2010-02-02",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "90.6%",
-    porcentaje_magico: "3.3%",
-    porcentaje_verdadero: "6.1%",
-    precio: " ",
-    pickrate: "9.3%",
-    winrate: "50.0%",
-    banrate: "3.7%",
-    kda: "7.1/6.7/7.7",
-    kdapromedio: "2.21",
-  },
-  {
-    nombre: "Poppy",
-    genero: "Femenino",
-    posiciones: ["Top", "Jungla", "Soporte"],
-    especies: ["Yordle"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Demacia"],
-    lanzamiento: "2010-01-13",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "80.4%",
-    porcentaje_magico: "13.1%",
-    porcentaje_verdadero: "6.5%",
-    precio: " ",
-    pickrate: "5.4%",
-    winrate: "50.5%",
-    banrate: "4.9%",
-    kda: "4.4/5.8/9.5",
-    kdapromedio: "2.40",
-  },
-  {
-    nombre: "Pyke",
-    genero: "Masculino",
-    posiciones: ["Soporte"],
-    especies: ["Revenant"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Aguasturbias"],
-    lanzamiento: "2018-05-31",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "79.6%",
-    porcentaje_magico: "0.2%",
-    porcentaje_verdadero: "20.2%",
-    precio: " ",
-    pickrate: "6.2%",
-    winrate: "48.4%",
-    banrate: "18.9%",
-    kda: "6.4/7.3/9.7",
-    kdapromedio: "2.21",
-  },
-  {
-    nombre: "Qiyana",
-    genero: "Femenino",
-    posiciones: ["Mid"],
-    especies: ["Humano", "Nacido con magia"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Ixtal"],
-    lanzamiento: "2019-06-28",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "83.7%",
-    porcentaje_magico: "8%",
-    porcentaje_verdadero: "8.3%",
-    precio: " ",
-    pickrate: "2.5%",
-    winrate: "49.0%",
-    banrate: "0.6%",
-    kda: "7.9/6.3/5.8",
-    kdapromedio: "2.17",
-  },
-  {
-    nombre: "Quinn",
-    genero: "Femenino",
-    posiciones: ["Top", "Mid"],
-    especies: ["Humano"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Demacia"],
-    lanzamiento: "2013-03-01",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "89.3%",
-    porcentaje_magico: "2.5%",
-    porcentaje_verdadero: "8.2%",
-    precio: " ",
-    pickrate: "2.5%",
-    winrate: "51.0%",
-    banrate: "1.5%",
-    kda: "7.8/7/6.4",
-    kdapromedio: "2.03",
-  },
-  {
-    nombre: "Rakan",
-    genero: "Masculino",
-    posiciones: ["Soporte"],
-    especies: ["Vastayan"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Ionia"],
-    lanzamiento: "2017-04-19",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "19.5%",
-    porcentaje_magico: "71.1%",
-    porcentaje_verdadero: "9.4%",
-    precio: " ",
-    pickrate: "4.9%",
-    winrate: "49.7%",
-    banrate: "0.5%",
-    kda: "1.4/5.4/14.3",
-    kdapromedio: "2.91",
-  },
-  {
-    nombre: "Rammus",
-    genero: "Masculino",
-    posiciones: ["Jungla"],
-    especies: ["Unknown"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Shurima"],
-    lanzamiento: "2009-07-10",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "18.6%",
-    porcentaje_magico: "76.6%",
-    porcentaje_verdadero: "4.8%",
-    precio: " ",
-    pickrate: "1.8%",
-    winrate: "49.7%",
-    banrate: "3.7%",
-    kda: "4.1/5.3/11.4",
-    kdapromedio: "2.92",
-  },
-  {
-    nombre: "Rek'Sai",
-    genero: "Femenino",
-    posiciones: ["Jungla"],
-    especies: ["Ser del vacio"],
-    recurso: "Furia",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Shurima", "El vacio"],
-    lanzamiento: "2014-12-11",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "77.1%",
-    porcentaje_magico: "15.5%",
-    porcentaje_verdadero: "7.3%",
-    precio: " ",
-    pickrate: "1.2%",
-    winrate: "49.5%",
-    banrate: "0.3%",
-    kda: "7/5.2/8.1",
-    kdapromedio: "2.90",
-  },
-  {
-    nombre: "Rell",
-    genero: "Femenino",
-    posiciones: ["Soporte"],
-    especies: ["Humano", "Nacido con magia", "Magicamente alterado"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Noxus"],
-    lanzamiento: "2020-12-10",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "21.6%",
-    porcentaje_magico: "69.5%",
-    porcentaje_verdadero: "8.9%",
-    precio: " ",
-    pickrate: "4.7%",
-    winrate: "50.6%",
-    banrate: "2.2%",
-    kda: "2.1/6.1/15.5",
-    kdapromedio: "2.89",
-  },
-  {
-    nombre: "Renata Glasc",
-    genero: "Femenino",
-    posiciones: ["Soporte"],
-    especies: ["Humano", "Quimicamente alterado"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Zaun"],
-    lanzamiento: "2022-02-17",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "14.8%",
-    porcentaje_magico: "60.9%",
-    porcentaje_verdadero: "24.3%",
-    precio: " ",
-    pickrate: "1.6%",
-    winrate: "49.5%",
-    banrate: "0.3%",
-    kda: "1.7/5.8/14.2",
-    kdapromedio: "2.74",
-  },
-  {
-    nombre: "Renekton",
-    genero: "Masculino",
-    posiciones: ["Top"],
-    especies: ["Dios-Warrior"],
-    recurso: "Fury",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Shurima"],
-    lanzamiento: "2011-01-18",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "80.2%",
-    porcentaje_magico: "17%",
-    porcentaje_verdadero: "2.8%",
-    precio: " ",
-    pickrate: "6.5%",
-    winrate: "50.7%",
-    banrate: "4.0%",
-    kda: "5.7/5.7/5.2",
-    kdapromedio: "1.91",
-  },
-  {
-    nombre: "Rengar",
-    genero: "Masculino",
-    posiciones: ["Jungla"],
-    especies: ["Vastayan"],
-    recurso: "Ferocity",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Ixtal", "Shurima"],
-    lanzamiento: "2012-08-21",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "87.3%",
-    porcentaje_magico: "6.2%",
-    porcentaje_verdadero: "6.6%",
-    precio: " ",
-    pickrate: "2.8%",
-    winrate: "46.4%",
-    banrate: "2.0%",
-    kda: "7.9/6.5/5.8",
-    kdapromedio: "2.11",
-  },
-  {
-    nombre: "Riven",
-    genero: "Femenino",
-    posiciones: ["Top"],
-    especies: ["Humano"],
-    recurso: "Sin mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Ionia", "Noxus"],
-    lanzamiento: "2011-09-14",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "94.6%",
-    porcentaje_magico: "0.2%",
-    porcentaje_verdadero: "5.2%",
-    precio: " ",
-    pickrate: "4.7%",
-    winrate: "50.2%",
-    banrate: "2.3%",
-    kda: "6.6/6/4.6",
-    kdapromedio: "1.87",
-  },
-  {
-    nombre: "Rumble",
-    genero: "Masculino",
-    posiciones: ["Top"],
-    especies: ["Yordle"],
-    recurso: "Heat",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Bandle City"],
-    lanzamiento: "2011-04-26",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "4.6%",
-    porcentaje_magico: "93%",
-    porcentaje_verdadero: "2.4%",
-    precio: " ",
-    pickrate: "2.7%",
-    winrate: "47.5%",
-    banrate: "0.8%",
-    kda: "5.5/6/6.5",
-    kdapromedio: "2.00",
-  },
-  {
-    nombre: "Ryze",
-    genero: "Masculino",
-    posiciones: ["Top", "Mid"],
-    especies: ["Humano", "Magicamente alterado"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Runeterra"],
-    lanzamiento: "2009-02-21",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "4.7%",
-    porcentaje_magico: "94.4%",
-    porcentaje_verdadero: "0.9%",
-    precio: " ",
-    pickrate: "4.6%",
-    winrate: "50.8%",
-    banrate: "0.8%",
-    kda: "5.2/5.2/6.2",
-    kdapromedio: "2.19",
-  },
-  {
-    nombre: "Samira",
-    genero: "Femenino",
-    posiciones: ["Inferior"],
-    especies: ["Humano"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Shurima", "Noxus"],
-    lanzamiento: "2020-09-21",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "86.1%",
-    porcentaje_magico: "10.9%",
-    porcentaje_verdadero: "3%",
-    precio: " ",
-    pickrate: "4.3%",
-    winrate: "49.1%",
-    banrate: "6.0%",
-    kda: "9.7/6.9/5.2",
-    kdapromedio: "2.16",
-  },
-  {
-    nombre: "Sejuani",
-    genero: "Femenino",
-    posiciones: ["Jungla"],
-    especies: ["Humano", "Nacido del hielo"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Freljord"],
-    lanzamiento: "2012-01-17",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "56.5%",
-    porcentaje_magico: "37.8%",
-    porcentaje_verdadero: "5.8%",
-    precio: " ",
-    pickrate: "4.0%",
-    winrate: "48.7%",
-    banrate: "0.5%",
-    kda: "4.3/4.9/10.7",
-    kdapromedio: "3.06",
-  },
-  {
-    nombre: "Senna",
-    genero: "Femenino",
-    posiciones: ["Soporte"],
-    especies: ["Humano", "No muerto"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Islas de las sombras"],
-    lanzamiento: "2019-11-10",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "93.5%",
-    porcentaje_magico: "4%",
-    porcentaje_verdadero: "2.5%",
-    precio: " ",
-    pickrate: "4.8%",
-    winrate: "49.6%",
-    banrate: "1.1%",
-    kda: "3.2/5.9/13.1",
-    kdapromedio: "2.76",
-  },
-  {
-    nombre: "Seraphine",
-    genero: "Femenino",
-    posiciones: ["Soporte"],
-    especies: ["Humano", "Nacido con magia"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Piltover", "Zaun"],
-    lanzamiento: "2020-10-29",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "10.1%",
-    porcentaje_magico: "87.4%",
-    porcentaje_verdadero: "2.5%",
-    precio: " ",
-    pickrate: "4.4%",
-    winrate: "49.4%",
-    banrate: "0.8%",
-    kda: "2.9/5.6/12.5",
-    kdapromedio: "2.75",
-  },
-  {
-    nombre: "Sett",
-    genero: "Masculino",
-    posiciones: ["Top"],
-    especies: ["Humano", "Vastayan"],
-    recurso: "Grit",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Ionia"],
-    lanzamiento: "2020-01-14",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "77.5%",
-    porcentaje_magico: "0.7%",
-    porcentaje_verdadero: "21.8%",
-    precio: " ",
-    pickrate: "8.2%",
-    winrate: "52.1%",
-    banrate: "4.0%",
-    kda: "5.9/6.4/5.1",
-    kdapromedio: "1.72",
-  },
-  {
-    nombre: "Shaco",
-    genero: "Masculino",
-    posiciones: ["Jungla"],
-    especies: ["Espiritu"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Runeterra"],
-    lanzamiento: "2009-10-10",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "35.8%",
-    porcentaje_magico: "52.6%",
-    porcentaje_verdadero: "11.6%",
-    precio: " ",
-    pickrate: "8.2%",
-    winrate: "48.8%",
-    banrate: "24.0%",
-    kda: "7.4/5.9/8.2",
-    kdapromedio: "2.64",
-  },
-  {
-    nombre: "Shen",
-    genero: "Masculino",
-    posiciones: ["Top", "Soporte"],
-    especies: ["Humano", "Espiritualista"],
-    recurso: "Energia",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Ionia"],
-    lanzamiento: "2010-03-24",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "54.7%",
-    porcentaje_magico: "39.8%",
-    porcentaje_verdadero: "5.5%",
-    precio: " ",
-    pickrate: "5.3%",
-    winrate: "49.7%",
-    banrate: "0.9%",
-    kda: "4.3/5/9.8",
-    kdapromedio: "2.82",
-  },
-  {
-    nombre: "Shyvana",
-    genero: "Femenino",
-    posiciones: ["Jungla"],
-    especies: ["Dragon", "Magicamente alterado"],
-    recurso: "Fury",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Demacia"],
-    lanzamiento: "2011-11-01",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "24.3%",
-    porcentaje_magico: "69.2%",
-    porcentaje_verdadero: "6.5%",
-    precio: " ",
-    pickrate: "1.7%",
-    winrate: "50.2%",
-    banrate: "0.3%",
-    kda: "5.7/5.3/6.7",
-    kdapromedio: "2.34",
-  },
-  {
-    nombre: "Singed",
-    genero: "Masculino",
-    posiciones: ["Top"],
-    especies: ["Humano", "Quimicamente alterado"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Zaun", "Piltover"],
-    lanzamiento: "2009-04-18",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "5.7%",
-    porcentaje_magico: "91.8%",
-    porcentaje_verdadero: "2.5%",
-    precio: " ",
-    pickrate: "2.8%",
-    winrate: "52.2%",
-    banrate: "0.8%",
-    kda: "4.4/6.3/7.7",
-    kdapromedio: "1.92",
-  },
-  {
-    nombre: "Sion",
-    genero: "Masculino",
-    posiciones: ["Top"],
-    especies: ["Revenant"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Noxus"],
-    lanzamiento: "2009-02-21",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "64%",
-    porcentaje_magico: "33.8%",
-    porcentaje_verdadero: "2.2%",
-    precio: " ",
-    pickrate: "6.7%",
-    winrate: "49.7%",
-    banrate: "1.3%",
-    kda: "4.3/6.3/6.9",
-    kdapromedio: "1.78",
-  },
-  {
-    nombre: "Sivir",
-    genero: "Femenino",
-    posiciones: ["Inferior"],
-    especies: ["Humano"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Shurima"],
-    lanzamiento: "2009-02-21",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "97.2%",
-    porcentaje_magico: "1.3%",
-    porcentaje_verdadero: "1.6%",
-    precio: " ",
-    pickrate: "4.0%",
-    winrate: "51.7%",
-    banrate: "0.8%",
-    kda: "5.8/5.5/7.9",
-    kdapromedio: "2.49",
-  },
-  {
-    nombre: "Skarner",
-    genero: "Masculino",
-    posiciones: ["Top", "Jungla"],
-    especies: ["Brackern"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Ixtal"],
-    lanzamiento: "2011-08-09",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "58.5%",
-    porcentaje_magico: "36.9%",
-    porcentaje_verdadero: "4.6%",
-    precio: " ",
-    pickrate: "1.6%",
-    winrate: "44.5%",
-    banrate: "1.4%",
-    kda: "4.1/5.2/10.4",
-    kdapromedio: "2.79",
-  },
-  {
-    nombre: "Smolder",
-    genero: "Masculino",
-    posiciones: ["Inferior"],
-    especies: ["Dragon"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Camavor", "Noxus"],
-    lanzamiento: "2024-01-31",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "74.5%",
-    porcentaje_magico: "15.2%",
-    porcentaje_verdadero: "10.4%",
-    precio: " ",
-    pickrate: "6.5%",
-    winrate: "49.4%",
-    banrate: "1.5%",
-    kda: "6.7/6/6.9",
-    kdapromedio: "2.27",
-  },
-  {
-    nombre: "Sona",
-    genero: "Femenino",
-    posiciones: ["Soporte"],
-    especies: ["Humano", "Nacido con magia"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Demacia", "Ionia"],
-    lanzamiento: "2010-09-21",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "18.3%",
-    porcentaje_magico: "79.4%",
-    porcentaje_verdadero: "2.3%",
-    precio: " ",
-    pickrate: "3.3%",
-    winrate: "51.9%",
-    banrate: "0.2%",
-    kda: "2/5.5/14.1",
-    kdapromedio: "2.93",
-  },
-  {
-    nombre: "Soraka",
-    genero: "Femenino",
-    posiciones: ["Soporte"],
-    especies: ["Celestial"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Targon", "Ionia"],
-    lanzamiento: "2009-02-21",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "12.2%",
-    porcentaje_magico: "82.1%",
-    porcentaje_verdadero: "5.7%",
-    precio: " ",
-    pickrate: "5.0%",
-    winrate: "51.3%",
-    banrate: "2.2%",
-    kda: "0.9/5.3/14.4",
-    kdapromedio: "2.89",
-  },
-  {
-    nombre: "Swain",
-    genero: "Masculino",
-    posiciones: ["Soporte"],
-    especies: ["Humano", "Magicamente alterado"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Noxus"],
-    lanzamiento: "2010-10-05",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "7.1%",
-    porcentaje_magico: "89.3%",
-    porcentaje_verdadero: "3.6%",
-    precio: " ",
-    pickrate: "5.2%",
-    winrate: "51.0%",
-    banrate: "2.0%",
-    kda: "4.9/6.2/10.4",
-    kdapromedio: "2.47",
-  },
-  {
-    nombre: "Sylas",
-    genero: "Masculino",
-    posiciones: ["Jungla", "Mid"],
-    especies: ["Humano", "Nacido con magia"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Demacia", "Freljord"],
-    lanzamiento: "2019-01-25",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "3.4%",
-    porcentaje_magico: "92.1%",
-    porcentaje_verdadero: "4.5%",
-    precio: " ",
-    pickrate: "12.4%",
-    winrate: "49.4%",
-    banrate: "11.0%",
-    kda: "6.5/6.4/6.7",
-    kdapromedio: "2.06",
-  },
-  {
-    nombre: "Syndra",
-    genero: "Femenino",
-    posiciones: ["Mid"],
-    especies: ["Humano", "Nacido con magia"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Ionia"],
-    lanzamiento: "2012-09-13",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "4.1%",
-    porcentaje_magico: "88.8%",
-    porcentaje_verdadero: "7.1%",
-    precio: " ",
-    pickrate: "5.1%",
-    winrate: "49.9%",
-    banrate: "3.9%",
-    kda: "6.2/5.5/6.3",
-    kdapromedio: "2.27",
-  },
-  {
-    nombre: "Tahm Kench",
-    genero: "Masculino",
-    posiciones: ["Top", "Soporte"],
-    especies: ["Demonio", "Espiritu"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Aguasturbias", "Runeterra"],
-    lanzamiento: "2015-07-09",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "22.6%",
-    porcentaje_magico: "73.2%",
-    porcentaje_verdadero: "4.1%",
-    precio: " ",
-    pickrate: "3.6%",
-    winrate: "49.5%",
-    banrate: "2.2%",
-    kda: "4.1/5.8/9.6",
-    kdapromedio: "2.36",
-  },
-  {
-    nombre: "Taliyah",
-    genero: "Femenino",
-    posiciones: ["Jungla", "Mid"],
-    especies: ["Humano", "Nacido con magia"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Shurima"],
-    lanzamiento: "2016-05-18",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "4.3%",
-    porcentaje_magico: "93.4%",
-    porcentaje_verdadero: "2.4%",
-    precio: " ",
-    pickrate: "3.5%",
-    winrate: "51.1%",
-    banrate: "0.8%",
-    kda: "5.6/5.8/8.4",
-    kdapromedio: "2.41",
-  },
-  {
-    nombre: "Talon",
-    genero: "Masculino",
-    posiciones: ["Jungla", "Mid"],
-    especies: ["Humano"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Noxus"],
-    lanzamiento: "2011-08-24",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "92.7%",
-    porcentaje_magico: "0.6%",
-    porcentaje_verdadero: "6.7%",
-    precio: " ",
-    pickrate: "6.3%",
-    winrate: "50.5%",
-    banrate: "3.4%",
-    kda: "8.5/5.9/6.3",
-    kdapromedio: "2.51",
-  },
-  {
-    nombre: "Taric",
-    genero: "Masculino",
-    posiciones: ["Soporte"],
-    especies: ["Humano", "Aspect"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Targon", "Demacia"],
-    lanzamiento: "2009-08-19",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "32.4%",
-    porcentaje_magico: "59%",
-    porcentaje_verdadero: "8.6%",
-    precio: " ",
-    pickrate: "1.4%",
-    winrate: "52.1%",
-    banrate: "0.2%",
-    kda: "1.7/5.9/14.5",
-    kdapromedio: "2.75",
-  },
-  {
-    nombre: "Teemo",
-    genero: "Masculino",
-    posiciones: ["Top"],
-    especies: ["Yordle"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Bandle City"],
-    lanzamiento: "2009-02-21",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "12%",
-    porcentaje_magico: "82.1%",
-    porcentaje_verdadero: "5.9%",
-    precio: " ",
-    pickrate: "4.9%",
-    winrate: "50.8%",
-    banrate: "7.5%",
-    kda: "5.2/6.4/6.1",
-    kdapromedio: "1.77",
-  },
-  {
-    nombre: "Thresh",
-    genero: "Masculino",
-    posiciones: ["Soporte"],
-    especies: ["No muerto"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Islas de las sombras"],
-    lanzamiento: "2013-01-23",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "15%",
-    porcentaje_magico: "76.9%",
-    porcentaje_verdadero: "8.1%",
-    precio: " ",
-    pickrate: "13.3%",
-    winrate: "50.8%",
-    banrate: "7.1%",
-    kda: "2.1/6/14.5",
-    kdapromedio: "2.77",
-  },
-  {
-    nombre: "Tristana",
-    genero: "Femenino",
-    posiciones: ["Mid", "Inferior"],
-    especies: ["Yordle"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Bandle City"],
-    lanzamiento: "2009-02-21",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "88.2%",
-    porcentaje_magico: "9.4%",
-    porcentaje_verdadero: "2.3%",
-    precio: " ",
-    pickrate: "10.2%",
-    winrate: "50.6%",
-    banrate: "8.3%",
-    kda: "8/5.6/5.2",
-    kdapromedio: "2.36",
-  },
-  {
-    nombre: "Trundle",
-    genero: "Masculino",
-    posiciones: ["Top", "Jungla"],
-    especies: ["Troll", "Nacido del hielo"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Freljord"],
-    lanzamiento: "2010-12-01",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "84.4%",
-    porcentaje_magico: "12.7%",
-    porcentaje_verdadero: "2.8%",
-    precio: " ",
-    pickrate: "2.9%",
-    winrate: "50.7%",
-    banrate: "0.9%",
-    kda: "5/6.4/5.4",
-    kdapromedio: "1.63",
-  },
-  {
-    nombre: "Tryndamere",
-    genero: "Masculino",
-    posiciones: ["Top"],
-    especies: ["Humano", "Magicamente alterado"],
-    recurso: "Fury",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Freljord"],
-    lanzamiento: "2009-05-01",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "94.1%",
-    porcentaje_magico: "1.7%",
-    porcentaje_verdadero: "4.2%",
-    precio: " ",
-    pickrate: "3.1%",
-    winrate: "49.4%",
-    banrate: "2.2%",
-    kda: "5.6/6/4",
-    kdapromedio: "1.60",
-  },
-  {
-    nombre: "Twisted Fate",
-    genero: "Masculino",
-    posiciones: ["Top", "Mid"],
-    especies: ["Humano", "Nacido con magia"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Aguasturbias"],
-    lanzamiento: "2009-02-21",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "12.4%",
-    porcentaje_magico: "84.5%",
-    porcentaje_verdadero: "3.2%",
-    precio: " ",
-    pickrate: "5.0%",
-    winrate: "49.5%",
-    banrate: "0.6%",
-    kda: "4.5/5.4/8.3",
-    kdapromedio: "2.37",
-  },
-  {
-    nombre: "Twitch",
-    genero: "Masculino",
-    posiciones: ["Inferior"],
-    especies: ["Rat", "Quimicamente alterado"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Zaun"],
-    lanzamiento: "2009-05-01",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "82.8%",
-    porcentaje_magico: "3.6%",
-    porcentaje_verdadero: "13.6%",
-    precio: " ",
-    pickrate: "4.2%",
-    winrate: "50.1%",
-    banrate: "3.5%",
-    kda: "9.4/6.7/6.2",
-    kdapromedio: "2.33",
-  },
-  {
-    nombre: "Udyr",
-    genero: "Masculino",
-    posiciones: ["Jungla"],
-    especies: ["Humano", "Espiritualista"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Freljord", "Ionia"],
-    lanzamiento: "2009-12-02",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "44.2%",
-    porcentaje_magico: "51.1%",
-    porcentaje_verdadero: "4.7%",
-    precio: " ",
-    pickrate: "2.5%",
-    winrate: "49.5%",
-    banrate: "1.2%",
-    kda: "5.5/5.4/7.1",
-    kdapromedio: "2.33",
-  },
-  {
-    nombre: "Urgot",
-    genero: "Masculino",
-    posiciones: ["Top"],
-    especies: ["Humano", "Quimicamente alterado", "Cyborg"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Noxus", "Zaun"],
-    lanzamiento: "2010-08-24",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "90.9%",
-    porcentaje_magico: "0.9%",
-    porcentaje_verdadero: "8.3%",
-    precio: " ",
-    pickrate: "3.2%",
-    winrate: "51.6%",
-    banrate: "1.2%",
-    kda: "6.7/5.8/4.8",
-    kdapromedio: "1.98",
-  },
-  {
-    nombre: "Varus",
-    genero: "Masculino",
-    posiciones: ["Inferior"],
-    especies: ["Darkin", "Humano"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Ionia", "Runeterra", "Shurima"],
-    lanzamiento: "2012-05-08",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "68.5%",
-    porcentaje_magico: "30%",
-    porcentaje_verdadero: "1.5%",
-    precio: " ",
-    pickrate: "10.7%",
-    winrate: "49.1%",
-    banrate: "2.9%",
-    kda: "7/5.9/6.5",
-    kdapromedio: "2.29",
-  },
-  {
-    nombre: "Vayne",
-    genero: "Femenino",
-    posiciones: ["Top", "Inferior"],
-    especies: ["Humano"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Demacia"],
-    lanzamiento: "2011-05-10",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "72.1%",
-    porcentaje_magico: "4.6%",
-    porcentaje_verdadero: "23.3%",
-    precio: " ",
-    pickrate: "7.6%",
-    winrate: "51.2%",
-    banrate: "4.9%",
-    kda: "7.6/6.2/5.2",
-    kdapromedio: "2.06",
-  },
-  {
-    nombre: "Veigar",
-    genero: "Masculino",
-    posiciones: ["Mid"],
-    especies: ["Yordle"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Runeterra", "Bandle City", "Islas de las sombras"],
-    lanzamiento: "2009-07-24",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "3.5%",
-    porcentaje_magico: "94.5%",
-    porcentaje_verdadero: "2%",
-    precio: " ",
-    pickrate: "4.9%",
-    winrate: "50.6%",
-    banrate: "1.3%",
-    kda: "6.3/5.5/6.3",
-    kdapromedio: "2.29",
-  },
-  {
-    nombre: "Vel'Koz",
-    genero: "Masculino",
-    posiciones: ["Mid", "Soporte"],
-    especies: ["Ser del vacio"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["El vacio"],
-    lanzamiento: "2014-02-27",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "2.5%",
-    porcentaje_magico: "72.1%",
-    porcentaje_verdadero: "25.4%",
-    precio: " ",
-    pickrate: "4.6%",
-    winrate: "51.5%",
-    banrate: "1.1%",
-    kda: "5.3/6.2/9.4",
-    kdapromedio: "2.37",
-  },
-  {
-    nombre: "Vex",
-    genero: "Femenino",
-    posiciones: ["Mid"],
-    especies: ["Yordle"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Islas de las sombras", "Bandle City"],
-    lanzamiento: "2021-09-23",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "6.9%",
-    porcentaje_magico: "91.1%",
-    porcentaje_verdadero: "2%",
-    precio: " ",
-    pickrate: "3.1%",
-    winrate: "50.8%",
-    banrate: "3.5%",
-    kda: "6.6/5.9/7.2",
-    kdapromedio: "2.34",
-  },
-  {
-    nombre: "Vi",
-    genero: "Femenino",
-    posiciones: ["Jungla"],
-    especies: ["Humano"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Piltover", "Zaun"],
-    lanzamiento: "2012-12-19",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "92.6%",
-    porcentaje_magico: "0.4%",
-    porcentaje_verdadero: "7%",
-    precio: " ",
-    pickrate: "8.6%",
-    winrate: "49.8%",
-    banrate: "3.2%",
-    kda: "6.1/5.7/8",
-    kdapromedio: "2.47",
-  },
-  {
-    nombre: "Viego",
-    genero: "Masculino",
-    posiciones: ["Jungla"],
-    especies: ["No muerto"],
-    recurso: "Sin mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Islas de las sombras", "Camavor"],
-    lanzamiento: "2021-01-21",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "84.1%",
-    porcentaje_magico: "9.8%",
-    porcentaje_verdadero: "6.1%",
-    precio: " ",
-    pickrate: "11.8%",
-    winrate: "49.3%",
-    banrate: "7.9%",
-    kda: "7.9/5.6/6.2",
-    kdapromedio: "2.52",
-  },
-  {
-    nombre: "Viktor",
-    genero: "Masculino",
-    posiciones: ["Mid"],
-    especies: ["Humano", "Cyborg"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Piltover", "Zaun"],
-    lanzamiento: "2011-12-29",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "3.5%",
-    porcentaje_magico: "95.2%",
-    porcentaje_verdadero: "1.4%",
-    precio: " ",
-    pickrate: "9.8%",
-    winrate: "50.1%",
-    banrate: "6.8%",
-    kda: "4.9/5.1/6.7",
-    kdapromedio: "2.27",
-  },
-  {
-    nombre: "Vladimir",
-    genero: "Masculino",
-    posiciones: ["Top", "Mid"],
-    especies: ["Humano", "Magicamente alterado"],
-    recurso: "Bloodthirst",
-    rango: ["A distancia"],
-    regiones: ["Noxus", "Islas de las sombras", "Camavor"],
-    lanzamiento: "2010-07-27",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "4.6%",
-    porcentaje_magico: "93.6%",
-    porcentaje_verdadero: "1.8%",
-    precio: " ",
-    pickrate: "6.4%",
-    winrate: "50.5%",
-    banrate: "6.2%",
-    kda: "6/5.1/5.3",
-    kdapromedio: "2.22",
-  },
-  {
-    nombre: "Volibear",
-    genero: "Masculino",
-    posiciones: ["Top", "Jungla"],
-    especies: ["Espiritu", "Dios"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Freljord"],
-    lanzamiento: "2011-11-29",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "50%",
-    porcentaje_magico: "46.1%",
-    porcentaje_verdadero: "3.9%",
-    precio: " ",
-    pickrate: "8.4%",
-    winrate: "50.5%",
-    banrate: "4.8%",
-    kda: "5.8/5.9/6.5",
-    kdapromedio: "2.08",
-  },
-  {
-    nombre: "Warwick",
-    genero: "Masculino",
-    posiciones: ["Top", "Jungla"],
-    especies: ["Humano", "Quimicamente alterado", "Cyborg"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Zaun"],
-    lanzamiento: "2009-02-21",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "48.9%",
-    porcentaje_magico: "47.2%",
-    porcentaje_verdadero: "3.9%",
-    precio: " ",
-    pickrate: "6.4%",
-    winrate: "52.3%",
-    banrate: "5.4%",
-    kda: "7.5/6.6/7",
-    kdapromedio: "2.20",
-  },
-  {
-    nombre: "monkeyking",
-    genero: "Masculino",
-    posiciones: ["Top", "Jungla"],
-    especies: ["Vastayan"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Ionia"],
-    lanzamiento: "2011-07-26",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "81.1%",
-    porcentaje_magico: "12.6%",
-    porcentaje_verdadero: "6.3%",
-    precio: " ",
-    pickrate: "4.4%",
-    winrate: "51.1%",
-    banrate: "1.4%",
-    kda: "6.5/5.3/7.2",
-    kdapromedio: "2.58",
-  },
-  {
-    nombre: "Xayah",
-    genero: "Femenino",
-    posiciones: ["Inferior"],
-    especies: ["Vastayan"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Ionia"],
-    lanzamiento: "2017-04-19",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "97.5%",
-    porcentaje_magico: "0.6%",
-    porcentaje_verdadero: "1.8%",
-    precio: " ",
-    pickrate: "5.6%",
-    winrate: "50.5%",
-    banrate: "0.9%",
-    kda: "7/5.6/6.5",
-    kdapromedio: "2.41",
-  },
-  {
-    nombre: "Xerath",
-    genero: "Masculino",
-    posiciones: ["Mid", "Soporte"],
-    especies: ["Dios-Warrior"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Shurima"],
-    lanzamiento: "2011-10-05",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "3.1%",
-    porcentaje_magico: "95.3%",
-    porcentaje_verdadero: "1.6%",
-    precio: " ",
-    pickrate: "7.5%",
-    winrate: "50.4%",
-    banrate: "6.3%",
-    kda: "5.6/5.3/9.4",
-    kdapromedio: "2.83",
-  },
-  {
-    nombre: "Xin Zhao",
-    genero: "Masculino",
-    posiciones: ["Jungla"],
-    especies: ["Humano"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Demacia", "Ionia", "Noxus"],
-    lanzamiento: "2010-07-13",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "88%",
-    porcentaje_magico: "6.8%",
-    porcentaje_verdadero: "5.2%",
-    precio: " ",
-    pickrate: "6.9%",
-    winrate: "51.8%",
-    banrate: "1.6%",
-    kda: "6.2/5.7/8",
-    kdapromedio: "2.49",
-  },
-  {
-    nombre: "Yasuo",
-    genero: "Masculino",
-    posiciones: ["Mid"],
-    especies: ["Humano", "Nacido con magia"],
-    recurso: "Flow",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Ionia"],
-    lanzamiento: "2013-12-13",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "87.4%",
-    porcentaje_magico: "9%",
-    porcentaje_verdadero: "3.6%",
-    precio: " ",
-    pickrate: "13.3%",
-    winrate: "49.6%",
-    banrate: "21.8%",
-    kda: "6/6.9/5.2",
-    kdapromedio: "1.62",
-  },
-  {
-    nombre: "Yone",
-    genero: "Masculino",
-    posiciones: ["Top", "Mid"],
-    especies: ["Humano", "Magicamente alterado"],
-    recurso: "Sin mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Ionia"],
-    lanzamiento: "2020-08-06",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "71.5%",
-    porcentaje_magico: "16.5%",
-    porcentaje_verdadero: "12%",
-    precio: " ",
-    pickrate: "12.5%",
-    winrate: "47.2%",
-    banrate: "9.2%",
-    kda: "5.4/6.6/4.8",
-    kdapromedio: "1.55",
-  },
-  {
-    nombre: "Yorick",
-    genero: "Masculino",
-    posiciones: ["Top"],
-    especies: ["Humano", "Magicamente alterado"],
-    recurso: "Mana",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Islas de las sombras"],
-    lanzamiento: "2011-06-22",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "69.8%",
-    porcentaje_magico: "27.9%",
-    porcentaje_verdadero: "2.3%",
-    precio: " ",
-    pickrate: "7.9%",
-    winrate: "51.9%",
-    banrate: "24.2%",
-    kda: "4.9/5/5.3",
-    kdapromedio: "2.04",
-  },
-  {
-    nombre: "Yuumi",
-    genero: "Femenino",
-    posiciones: ["Soporte"],
-    especies: ["Cat", "Magicamente alterado"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Bandle City"],
-    lanzamiento: "2019-05-14",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "4.1%",
-    porcentaje_magico: "92.4%",
-    porcentaje_verdadero: "3.6%",
-    precio: " ",
-    pickrate: "7.0%",
-    winrate: "49.6%",
-    banrate: "12.7%",
-    kda: "1.3/3.7/15.2",
-    kdapromedio: "4.46",
-  },
-  {
-    nombre: "Zac",
-    genero: "Masculino",
-    posiciones: ["Top", "Jungla"],
-    especies: ["Golem"],
-    recurso: "Health costs",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Zaun"],
-    lanzamiento: "2013-03-29",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "7.4%",
-    porcentaje_magico: "86%",
-    porcentaje_verdadero: "6.6%",
-    precio: " ",
-    pickrate: "4.6%",
-    winrate: "49.7%",
-    banrate: "1.8%",
-    kda: "4.8/4.9/10.4",
-    kdapromedio: "3.10",
-  },
-  {
-    nombre: "Zed",
-    genero: "Masculino",
-    posiciones: ["Mid"],
-    especies: ["Humano", "Magicamente alterado"],
-    recurso: "Energia",
-    rango: ["Cuerpo a cuerpo"],
-    regiones: ["Ionia"],
-    lanzamiento: "2012-11-13",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "89.1%",
-    porcentaje_magico: "5.1%",
-    porcentaje_verdadero: "5.8%",
-    precio: " ",
-    pickrate: "12.5%",
-    winrate: "48.5%",
-    banrate: "24.6%",
-    kda: "8.1/5.8/5.9",
-    kdapromedio: "2.41",
-  },
-  {
-    nombre: "Zeri",
-    genero: "Femenino",
-    posiciones: ["Inferior"],
-    especies: ["Humano", "Nacido con magia"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Zaun"],
-    lanzamiento: "2022-01-20",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "73.2%",
-    porcentaje_magico: "24.4%",
-    porcentaje_verdadero: "2.4%",
-    precio: " ",
-    pickrate: "4.4%",
-    winrate: "49.3%",
-    banrate: "0.6%",
-    kda: "7.3/5.9/6.3",
-    kdapromedio: "2.31",
-  },
-  {
-    nombre: "Ziggs",
-    genero: "Masculino",
-    posiciones: ["Mid", "Inferior"],
-    especies: ["Yordle"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Zaun"],
-    lanzamiento: "2012-02-01",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "3.7%",
-    porcentaje_magico: "95%",
-    porcentaje_verdadero: "1.3%",
-    precio: " ",
-    pickrate: "2.1%",
-    winrate: "48.5%",
-    banrate: "0.4%",
-    kda: "5.2/5.5/8.1",
-    kdapromedio: "2.42",
-  },
-  {
-    nombre: "Zilean",
-    genero: "Masculino",
-    posiciones: ["Soporte"],
-    especies: ["Humano", "Nacido con magia"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Runeterra", "Icathia", "Shurima"],
-    lanzamiento: "2009-04-18",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "12.1%",
-    porcentaje_magico: "82.5%",
-    porcentaje_verdadero: "5.4%",
-    precio: " ",
-    pickrate: "2.7%",
-    winrate: "51.4%",
-    banrate: "0.8%",
-    kda: "2.1/4.7/13.4",
-    kdapromedio: "3.30",
-  },
-  {
-    nombre: "Zoe",
-    genero: "Femenino",
-    posiciones: ["Mid"],
-    especies: ["Humano", "Aspect"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Targon"],
-    lanzamiento: "2017-11-21",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "8.3%",
-    porcentaje_magico: "75.9%",
-    porcentaje_verdadero: "15.8%",
-    precio: " ",
-    pickrate: "4.6%",
-    winrate: "49.9%",
-    banrate: "3.2%",
-    kda: "6.5/5.4/7.4",
-    kdapromedio: "2.57",
-  },
-  {
-    nombre: "Zyra",
-    genero: "Femenino",
-    posiciones: ["Soporte"],
-    especies: ["Unknown"],
-    recurso: "Mana",
-    rango: ["A distancia"],
-    regiones: ["Ixtal"],
-    lanzamiento: "2012-07-24",
-    dureza: " ",
-    rol: " ",
-    cantidad_dano: " ",
-    clase: " ",
-    movilidad: " ",
-    utilidad: " ",
-    control_masas: " ",
-    dificultad: " ",
-    porcentaje_fisico: "5.4%",
-    porcentaje_magico: "89.2%",
-    porcentaje_verdadero: "5.4%",
-    precio: " ",
-    pickrate: "4.8%",
-    winrate: "50.4%",
-    banrate: "3.7%",
-    kda: "3.6/6.1/10.6",
-    kdapromedio: "2.33",
-  },
+    "nombre": "Aatrox",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top"
+    ],
+    "especies": [
+      "Darkin"
+    ],
+    "recurso": "Sin mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Runeterra",
+      "Shurima"
+    ],
+    "lanzamiento": "2013-06-13",
+    "dureza": "3",
+    "rol": [
+      "Coloso"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Luchador",
+      "Tanque"
+    ],
+    "movilidad": "2",
+    "utilidad": "2",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "80.2%",
+    "porcentaje_magico": "17.9%",
+    "porcentaje_verdadero": "1.9%",
+    "precio": "4800",
+    "pickrate": "9.6%",
+    "winrate": "50.1%",
+    "banrate": "11.2%",
+    "kda": "5.6/5.7/5.2",
+    "kdapromedio": "1.89",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Ahri",
+    "genero": "Femenino",
+    "posiciones": [
+      "Mid"
+    ],
+    "especies": [
+      "Vastayan"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Ionia"
+    ],
+    "lanzamiento": "2011-12-14",
+    "dureza": "1",
+    "rol": [
+      "Explosivo"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Mago",
+      "Asesino"
+    ],
+    "movilidad": "3",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "8.9%",
+    "porcentaje_magico": "68.8%",
+    "porcentaje_verdadero": "22.3%",
+    "precio": "3150",
+    "pickrate": "12.1%",
+    "winrate": "50.5%",
+    "banrate": "9.3%",
+    "kda": "5.2/4.6/7.4",
+    "kdapromedio": "2.74",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Akali",
+    "genero": "Femenino",
+    "posiciones": [
+      "Top",
+      "Mid"
+    ],
+    "especies": [
+      "Humano"
+    ],
+    "recurso": "Energia",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Ionia"
+    ],
+    "lanzamiento": "2010-05-11",
+    "dureza": "1",
+    "rol": [
+      "Asesino"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Asesino"
+    ],
+    "movilidad": "3",
+    "utilidad": "1",
+    "control_masas": "1",
+    "dificultad": "2",
+    "porcentaje_fisico": "6.2%",
+    "porcentaje_magico": "88.5%",
+    "porcentaje_verdadero": "5.3%",
+    "precio": "3150",
+    "pickrate": "7.4%",
+    "winrate": "48.9%",
+    "banrate": "8.9%",
+    "kda": "7.8/5.5/4.7",
+    "kdapromedio": "2.27",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Akshan",
+    "genero": "Masculino",
+    "posiciones": [
+      "Mid"
+    ],
+    "especies": [
+      "Humano"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Shurima"
+    ],
+    "lanzamiento": "2021-07-22",
+    "dureza": "1",
+    "rol": [
+      "Tirador",
+      "Asesino"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Tirador",
+      "Asesino"
+    ],
+    "movilidad": "3",
+    "utilidad": "2",
+    "control_masas": "1",
+    "dificultad": "3",
+    "porcentaje_fisico": "79.1%",
+    "porcentaje_magico": "14.5%",
+    "porcentaje_verdadero": "6.4%",
+    "precio": "4800",
+    "pickrate": "2.5%",
+    "winrate": "50.4%",
+    "banrate": "2.4%",
+    "kda": "8.9/6.3/5.4",
+    "kdapromedio": "2.27",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Alistar",
+    "genero": "Masculino",
+    "posiciones": [
+      "Soporte"
+    ],
+    "especies": [
+      "Minotauro"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Runeterra"
+    ],
+    "lanzamiento": "2009-02-21",
+    "dureza": "3",
+    "rol": [
+      "Vanguardia"
+    ],
+    "cantidad_dano": "1",
+    "clase": [
+      "Tanque",
+      "Soporte"
+    ],
+    "movilidad": "1",
+    "utilidad": "2",
+    "control_masas": "3",
+    "dificultad": "1",
+    "porcentaje_fisico": "14.4%",
+    "porcentaje_magico": "76.2%",
+    "porcentaje_verdadero": "9.5%",
+    "precio": "1350",
+    "pickrate": "5.6%",
+    "winrate": "49.6%",
+    "banrate": "2.0%",
+    "kda": "1.7/6.1/13.8",
+    "kdapromedio": "2.54",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Ambessa",
+    "genero": "Femenino",
+    "posiciones": [
+      "Top"
+    ],
+    "especies": [
+      "Humano"
+    ],
+    "recurso": "Energia",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Noxus",
+      "Piltover"
+    ],
+    "lanzamiento": "2024-10-21",
+    "dureza": "1",
+    "rol": [
+      "Explosivo"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Mago",
+      "Asesino"
+    ],
+    "movilidad": "3",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "93.9%",
+    "porcentaje_magico": "2.6%",
+    "porcentaje_verdadero": "3.5%",
+    "precio": "3150",
+    "pickrate": "4.9%",
+    "winrate": "48.2%",
+    "banrate": "10.4%",
+    "kda": "5.6/5.6/5.2",
+    "kdapromedio": "1.93",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Amumu",
+    "genero": "Masculino",
+    "posiciones": [
+      "Jungla"
+    ],
+    "especies": [
+      "No muerto",
+      "Yordle"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Shurima"
+    ],
+    "lanzamiento": "2009-06-26",
+    "dureza": "3",
+    "rol": [
+      "Vanguardia"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Tanque",
+      "Soporte"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "3",
+    "dificultad": "1",
+    "porcentaje_fisico": "8.8%",
+    "porcentaje_magico": "8%",
+    "porcentaje_verdadero": "13.2%",
+    "precio": "450",
+    "pickrate": "4.1%",
+    "winrate": "50.9%",
+    "banrate": "2.5%",
+    "kda": "4.5/6.3/10.6",
+    "kdapromedio": "2.40",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Anivia",
+    "genero": "Femenino",
+    "posiciones": [
+      "Mid"
+    ],
+    "especies": [
+      "Espiritu",
+      "Dios"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Freljord"
+    ],
+    "lanzamiento": "2009-07-10",
+    "dureza": "1",
+    "rol": [
+      "Mago batalla"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Mago",
+      "Soporte"
+    ],
+    "movilidad": "1",
+    "utilidad": "2",
+    "control_masas": "3",
+    "dificultad": "3",
+    "porcentaje_fisico": "7.2%",
+    "porcentaje_magico": "87.4%",
+    "porcentaje_verdadero": "5.3%",
+    "precio": "3150",
+    "pickrate": "3.0%",
+    "winrate": "52.6%",
+    "banrate": "2.0%",
+    "kda": "5.1/4.6/7.6",
+    "kdapromedio": "2.76",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Annie",
+    "genero": "Femenino",
+    "posiciones": [
+      "Mid"
+    ],
+    "especies": [
+      "Humano",
+      "Nacido con magia"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Noxus",
+      "Runeterra"
+    ],
+    "lanzamiento": "2009-02-21",
+    "dureza": "1",
+    "rol": [
+      "Explosivo"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Mago",
+      "Soporte"
+    ],
+    "movilidad": "1",
+    "utilidad": "2",
+    "control_masas": "3",
+    "dificultad": "1",
+    "porcentaje_fisico": "4.4%",
+    "porcentaje_magico": "90.7%",
+    "porcentaje_verdadero": "4.9%",
+    "precio": "450",
+    "pickrate": "2.2%",
+    "winrate": "48.0%",
+    "banrate": "0.7%",
+    "kda": "5.4/6.3/8.1",
+    "kdapromedio": "2.14",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Aphelios",
+    "genero": "Masculino",
+    "posiciones": [
+      "Inferior"
+    ],
+    "especies": [
+      "Humano",
+      "Espiritualista"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Targon"
+    ],
+    "lanzamiento": "2019-12-11",
+    "dureza": "1",
+    "rol": [
+      "Tirador"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Tirador"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "3",
+    "porcentaje_fisico": "93.9%",
+    "porcentaje_magico": "4%",
+    "porcentaje_verdadero": "2.1%",
+    "precio": "4800",
+    "pickrate": "5.3%",
+    "winrate": "49.5%",
+    "banrate": "1.4%",
+    "kda": "7.3/6.4/5.2",
+    "kdapromedio": "1.95",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Ashe",
+    "genero": "Femenino",
+    "posiciones": [
+      "Inferior"
+    ],
+    "especies": [
+      "Humano",
+      "Nacido del hielo"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Freljord"
+    ],
+    "lanzamiento": "2009-02-21",
+    "dureza": "1",
+    "rol": [
+      "Tirador"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Tirador",
+      "Soporte"
+    ],
+    "movilidad": "1",
+    "utilidad": "2",
+    "control_masas": "3",
+    "dificultad": "1",
+    "porcentaje_fisico": "86.8%",
+    "porcentaje_magico": "11.1%",
+    "porcentaje_verdadero": "2.1%",
+    "precio": "450",
+    "pickrate": "9.3%",
+    "winrate": "48.9%",
+    "banrate": "3.0%",
+    "kda": "5.4/6.3/8.8",
+    "kdapromedio": "2.25",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Aurelion Sol",
+    "genero": "Masculino",
+    "posiciones": [
+      "Mid"
+    ],
+    "especies": [
+      "Celestial",
+      "Dragon"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Runeterra",
+      "Targon"
+    ],
+    "lanzamiento": "2016-03-24",
+    "dureza": "1",
+    "rol": [
+      "Mago batalla"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Mago"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "3",
+    "porcentaje_fisico": "1.3%",
+    "porcentaje_magico": "96.2%",
+    "porcentaje_verdadero": "2.5%",
+    "precio": "4800",
+    "pickrate": "2.7%",
+    "winrate": "50.2%",
+    "banrate": "1.0%",
+    "kda": "6.7/5.7/7.9",
+    "kdapromedio": "2.56",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Aurora",
+    "genero": "Femenino",
+    "posiciones": [
+      "Mid",
+      "Top"
+    ],
+    "especies": [
+      "Vastayan"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Freljord"
+    ],
+    "lanzamiento": "2024-07-17",
+    "dureza": "1",
+    "rol": [
+      "Mago",
+      "Asesino"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Mago",
+      "Asesino"
+    ],
+    "movilidad": "3",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "6.9%",
+    "porcentaje_magico": "89.7%",
+    "porcentaje_verdadero": "3.5%",
+    "precio": "7800",
+    "pickrate": "3.8%",
+    "winrate": "47.8%",
+    "banrate": "4.8%",
+    "kda": "6/5.3/6.5",
+    "kdapromedio": "2.36",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Azir",
+    "genero": "Masculino",
+    "posiciones": [
+      "Mid"
+    ],
+    "especies": [
+      "Dios-Warrior"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Shurima"
+    ],
+    "lanzamiento": "2014-09-16",
+    "dureza": "1",
+    "rol": [
+      "Especialista"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Tirador",
+      "Mago"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "3",
+    "porcentaje_fisico": "3.3%",
+    "porcentaje_magico": "95%",
+    "porcentaje_verdadero": "1.7%",
+    "precio": "4800",
+    "pickrate": "3.9%",
+    "winrate": "47.3%",
+    "banrate": "0.7%",
+    "kda": "5.1/5.6/5.8",
+    "kdapromedio": "1.95",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Bard",
+    "genero": "Masculino",
+    "posiciones": [
+      "Soporte"
+    ],
+    "especies": [
+      "Celestial"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Runeterra"
+    ],
+    "lanzamiento": "2015-03-12",
+    "dureza": "1",
+    "rol": [
+      "Captura"
+    ],
+    "cantidad_dano": "1",
+    "clase": [
+      "Soporte",
+      "Mago"
+    ],
+    "movilidad": "2",
+    "utilidad": "3",
+    "control_masas": "3",
+    "dificultad": "3",
+    "porcentaje_fisico": "27.6%",
+    "porcentaje_magico": "62.6%",
+    "porcentaje_verdadero": "9.8%",
+    "precio": "4800",
+    "pickrate": "3.5%",
+    "winrate": "50.1%",
+    "banrate": "0.7%",
+    "kda": "3.1/5.6/13.7",
+    "kdapromedio": "3.00",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Bel'Veth",
+    "genero": "Femenino",
+    "posiciones": [
+      "Jungla"
+    ],
+    "especies": [
+      "Ser del vacio"
+    ],
+    "recurso": "Sin mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "El vacio"
+    ],
+    "lanzamiento": "2022-06-09",
+    "dureza": "1",
+    "rol": [
+      "Duelista"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Luchador"
+    ],
+    "movilidad": "3",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "70.3%",
+    "porcentaje_magico": "11.7%",
+    "porcentaje_verdadero": "18%",
+    "precio": "3150",
+    "pickrate": "1.7%",
+    "winrate": "49.3%",
+    "banrate": "2.4%",
+    "kda": "6.8/5.4/6.2",
+    "kdapromedio": "2.41",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Blitzcrank",
+    "genero": "Otro",
+    "posiciones": [
+      "Soporte"
+    ],
+    "especies": [
+      "Golem"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Zaun"
+    ],
+    "lanzamiento": "2009-09-02",
+    "dureza": "2",
+    "rol": [
+      "Captura"
+    ],
+    "cantidad_dano": "1",
+    "clase": [
+      "Tanque",
+      "Soporte"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "3",
+    "dificultad": "1",
+    "porcentaje_fisico": "29.6%",
+    "porcentaje_magico": "61.3%",
+    "porcentaje_verdadero": "9.2%",
+    "precio": "1350",
+    "pickrate": "5.8%",
+    "winrate": "49.3%",
+    "banrate": "17.0%",
+    "kda": "2.1/6.2/13.5",
+    "kdapromedio": "2.52",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Brand",
+    "genero": "Masculino",
+    "posiciones": [
+      "Jungla",
+      "Mid",
+      "Soporte"
+    ],
+    "especies": [
+      "Humano",
+      "Magicamente alterado"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Freljord",
+      "Runeterra"
+    ],
+    "lanzamiento": "2011-04-12",
+    "dureza": "1",
+    "rol": [
+      "Explosivo"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Mago",
+      "Soporte"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "4%",
+    "porcentaje_magico": "91.8%",
+    "porcentaje_verdadero": "4.3%",
+    "precio": "450",
+    "pickrate": "4.9%",
+    "winrate": "49.1%",
+    "banrate": "2.9%",
+    "kda": "4.9/6.9/9.2",
+    "kdapromedio": "2.04",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Braum",
+    "genero": "Masculino",
+    "posiciones": [
+      "Soporte"
+    ],
+    "especies": [
+      "Humano",
+      "Nacido del hielo"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Freljord"
+    ],
+    "lanzamiento": "2014-05-12",
+    "dureza": "2",
+    "rol": [
+      "Guardian"
+    ],
+    "cantidad_dano": "1",
+    "clase": [
+      "Tanque",
+      "Soporte"
+    ],
+    "movilidad": "1",
+    "utilidad": "2",
+    "control_masas": "3",
+    "dificultad": "2",
+    "porcentaje_fisico": "18.7%",
+    "porcentaje_magico": "74.5%",
+    "porcentaje_verdadero": "6.8%",
+    "precio": "3150",
+    "pickrate": "6.7%",
+    "winrate": "52.2%",
+    "banrate": "5.6%",
+    "kda": "1.4/5.4/14.9",
+    "kdapromedio": "3.02",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Briar",
+    "genero": "Femenino",
+    "posiciones": [
+      "Jungla"
+    ],
+    "especies": [
+      "Golem"
+    ],
+    "recurso": "Health costs",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Noxus"
+    ],
+    "lanzamiento": "2023-09-14",
+    "dureza": "2",
+    "rol": [
+      "Iniciador"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Luchador",
+      "Asesino"
+    ],
+    "movilidad": "3",
+    "utilidad": "1",
+    "control_masas": "3",
+    "dificultad": "2",
+    "porcentaje_fisico": "72.7%",
+    "porcentaje_magico": "20.6%",
+    "porcentaje_verdadero": "6.7%",
+    "precio": "6300",
+    "pickrate": "3.3%",
+    "winrate": "50.5%",
+    "banrate": "3.7%",
+    "kda": "8/7.1/7.3",
+    "kdapromedio": "2.15",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Caitlyn",
+    "genero": "Femenino",
+    "posiciones": [
+      "Inferior"
+    ],
+    "especies": [
+      "Humano"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Piltover"
+    ],
+    "lanzamiento": "2011-01-04",
+    "dureza": "1",
+    "rol": [
+      "Tirador"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Tirador"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "1",
+    "porcentaje_fisico": "94%",
+    "porcentaje_magico": "3.3%",
+    "porcentaje_verdadero": "2.7%",
+    "precio": "450",
+    "pickrate": "15.2%",
+    "winrate": "49.2%",
+    "banrate": "18.3%",
+    "kda": "7/6.2/5.9",
+    "kdapromedio": "2.08",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Camille",
+    "genero": "Femenino",
+    "posiciones": [
+      "Top"
+    ],
+    "especies": [
+      "Humano",
+      "Cyborg"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Piltover"
+    ],
+    "lanzamiento": "2016-12-07",
+    "dureza": "2",
+    "rol": [
+      "Iniciador"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Luchador",
+      "Asesino"
+    ],
+    "movilidad": "3",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "3",
+    "porcentaje_fisico": "62.3%",
+    "porcentaje_magico": "5.8%",
+    "porcentaje_verdadero": "31.9%",
+    "precio": "4800",
+    "pickrate": "3.7%",
+    "winrate": "49.3%",
+    "banrate": "1.6%",
+    "kda": "6.1/6.2/5.7",
+    "kdapromedio": "1.90",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Cassiopeia",
+    "genero": "Femenino",
+    "posiciones": [
+      "Top",
+      "Mid"
+    ],
+    "especies": [
+      "Humano",
+      "Magicamente alterado"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Noxus",
+      "Shurima"
+    ],
+    "lanzamiento": "2010-12-14",
+    "dureza": "1",
+    "rol": [
+      "Mago batalla"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Mago"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "3",
+    "dificultad": "3",
+    "porcentaje_fisico": "2.2%",
+    "porcentaje_magico": "96.9%",
+    "porcentaje_verdadero": "0.9%",
+    "precio": "4800",
+    "pickrate": "2.2%",
+    "winrate": "52.1%",
+    "banrate": "2.0%",
+    "kda": "6.1/5.9/5.8",
+    "kdapromedio": "2.02",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Cho'Gath",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top"
+    ],
+    "especies": [
+      "Ser del vacio"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "El vacio"
+    ],
+    "lanzamiento": "2009-06-26",
+    "dureza": "3",
+    "rol": [
+      "Especialista"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Tanque",
+      "Mago"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "1",
+    "porcentaje_fisico": "16.4%",
+    "porcentaje_magico": "63.6%",
+    "porcentaje_verdadero": "20%",
+    "precio": "1350",
+    "pickrate": "5.4%",
+    "winrate": "50.7%",
+    "banrate": "2.1%",
+    "kda": "6.1/5.7/6.1",
+    "kdapromedio": "2.14",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Corki",
+    "genero": "Masculino",
+    "posiciones": [
+      "Mid"
+    ],
+    "especies": [
+      "Yordle"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Bandle City",
+      "Piltover"
+    ],
+    "lanzamiento": "2009-09-19",
+    "dureza": "1",
+    "rol": [
+      "Tirador"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Tirador",
+      "Mago"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "1",
+    "dificultad": "2",
+    "porcentaje_fisico": "63.6%",
+    "porcentaje_magico": "23.2%",
+    "porcentaje_verdadero": "13.2%",
+    "precio": "3150",
+    "pickrate": "3.5%",
+    "winrate": "48.1%",
+    "banrate": "1.1%",
+    "kda": "6.8/5.7/6.7",
+    "kdapromedio": "2.37",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Darius",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top"
+    ],
+    "especies": [
+      "Humano"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Noxus"
+    ],
+    "lanzamiento": "2012-05-23",
+    "dureza": "2",
+    "rol": [
+      "Coloso"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Luchador",
+      "Tanque"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "78.1%",
+    "porcentaje_magico": "0.4%",
+    "porcentaje_verdadero": "21.4%",
+    "precio": "450",
+    "pickrate": "9.7%",
+    "winrate": "49.4%",
+    "banrate": "23.8%",
+    "kda": "6.9/6.2/4.5",
+    "kdapromedio": "1.84",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Diana",
+    "genero": "Femenino",
+    "posiciones": [
+      "Jungla",
+      "Mid"
+    ],
+    "especies": [
+      "Humano",
+      "Aspect"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Targon"
+    ],
+    "lanzamiento": "2012-08-07",
+    "dureza": "2",
+    "rol": [
+      "Asesino",
+      "Iniciador"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Luchador",
+      "Asesino"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "1",
+    "porcentaje_fisico": "11.1%",
+    "porcentaje_magico": "82.9%",
+    "porcentaje_verdadero": "6%",
+    "precio": "450",
+    "pickrate": "8.1%",
+    "winrate": "50.7%",
+    "banrate": "3.6%",
+    "kda": "7.2/6.3/6.6",
+    "kdapromedio": "2.19",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Dr. Mundo",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top"
+    ],
+    "especies": [
+      "Humano",
+      "Quimicamente alterado"
+    ],
+    "recurso": "Health costs",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Zaun"
+    ],
+    "lanzamiento": "2009-09-02",
+    "dureza": "3",
+    "rol": [
+      "Coloso"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Tanque",
+      "Luchador"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "1",
+    "dificultad": "1",
+    "porcentaje_fisico": "43.9%",
+    "porcentaje_magico": "53.9%",
+    "porcentaje_verdadero": "2.2%",
+    "precio": "450",
+    "pickrate": "4.4%",
+    "winrate": "51.8%",
+    "banrate": "2.4%",
+    "kda": "4.4/4.9/6.3",
+    "kdapromedio": "2.18",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Draven",
+    "genero": "Masculino",
+    "posiciones": [
+      "Inferior"
+    ],
+    "especies": [
+      "Humano"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Noxus"
+    ],
+    "lanzamiento": "2012-06-06",
+    "dureza": "1",
+    "rol": [
+      "Tirador"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Tirador"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "1",
+    "dificultad": "2",
+    "porcentaje_fisico": "97.5%",
+    "porcentaje_magico": "0.5%",
+    "porcentaje_verdadero": "2%",
+    "precio": "4800",
+    "pickrate": "4.6%",
+    "winrate": "48.6%",
+    "banrate": "15.6%",
+    "kda": "8.1/6.8/5.3",
+    "kdapromedio": "1.97",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Ekko",
+    "genero": "Masculino",
+    "posiciones": [
+      "Jungla",
+      "Mid"
+    ],
+    "especies": [
+      "Humano"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Zaun"
+    ],
+    "lanzamiento": "2015-05-29",
+    "dureza": "2",
+    "rol": [
+      "Asesino"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Asesino",
+      "Mago"
+    ],
+    "movilidad": "3",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "3",
+    "porcentaje_fisico": "12%",
+    "porcentaje_magico": "79.2%",
+    "porcentaje_verdadero": "8.8%",
+    "precio": "3150",
+    "pickrate": "6.4%",
+    "winrate": "50.3%",
+    "banrate": "1.3%",
+    "kda": "7.7/5.6/6.4",
+    "kdapromedio": "2.52",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Elise",
+    "genero": "Femenino",
+    "posiciones": [
+      "Jungla"
+    ],
+    "especies": [
+      "Humano",
+      "Magicamente alterado"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo",
+      "A distancia"
+    ],
+    "regiones": [
+      "Islas de las sombras",
+      "Noxus"
+    ],
+    "lanzamiento": "2012-10-26",
+    "dureza": "2",
+    "rol": [
+      "Iniciador"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Asesino",
+      "Mago"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "8.2%",
+    "porcentaje_magico": "84.2%",
+    "porcentaje_verdadero": "7.7%",
+    "precio": "4800",
+    "pickrate": "4.8%",
+    "winrate": "50.4%",
+    "banrate": "5.3%",
+    "kda": "6.9/6.2/8",
+    "kdapromedio": "2.40",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Evelynn",
+    "genero": "Femenino",
+    "posiciones": [
+      "Jungla"
+    ],
+    "especies": [
+      "Demonio",
+      "Espiritu"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Runeterra"
+    ],
+    "lanzamiento": "2009-05-01",
+    "dureza": "2",
+    "rol": [
+      "Asesino"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Asesino",
+      "Mago"
+    ],
+    "movilidad": "2",
+    "utilidad": "2",
+    "control_masas": "1",
+    "dificultad": "2",
+    "porcentaje_fisico": "3.2%",
+    "porcentaje_magico": "90.2%",
+    "porcentaje_verdadero": "6.6%",
+    "precio": "1350",
+    "pickrate": "2.4%",
+    "winrate": "48.4%",
+    "banrate": "2.8%",
+    "kda": "8.6/5.5/6.7",
+    "kdapromedio": "2.78",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Ezreal",
+    "genero": "Masculino",
+    "posiciones": [
+      "Inferior"
+    ],
+    "especies": [
+      "Humano",
+      "Nacido con magia"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Piltover"
+    ],
+    "lanzamiento": "2010-03-16",
+    "dureza": "1",
+    "rol": [
+      "Tirador"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Tirador",
+      "Mago"
+    ],
+    "movilidad": "3",
+    "utilidad": "1",
+    "control_masas": "1",
+    "dificultad": "1",
+    "porcentaje_fisico": "68.1%",
+    "porcentaje_magico": "29.6%",
+    "porcentaje_verdadero": "2.3%",
+    "precio": "1350",
+    "pickrate": "18.3%",
+    "winrate": "47.2%",
+    "banrate": "7.3%",
+    "kda": "6.6/5.4/6.6",
+    "kdapromedio": "2.44",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Fiddlesticks",
+    "genero": "Otro",
+    "posiciones": [
+      "Jungla"
+    ],
+    "especies": [
+      "Demonio",
+      "Espiritu"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Runeterra"
+    ],
+    "lanzamiento": "2009-02-21",
+    "dureza": "1",
+    "rol": [
+      "Especialista"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Mago",
+      "Soporte"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "3",
+    "dificultad": "2",
+    "porcentaje_fisico": "1.8%",
+    "porcentaje_magico": "93.3%",
+    "porcentaje_verdadero": "4.8%",
+    "precio": "1350",
+    "pickrate": "4.6%",
+    "winrate": "52.0%",
+    "banrate": "2.3%",
+    "kda": "5.1/5.9/9.9",
+    "kdapromedio": "2.54",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Fiora",
+    "genero": "Femenino",
+    "posiciones": [
+      "Top"
+    ],
+    "especies": [
+      "Humano"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Demacia"
+    ],
+    "lanzamiento": "2012-02-29",
+    "dureza": "2",
+    "rol": [
+      "Duelista"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Luchador",
+      "Asesino"
+    ],
+    "movilidad": "2",
+    "utilidad": "2",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "62.1%",
+    "porcentaje_magico": "7.1%",
+    "porcentaje_verdadero": "30.8%",
+    "precio": "4800",
+    "pickrate": "4.3%",
+    "winrate": "50.9%",
+    "banrate": "5.3%",
+    "kda": "5.5/6.2/4",
+    "kdapromedio": "1.53",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Fizz",
+    "genero": "Masculino",
+    "posiciones": [
+      "Mid"
+    ],
+    "especies": [
+      "Yordle"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Aguasturbias"
+    ],
+    "lanzamiento": "2011-11-15",
+    "dureza": "1",
+    "rol": [
+      "Asesino"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Asesino",
+      "Luchador"
+    ],
+    "movilidad": "3",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "12.8%",
+    "porcentaje_magico": "77.8%",
+    "porcentaje_verdadero": "9.4%",
+    "precio": "1350",
+    "pickrate": "2.9%",
+    "winrate": "49.4%",
+    "banrate": "3.8%",
+    "kda": "8.3/6.1/5.5",
+    "kdapromedio": "2.26",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Galio",
+    "genero": "Masculino",
+    "posiciones": [
+      "Mid"
+    ],
+    "especies": [
+      "Golem"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Demacia"
+    ],
+    "lanzamiento": "2010-08-10",
+    "dureza": "3",
+    "rol": [
+      "Guardian"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Tanque",
+      "Mago"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "3",
+    "dificultad": "2",
+    "porcentaje_fisico": "2.7%",
+    "porcentaje_magico": "94.6%",
+    "porcentaje_verdadero": "2.8%",
+    "precio": "3150",
+    "pickrate": "5.9%",
+    "winrate": "51.2%",
+    "banrate": "3.0%",
+    "kda": "4/5.2/10",
+    "kdapromedio": "2.69",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Gangplank",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top"
+    ],
+    "especies": [
+      "Humano"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Aguasturbias"
+    ],
+    "lanzamiento": "2009-08-19",
+    "dureza": "1",
+    "rol": [
+      "Especialista"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Luchador"
+    ],
+    "movilidad": "1",
+    "utilidad": "2",
+    "control_masas": "1",
+    "dificultad": "3",
+    "porcentaje_fisico": "67.9%",
+    "porcentaje_magico": "15.3%",
+    "porcentaje_verdadero": "16.8%",
+    "precio": "3150",
+    "pickrate": "4.7%",
+    "winrate": "49.3%",
+    "banrate": "2.7%",
+    "kda": "6/5.7/5.9",
+    "kdapromedio": "2.09",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Garen",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top"
+    ],
+    "especies": [
+      "Humano"
+    ],
+    "recurso": "Sin mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Demacia"
+    ],
+    "lanzamiento": "2010-04-27",
+    "dureza": "3",
+    "rol": [
+      "Coloso"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Luchador",
+      "Tanque"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "1",
+    "dificultad": "1",
+    "porcentaje_fisico": "74%",
+    "porcentaje_magico": "0.5%",
+    "porcentaje_verdadero": "25.5%",
+    "precio": "450",
+    "pickrate": "6.5%",
+    "winrate": "50.2%",
+    "banrate": "6.0%",
+    "kda": "6.3/5.3/4.1",
+    "kdapromedio": "1.96",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Gnar",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top"
+    ],
+    "especies": [
+      "Yordle"
+    ],
+    "recurso": "Furia",
+    "rango": [
+      "Cuerpo a cuerpo",
+      "A distancia"
+    ],
+    "regiones": [
+      "Freljord"
+    ],
+    "lanzamiento": "2014-08-14",
+    "dureza": "4",
+    "rol": [
+      "Especialista",
+      "Vanguardia"
+    ],
+    "cantidad_dano": "4",
+    "clase": [
+      "Luchador",
+      "Tanque",
+      "Luchador",
+      "Tanque"
+    ],
+    "movilidad": "3",
+    "utilidad": "2",
+    "control_masas": "3",
+    "dificultad": "3",
+    "porcentaje_fisico": "80.6%",
+    "porcentaje_magico": "17.8%",
+    "porcentaje_verdadero": "1.6%",
+    "precio": "4800",
+    "pickrate": "4.2%",
+    "winrate": "49.0%",
+    "banrate": "1.3%",
+    "kda": "4.9/5.7/5.9",
+    "kdapromedio": "1.89",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Gragas",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top",
+      "Jungla"
+    ],
+    "especies": [
+      "Humano",
+      "Nacido del hielo"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Freljord"
+    ],
+    "lanzamiento": "2010-02-02",
+    "dureza": "3",
+    "rol": [
+      "Vanguardia"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Luchador",
+      "Mago"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "3",
+    "dificultad": "2",
+    "porcentaje_fisico": "8.6%",
+    "porcentaje_magico": "88%",
+    "porcentaje_verdadero": "3.4%",
+    "precio": "3150",
+    "pickrate": "5.2%",
+    "winrate": "50.0%",
+    "banrate": "1.7%",
+    "kda": "5/5.2/7.2",
+    "kdapromedio": "2.35",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Graves",
+    "genero": "Masculino",
+    "posiciones": [
+      "Jungla"
+    ],
+    "especies": [
+      "Humano"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Aguasturbias"
+    ],
+    "lanzamiento": "2011-10-19",
+    "dureza": "2",
+    "rol": [
+      "Especialista"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Tirador"
+    ],
+    "movilidad": "2",
+    "utilidad": "2",
+    "control_masas": "1",
+    "dificultad": "2",
+    "porcentaje_fisico": "86%",
+    "porcentaje_magico": "3.9%",
+    "porcentaje_verdadero": "10.1%",
+    "precio": "4800",
+    "pickrate": "6.4%",
+    "winrate": "49.2%",
+    "banrate": "4.1%",
+    "kda": "8/6/6.4",
+    "kdapromedio": "2.40",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Gwen",
+    "genero": "Femenino",
+    "posiciones": [
+      "Top"
+    ],
+    "especies": [
+      "Humano",
+      "Magicamente alterado"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Islas de las sombras",
+      "Camavor"
+    ],
+    "lanzamiento": "2021-04-15",
+    "dureza": "2",
+    "rol": [
+      "Duelista"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Luchador",
+      "Asesino"
+    ],
+    "movilidad": "3",
+    "utilidad": "1",
+    "control_masas": "1",
+    "dificultad": "2",
+    "porcentaje_fisico": "14.4%",
+    "porcentaje_magico": "69.5%",
+    "porcentaje_verdadero": "16.1%",
+    "precio": "4800",
+    "pickrate": "8.9%",
+    "winrate": "50.7%",
+    "banrate": "25.2%",
+    "kda": "6.6/5.8/5.1",
+    "kdapromedio": "2.02",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Hecarim",
+    "genero": "Masculino",
+    "posiciones": [
+      "Jungla"
+    ],
+    "especies": [
+      "No muerto"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Islas de las sombras",
+      "Camavor"
+    ],
+    "lanzamiento": "2012-04-18",
+    "dureza": "2",
+    "rol": [
+      "Iniciador"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Luchador",
+      "Tanque"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "80.8%",
+    "porcentaje_magico": "14.9%",
+    "porcentaje_verdadero": "4.3%",
+    "precio": "4800",
+    "pickrate": "4.2%",
+    "winrate": "49.0%",
+    "banrate": "2.6%",
+    "kda": "7/5.5/7.9",
+    "kdapromedio": "2.71",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Hwei",
+    "genero": "Masculino",
+    "posiciones": [
+      "Mid",
+      "Soporte"
+    ],
+    "especies": [
+      "Humano",
+      "Nacido con magia"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Ionia"
+    ],
+    "lanzamiento": "2023-12-05",
+    "dureza": "1",
+    "rol": [
+      "Largo alcance"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Mago",
+      "Soporte"
+    ],
+    "movilidad": "1",
+    "utilidad": "2",
+    "control_masas": "3",
+    "dificultad": "3",
+    "porcentaje_fisico": "4.4%",
+    "porcentaje_magico": "94.5%",
+    "porcentaje_verdadero": "1.1%",
+    "precio": "6300",
+    "pickrate": "6.1%",
+    "winrate": "50.7%",
+    "banrate": "3.7%",
+    "kda": "5.2/5.4/8",
+    "kdapromedio": "2.44",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Heimerdinger",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top",
+      "Mid"
+    ],
+    "especies": [
+      "Yordle"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Piltover"
+    ],
+    "lanzamiento": "2009-10-10",
+    "dureza": "1",
+    "rol": [
+      "Especialista"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Mago",
+      "Soporte"
+    ],
+    "movilidad": "1",
+    "utilidad": "2",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "4.4%",
+    "porcentaje_magico": "94%",
+    "porcentaje_verdadero": "1.6%",
+    "precio": "3150",
+    "pickrate": "2.0%",
+    "winrate": "51.4%",
+    "banrate": "1.7%",
+    "kda": "4.7/6.1/6",
+    "kdapromedio": "1.75",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Illaoi",
+    "genero": "Femenino",
+    "posiciones": [
+      "Top"
+    ],
+    "especies": [
+      "Humano",
+      "Espiritualista"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Aguasturbias"
+    ],
+    "lanzamiento": "2015-11-24",
+    "dureza": "2",
+    "rol": [
+      "Coloso"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Luchador",
+      "Tanque"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "1",
+    "dificultad": "2",
+    "porcentaje_fisico": "95.5%",
+    "porcentaje_magico": "3.3%",
+    "porcentaje_verdadero": "1.2%",
+    "precio": "3150",
+    "pickrate": "2.3%",
+    "winrate": "49.9%",
+    "banrate": "5.1%",
+    "kda": "4.9/6.5/4.3",
+    "kdapromedio": "1.42",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Irelia",
+    "genero": "Femenino",
+    "posiciones": [
+      "Top",
+      "Mid"
+    ],
+    "especies": [
+      "Humano",
+      "Espiritualista"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Ionia"
+    ],
+    "lanzamiento": "2010-11-16",
+    "dureza": "2",
+    "rol": [
+      "Iniciador"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Luchador",
+      "Asesino"
+    ],
+    "movilidad": "3",
+    "utilidad": "2",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "73.2%",
+    "porcentaje_magico": "24.3%",
+    "porcentaje_verdadero": "2.4%",
+    "precio": "3150",
+    "pickrate": "6.7%",
+    "winrate": "49.9%",
+    "banrate": "13.3%",
+    "kda": "6.5/7/4.2",
+    "kdapromedio": "1.53",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Ivern",
+    "genero": "Masculino",
+    "posiciones": [
+      "Jungla"
+    ],
+    "especies": [
+      "Humano",
+      "Magicamente alterado"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Ionia",
+      "Freljord"
+    ],
+    "lanzamiento": "2016-10-05",
+    "dureza": "1",
+    "rol": [
+      "Captura"
+    ],
+    "cantidad_dano": "1",
+    "clase": [
+      "Soporte",
+      "Mago"
+    ],
+    "movilidad": "2",
+    "utilidad": "3",
+    "control_masas": "3",
+    "dificultad": "3",
+    "porcentaje_fisico": "28.1%",
+    "porcentaje_magico": "59.5%",
+    "porcentaje_verdadero": "12.4%",
+    "precio": "4800",
+    "pickrate": "1.8%",
+    "winrate": "51.2%",
+    "banrate": "0.7%",
+    "kda": "2.8/4.5/13.1",
+    "kdapromedio": "3.53",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Janna",
+    "genero": "Femenino",
+    "posiciones": [
+      "Soporte"
+    ],
+    "especies": [
+      "Espiritu",
+      "Dios"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Zaun",
+      "Shurima"
+    ],
+    "lanzamiento": "2009-09-02",
+    "dureza": "1",
+    "rol": [
+      "Encantador"
+    ],
+    "cantidad_dano": "1",
+    "clase": [
+      "Soporte",
+      "Mago"
+    ],
+    "movilidad": "1",
+    "utilidad": "3",
+    "control_masas": "3",
+    "dificultad": "1",
+    "porcentaje_fisico": "14%",
+    "porcentaje_magico": "81%",
+    "porcentaje_verdadero": "5%",
+    "precio": "1350",
+    "pickrate": "3.9%",
+    "winrate": "51.1%",
+    "banrate": "1.0%",
+    "kda": "1.6/4.9/14.5",
+    "kdapromedio": "3.29",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Jarvan IV",
+    "genero": "Masculino",
+    "posiciones": [
+      "Jungla"
+    ],
+    "especies": [
+      "Humano"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Demacia"
+    ],
+    "lanzamiento": "2011-03-01",
+    "dureza": "2",
+    "rol": [
+      "Iniciador"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Luchador",
+      "Tanque"
+    ],
+    "movilidad": "2",
+    "utilidad": "2",
+    "control_masas": "2",
+    "dificultad": "1",
+    "porcentaje_fisico": "85.3%",
+    "porcentaje_magico": "8%",
+    "porcentaje_verdadero": "6.7%",
+    "precio": "3150",
+    "pickrate": "6.4%",
+    "winrate": "51.2%",
+    "banrate": "1.8%",
+    "kda": "5.8/5.5/12.2",
+    "kdapromedio": "3.27",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Jax",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top",
+      "Jungla"
+    ],
+    "especies": [
+      "Unknown"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Runeterra",
+      "Icathia",
+      "Shurima"
+    ],
+    "lanzamiento": "2009-02-21",
+    "dureza": "2",
+    "rol": [
+      "Duelista"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Luchador",
+      "Asesino"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "1",
+    "porcentaje_fisico": "56.5%",
+    "porcentaje_magico": "40.9%",
+    "porcentaje_verdadero": "2.5%",
+    "precio": "1350",
+    "pickrate": "6.1%",
+    "winrate": "48.4%",
+    "banrate": "5.5%",
+    "kda": "5.4/6/4.5",
+    "kdapromedio": "1.65",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Jayce",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top",
+      "Mid"
+    ],
+    "especies": [
+      "Humano"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo",
+      "A distancia"
+    ],
+    "regiones": [
+      "Piltover"
+    ],
+    "lanzamiento": "2012-07-07",
+    "dureza": "1",
+    "rol": [
+      "Largo alcance"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Tirador",
+      "Luchador"
+    ],
+    "movilidad": "2",
+    "utilidad": "2",
+    "control_masas": "1",
+    "dificultad": "2",
+    "porcentaje_fisico": "77.2%",
+    "porcentaje_magico": "21.4%",
+    "porcentaje_verdadero": "1.5%",
+    "precio": "4800",
+    "pickrate": "6.9%",
+    "winrate": "48.6%",
+    "banrate": "5.8%",
+    "kda": "5.6/6.2/5.7",
+    "kdapromedio": "1.82",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Jhin",
+    "genero": "Masculino",
+    "posiciones": [
+      "Inferior"
+    ],
+    "especies": [
+      "Humano",
+      "Espiritualista"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Ionia"
+    ],
+    "lanzamiento": "2016-02-01",
+    "dureza": "1",
+    "rol": [
+      "Tirador",
+      "Captura"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Tirador",
+      "Mago"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "93.1%",
+    "porcentaje_magico": "4.9%",
+    "porcentaje_verdadero": "2%",
+    "precio": "4444",
+    "pickrate": "19.4%",
+    "winrate": "50.5%",
+    "banrate": "3.3%",
+    "kda": "7.9/5.4/7.4",
+    "kdapromedio": "2.83",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Jinx",
+    "genero": "Femenino",
+    "posiciones": [
+      "Inferior"
+    ],
+    "especies": [
+      "Humano",
+      "Quimicamente alterado"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Zaun"
+    ],
+    "lanzamiento": "2013-10-10",
+    "dureza": "1",
+    "rol": [
+      "Tirador"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Tirador"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "94.6%",
+    "porcentaje_magico": "3.4%",
+    "porcentaje_verdadero": "2%",
+    "precio": "3150",
+    "pickrate": "15.8%",
+    "winrate": "52.0%",
+    "banrate": "5.8%",
+    "kda": "7.1/6/6.9",
+    "kdapromedio": "2.33",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "K'Sante",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top"
+    ],
+    "especies": [
+      "Humano"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Shurima"
+    ],
+    "lanzamiento": "2022-11-02",
+    "dureza": "3",
+    "rol": [
+      "Guardian",
+      "Duelista"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Tanque",
+      "Luchador"
+    ],
+    "movilidad": "2",
+    "utilidad": "2",
+    "control_masas": "3",
+    "dificultad": "3",
+    "porcentaje_fisico": "84.3%",
+    "porcentaje_magico": "10.4%",
+    "porcentaje_verdadero": "5.4%",
+    "precio": "4800",
+    "pickrate": "3.1%",
+    "winrate": "47.2%",
+    "banrate": "2.6%",
+    "kda": "4.3/5/5.9",
+    "kdapromedio": "2.04",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Kai'Sa",
+    "genero": "Femenino",
+    "posiciones": [
+      "Inferior"
+    ],
+    "especies": [
+      "Humano",
+      "Ser del vacio"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Shurima",
+      "El vacio"
+    ],
+    "lanzamiento": "2018-03-07",
+    "dureza": "1",
+    "rol": [
+      "Tirador"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Tirador",
+      "Mago"
+    ],
+    "movilidad": "3",
+    "utilidad": "1",
+    "control_masas": "1",
+    "dificultad": "2",
+    "porcentaje_fisico": "61.4%",
+    "porcentaje_magico": "36.6%",
+    "porcentaje_verdadero": "1.9%",
+    "precio": "1350",
+    "pickrate": "19.3%",
+    "winrate": "48.6%",
+    "banrate": "2.9%",
+    "kda": "8.1/5.8/6.2",
+    "kdapromedio": "2.47",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Kalista",
+    "genero": "Femenino",
+    "posiciones": [
+      "Inferior"
+    ],
+    "especies": [
+      "No muerto"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Islas de las sombras",
+      "Camavor"
+    ],
+    "lanzamiento": "2014-11-20",
+    "dureza": "1",
+    "rol": [
+      "Tirador"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Tirador"
+    ],
+    "movilidad": "3",
+    "utilidad": "2",
+    "control_masas": "1",
+    "dificultad": "3",
+    "porcentaje_fisico": "83.3%",
+    "porcentaje_magico": "9.8%",
+    "porcentaje_verdadero": "6.9%",
+    "precio": "4800",
+    "pickrate": "2.1%",
+    "winrate": "46.4%",
+    "banrate": "0.7%",
+    "kda": "7.8/6.7/5.7",
+    "kdapromedio": "2.01",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Karma",
+    "genero": "Femenino",
+    "posiciones": [
+      "Soporte"
+    ],
+    "especies": [
+      "Humano",
+      "Espiritualista"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Ionia"
+    ],
+    "lanzamiento": "2011-02-01",
+    "dureza": "1",
+    "rol": [
+      "Explosivo",
+      "Encantador"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Mago",
+      "Soporte"
+    ],
+    "movilidad": "1",
+    "utilidad": "2",
+    "control_masas": "2",
+    "dificultad": "1",
+    "porcentaje_fisico": "7.5%",
+    "porcentaje_magico": "88.6%",
+    "porcentaje_verdadero": "3.9%",
+    "precio": "3150",
+    "pickrate": "8.9%",
+    "winrate": "49.7%",
+    "banrate": "7.1%",
+    "kda": "2.2/5.5/12.7",
+    "kdapromedio": "2.71",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Karthus",
+    "genero": "Masculino",
+    "posiciones": [
+      "Jungla"
+    ],
+    "especies": [
+      "No muerto"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Islas de las sombras",
+      "Noxus"
+    ],
+    "lanzamiento": "2009-06-12",
+    "dureza": "1",
+    "rol": [
+      "Mago batalla"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Mago"
+    ],
+    "movilidad": "1",
+    "utilidad": "2",
+    "control_masas": "1",
+    "dificultad": "2",
+    "porcentaje_fisico": "0.8%",
+    "porcentaje_magico": "92.8%",
+    "porcentaje_verdadero": "6.3%",
+    "precio": "3150",
+    "pickrate": "2.2%",
+    "winrate": "48.9%",
+    "banrate": "1.9%",
+    "kda": "7.7/7.3/9.1",
+    "kdapromedio": "2.30",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Kassadin",
+    "genero": "Masculino",
+    "posiciones": [
+      "Mid"
+    ],
+    "especies": [
+      "Humano",
+      "Ser del vacio"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Shurima",
+      "El vacio"
+    ],
+    "lanzamiento": "2009-08-07",
+    "dureza": "2",
+    "rol": [
+      "Asesino"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Asesino",
+      "Mago"
+    ],
+    "movilidad": "3",
+    "utilidad": "1",
+    "control_masas": "1",
+    "dificultad": "2",
+    "porcentaje_fisico": "7.9%",
+    "porcentaje_magico": "87.4%",
+    "porcentaje_verdadero": "4.7%",
+    "precio": "3150",
+    "pickrate": "2.0%",
+    "winrate": "50.5%",
+    "banrate": "1.6%",
+    "kda": "7.2/5/5.3",
+    "kdapromedio": "2.50",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Katarina",
+    "genero": "Femenino",
+    "posiciones": [
+      "Mid"
+    ],
+    "especies": [
+      "Humano"
+    ],
+    "recurso": "Sin mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Noxus"
+    ],
+    "lanzamiento": "2009-09-19",
+    "dureza": "1",
+    "rol": [
+      "Asesino"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Asesino",
+      "Mago"
+    ],
+    "movilidad": "3",
+    "utilidad": "1",
+    "control_masas": "1",
+    "dificultad": "2",
+    "porcentaje_fisico": "11.6%",
+    "porcentaje_magico": "80.6%",
+    "porcentaje_verdadero": "7.7%",
+    "precio": "3150",
+    "pickrate": "5.0%",
+    "winrate": "49.0%",
+    "banrate": "5.1%",
+    "kda": "9.4/6.5/5.5",
+    "kdapromedio": "2.29",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Kayle",
+    "genero": "Femenino",
+    "posiciones": [
+      "Top"
+    ],
+    "especies": [
+      "Humano",
+      "Magicamente alterado",
+      "Aspect"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo",
+      "A distancia"
+    ],
+    "regiones": [
+      "Demacia",
+      "Targon"
+    ],
+    "lanzamiento": "2009-02-21",
+    "dureza": "1",
+    "rol": [
+      "Especialista"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Mago",
+      "Tirador"
+    ],
+    "movilidad": "1",
+    "utilidad": "3",
+    "control_masas": "1",
+    "dificultad": "2",
+    "porcentaje_fisico": "25.7%",
+    "porcentaje_magico": "72.2%",
+    "porcentaje_verdadero": "2.1%",
+    "precio": "4800",
+    "pickrate": "4.3%",
+    "winrate": "51.9%",
+    "banrate": "2.3%",
+    "kda": "5.4/5.9/5.3",
+    "kdapromedio": "1.81",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Kayn",
+    "genero": "Masculino",
+    "posiciones": [
+      "Jungla"
+    ],
+    "especies": [
+      "Darkin",
+      "Humano",
+      "Magicamente alterado"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Ionia",
+      "Runeterra",
+      "Noxus",
+      "Shurima"
+    ],
+    "lanzamiento": "2017-07-12",
+    "dureza": "3",
+    "rol": [
+      "Duelista",
+      "Asesino"
+    ],
+    "cantidad_dano": "9",
+    "clase": [
+      "Luchador",
+      "Asesino"
+    ],
+    "movilidad": "9",
+    "utilidad": "3",
+    "control_masas": "3",
+    "dificultad": "2",
+    "porcentaje_fisico": "89.5%",
+    "porcentaje_magico": "4.6%",
+    "porcentaje_verdadero": "5.9%",
+    "precio": "3150",
+    "pickrate": "8.9%",
+    "winrate": "50.8%",
+    "banrate": "6.8%",
+    "kda": "7.5/6.2/7.1",
+    "kdapromedio": "2.35",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Kennen",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top"
+    ],
+    "especies": [
+      "Yordle"
+    ],
+    "recurso": "Energia",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Ionia"
+    ],
+    "lanzamiento": "2010-04-08",
+    "dureza": "1",
+    "rol": [
+      "Especialista"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Mago",
+      "Tirador"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "3",
+    "dificultad": "2",
+    "porcentaje_fisico": "10.5%",
+    "porcentaje_magico": "87.3%",
+    "porcentaje_verdadero": "2.3%",
+    "precio": "4800",
+    "pickrate": "2.6%",
+    "winrate": "50.3%",
+    "banrate": "1.0%",
+    "kda": "5.8/5.8/6.2",
+    "kdapromedio": "2.07",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Kha'Zix",
+    "genero": "Masculino",
+    "posiciones": [
+      "Jungla"
+    ],
+    "especies": [
+      "Ser del vacio"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "El vacio"
+    ],
+    "lanzamiento": "2012-09-27",
+    "dureza": "1",
+    "rol": [
+      "Asesino"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Asesino"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "1",
+    "dificultad": "2",
+    "porcentaje_fisico": "87.2%",
+    "porcentaje_magico": "6.1%",
+    "porcentaje_verdadero": "6.7%",
+    "precio": "4800",
+    "pickrate": "5.5%",
+    "winrate": "50.3%",
+    "banrate": "3.2%",
+    "kda": "8.8/5.8/6",
+    "kdapromedio": "2.55",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Kindred",
+    "genero": "Otro",
+    "posiciones": [
+      "Jungla"
+    ],
+    "especies": [
+      "Espiritu",
+      "Dios"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Runeterra"
+    ],
+    "lanzamiento": "2015-10-14",
+    "dureza": "1",
+    "rol": [
+      "Tirador"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Tirador"
+    ],
+    "movilidad": "3",
+    "utilidad": "2",
+    "control_masas": "2",
+    "dificultad": "3",
+    "porcentaje_fisico": "74.4%",
+    "porcentaje_magico": "15%",
+    "porcentaje_verdadero": "10.6%",
+    "precio": "4800",
+    "pickrate": "2.8%",
+    "winrate": "49.8%",
+    "banrate": "2.0%",
+    "kda": "7.7/6.3/6.6",
+    "kdapromedio": "2.27",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Kled",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top"
+    ],
+    "especies": [
+      "Yordle"
+    ],
+    "recurso": "CouFuria",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Noxus"
+    ],
+    "lanzamiento": "2016-08-10",
+    "dureza": "4",
+    "rol": [
+      "Duelista"
+    ],
+    "cantidad_dano": "6",
+    "clase": [
+      "Luchador",
+      "Tanque"
+    ],
+    "movilidad": "5",
+    "utilidad": "2",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "95.4%",
+    "porcentaje_magico": "0.5%",
+    "porcentaje_verdadero": "4.1%",
+    "precio": "6300",
+    "pickrate": "1.5%",
+    "winrate": "50.7%",
+    "banrate": "0.7%",
+    "kda": "6.5/6.1/6.2",
+    "kdapromedio": "2.08",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Kog'Maw",
+    "genero": "Masculino",
+    "posiciones": [
+      "Inferior"
+    ],
+    "especies": [
+      "Ser del vacio"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "El vacio"
+    ],
+    "lanzamiento": "2010-06-24",
+    "dureza": "1",
+    "rol": [
+      "Tirador"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Tirador",
+      "Mago"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "1",
+    "dificultad": "2",
+    "porcentaje_fisico": "39.1%",
+    "porcentaje_magico": "50.6%",
+    "porcentaje_verdadero": "10.3%",
+    "precio": "4800",
+    "pickrate": "1.9%",
+    "winrate": "51.9%",
+    "banrate": "0.7%",
+    "kda": "7.8/6.7/6.7",
+    "kdapromedio": "2.16",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "LeBlanc",
+    "genero": "Femenino",
+    "posiciones": [
+      "Mid"
+    ],
+    "especies": [
+      "Humano",
+      "Magicamente alterado"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Noxus"
+    ],
+    "lanzamiento": "2010-11-02",
+    "dureza": "1",
+    "rol": [
+      "Explosivo"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Asesino",
+      "Mago"
+    ],
+    "movilidad": "3",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "6.4%",
+    "porcentaje_magico": "85.5%",
+    "porcentaje_verdadero": "8.1%",
+    "precio": "3150",
+    "pickrate": "6.5%",
+    "winrate": "47.8%",
+    "banrate": "18.2%",
+    "kda": "7/5.2/6.6",
+    "kdapromedio": "2.62",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Lee Sin",
+    "genero": "Masculino",
+    "posiciones": [
+      "Jungla"
+    ],
+    "especies": [
+      "Humano",
+      "Espiritualista"
+    ],
+    "recurso": "Energia",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Ionia"
+    ],
+    "lanzamiento": "2011-04-01",
+    "dureza": "2",
+    "rol": [
+      "Iniciador"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Luchador",
+      "Asesino"
+    ],
+    "movilidad": "3",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "77.9%",
+    "porcentaje_magico": "15.5%",
+    "porcentaje_verdadero": "6.6%",
+    "precio": "1350",
+    "pickrate": "13.2%",
+    "winrate": "48.1%",
+    "banrate": "10.6%",
+    "kda": "7.1/5.6/8.1",
+    "kdapromedio": "2.71",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Leona",
+    "genero": "Femenino",
+    "posiciones": [
+      "Soporte"
+    ],
+    "especies": [
+      "Humano",
+      "Aspect"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Targon"
+    ],
+    "lanzamiento": "2011-07-13",
+    "dureza": "3",
+    "rol": [
+      "Vanguardia"
+    ],
+    "cantidad_dano": "1",
+    "clase": [
+      "Tanque",
+      "Soporte"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "3",
+    "dificultad": "1",
+    "porcentaje_fisico": "29.2%",
+    "porcentaje_magico": "61.9%",
+    "porcentaje_verdadero": "8.9%",
+    "precio": "450",
+    "pickrate": "5.9%",
+    "winrate": "49.6%",
+    "banrate": "5.6%",
+    "kda": "1.8/6.3/13.6",
+    "kdapromedio": "2.44",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Lillia",
+    "genero": "Femenino",
+    "posiciones": [
+      "Jungla"
+    ],
+    "especies": [
+      "Espiritu"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Ionia"
+    ],
+    "lanzamiento": "2020-07-22",
+    "dureza": "1",
+    "rol": [
+      "Duelista"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Luchador",
+      "Mago"
+    ],
+    "movilidad": "2",
+    "utilidad": "2",
+    "control_masas": "2",
+    "dificultad": "3",
+    "porcentaje_fisico": "3.9%",
+    "porcentaje_magico": "76.4%",
+    "porcentaje_verdadero": "19.7%",
+    "precio": "4800",
+    "pickrate": "5.5%",
+    "winrate": "51.3%",
+    "banrate": "4.6%",
+    "kda": "6.4/5.1/8.4",
+    "kdapromedio": "2.90",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Lissandra",
+    "genero": "Femenino",
+    "posiciones": [
+      "Mid"
+    ],
+    "especies": [
+      "Humano",
+      "Nacido del hielo"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Freljord"
+    ],
+    "lanzamiento": "2013-04-30",
+    "dureza": "1",
+    "rol": [
+      "Explosivo"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Mago"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "3",
+    "dificultad": "2",
+    "porcentaje_fisico": "6.1%",
+    "porcentaje_magico": "90%",
+    "porcentaje_verdadero": "3.9%",
+    "precio": "4800",
+    "pickrate": "3.4%",
+    "winrate": "50.5%",
+    "banrate": "1.6%",
+    "kda": "5.1/5.8/8.8",
+    "kdapromedio": "2.40",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Lucian",
+    "genero": "Masculino",
+    "posiciones": [
+      "Inferior"
+    ],
+    "especies": [
+      "Humano"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Demacia",
+      "Islas de las sombras"
+    ],
+    "lanzamiento": "2013-08-22",
+    "dureza": "1",
+    "rol": [
+      "Tirador"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Tirador",
+      "Asesino"
+    ],
+    "movilidad": "3",
+    "utilidad": "1",
+    "control_masas": "1",
+    "dificultad": "2",
+    "porcentaje_fisico": "86.2%",
+    "porcentaje_magico": "11.6%",
+    "porcentaje_verdadero": "2.2%",
+    "precio": "1350",
+    "pickrate": "12.8%",
+    "winrate": "50.8%",
+    "banrate": "10.8%",
+    "kda": "8/5.8/6",
+    "kdapromedio": "2.41",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Lulu",
+    "genero": "Femenino",
+    "posiciones": [
+      "Soporte"
+    ],
+    "especies": [
+      "Yordle"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Bandle City"
+    ],
+    "lanzamiento": "2012-03-20",
+    "dureza": "1",
+    "rol": [
+      "Encantador"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Soporte",
+      "Mago"
+    ],
+    "movilidad": "1",
+    "utilidad": "3",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "14.8%",
+    "porcentaje_magico": "82%",
+    "porcentaje_verdadero": "3.2%",
+    "precio": "4800",
+    "pickrate": "13.4%",
+    "winrate": "51.4%",
+    "banrate": "25.5%",
+    "kda": "1.4/4.8/14.2",
+    "kdapromedio": "3.25",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Lux",
+    "genero": "Femenino",
+    "posiciones": [
+      "Mid",
+      "Soporte"
+    ],
+    "especies": [
+      "Humano",
+      "Nacido con magia"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Demacia"
+    ],
+    "lanzamiento": "2010-10-19",
+    "dureza": "1",
+    "rol": [
+      "Explosivo",
+      "Largo alcance"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Mago",
+      "Soporte"
+    ],
+    "movilidad": "1",
+    "utilidad": "2",
+    "control_masas": "2",
+    "dificultad": "1",
+    "porcentaje_fisico": "6%",
+    "porcentaje_magico": "89.5%",
+    "porcentaje_verdadero": "4.5%",
+    "precio": "450",
+    "pickrate": "12.2%",
+    "winrate": "49.2%",
+    "banrate": "6.2%",
+    "kda": "4.8/6/10.2",
+    "kdapromedio": "2.50",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Malphite",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top",
+      "Mid"
+    ],
+    "especies": [
+      "Golem"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Ixtal",
+      "Shurima"
+    ],
+    "lanzamiento": "2009-09-02",
+    "dureza": "3",
+    "rol": [
+      "Vanguardia"
+    ],
+    "cantidad_dano": "1",
+    "clase": [
+      "Tanque",
+      "Mago"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "3",
+    "dificultad": "1",
+    "porcentaje_fisico": "25%",
+    "porcentaje_magico": "72.8%",
+    "porcentaje_verdadero": "2.2%",
+    "precio": "450",
+    "pickrate": "7.0%",
+    "winrate": "51.0%",
+    "banrate": "7.7%",
+    "kda": "4.6/5/7.9",
+    "kdapromedio": "2.50",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Malzahar",
+    "genero": "Masculino",
+    "posiciones": [
+      "Mid"
+    ],
+    "especies": [
+      "Humano",
+      "Ser del vacio"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Shurima",
+      "El vacio"
+    ],
+    "lanzamiento": "2010-06-01",
+    "dureza": "1",
+    "rol": [
+      "Mago batalla"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Mago",
+      "Asesino"
+    ],
+    "movilidad": "1",
+    "utilidad": "2",
+    "control_masas": "3",
+    "dificultad": "1",
+    "porcentaje_fisico": "2.7%",
+    "porcentaje_magico": "96.1%",
+    "porcentaje_verdadero": "1.2%",
+    "precio": "4800",
+    "pickrate": "6.6%",
+    "winrate": "51.5%",
+    "banrate": "8.7%",
+    "kda": "4.6/5.6/7.3",
+    "kdapromedio": "2.13",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Maokai",
+    "genero": "Masculino",
+    "posiciones": [
+      "Jungla",
+      "Soporte"
+    ],
+    "especies": [
+      "Espiritu"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Islas de las sombras"
+    ],
+    "lanzamiento": "2011-02-16",
+    "dureza": "3",
+    "rol": [
+      "Vanguardia"
+    ],
+    "cantidad_dano": "1",
+    "clase": [
+      "Tanque",
+      "Soporte"
+    ],
+    "movilidad": "1",
+    "utilidad": "2",
+    "control_masas": "3",
+    "dificultad": "1",
+    "porcentaje_fisico": "12.4%",
+    "porcentaje_magico": "82.2%",
+    "porcentaje_verdadero": "5.5%",
+    "precio": "4800",
+    "pickrate": "3.0%",
+    "winrate": "50.8%",
+    "banrate": "0.4%",
+    "kda": "2.6/5.8/12",
+    "kdapromedio": "2.52",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Master Yi",
+    "genero": "Masculino",
+    "posiciones": [
+      "Jungla"
+    ],
+    "especies": [
+      "Humano",
+      "Espiritualista"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Ionia"
+    ],
+    "lanzamiento": "2009-02-21",
+    "dureza": "1",
+    "rol": [
+      "Duelista"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Asesino",
+      "Luchador"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "1",
+    "dificultad": "1",
+    "porcentaje_fisico": "66.9%",
+    "porcentaje_magico": "4.5%",
+    "porcentaje_verdadero": "28.5%",
+    "precio": "450",
+    "pickrate": "5.2%",
+    "winrate": "50.0%",
+    "banrate": "9.0%",
+    "kda": "8.3/6.5/5.3",
+    "kdapromedio": "2.09",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Mel",
+    "genero": "Femenino",
+    "posiciones": [
+      "Mid",
+      "Soporte"
+    ],
+    "especies": [
+      "Humano",
+      "Magicamente alterado"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Noxus",
+      "Piltover"
+    ],
+    "lanzamiento": "2025-02-01",
+    "dureza": "1",
+    "rol": [
+      "Explosivo"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Mago",
+      "Asesino"
+    ],
+    "movilidad": "3",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "6.6%",
+    "porcentaje_magico": "91.7%",
+    "porcentaje_verdadero": "1.6%",
+    "precio": "3150",
+    "pickrate": "10.1%",
+    "winrate": "48.1%",
+    "banrate": "27.4%",
+    "kda": "8/5.8/6.3",
+    "kdapromedio": "2.47",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Milio",
+    "genero": "Masculino",
+    "posiciones": [
+      "Soporte"
+    ],
+    "especies": [
+      "Humano",
+      "Nacido con magia"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Ixtal"
+    ],
+    "lanzamiento": "2023-03-23",
+    "dureza": "1",
+    "rol": [
+      "Encantador"
+    ],
+    "cantidad_dano": "1",
+    "clase": [
+      "Soporte",
+      "Mago"
+    ],
+    "movilidad": "3",
+    "utilidad": "3",
+    "control_masas": "2",
+    "dificultad": "1",
+    "porcentaje_fisico": "16%",
+    "porcentaje_magico": "81.2%",
+    "porcentaje_verdadero": "2.8%",
+    "precio": "6300",
+    "pickrate": "6.4%",
+    "winrate": "52.2%",
+    "banrate": "3.4%",
+    "kda": "0.9/4.2/14.4",
+    "kdapromedio": "3.64",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Miss Fortune",
+    "genero": "Femenino",
+    "posiciones": [
+      "Inferior"
+    ],
+    "especies": [
+      "Humano"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Aguasturbias"
+    ],
+    "lanzamiento": "2010-09-08",
+    "dureza": "1",
+    "rol": [
+      "Tirador"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Tirador",
+      "Mago"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "1",
+    "dificultad": "1",
+    "porcentaje_fisico": "91.9%",
+    "porcentaje_magico": "5.4%",
+    "porcentaje_verdadero": "2.7%",
+    "precio": "450",
+    "pickrate": "12.0%",
+    "winrate": "50.8%",
+    "banrate": "3.3%",
+    "kda": "7.2/5.9/7.1",
+    "kdapromedio": "2.42",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Mordekaiser",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top"
+    ],
+    "especies": [
+      "Revenant"
+    ],
+    "recurso": "Shield",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Noxus",
+      "Islas de las sombras"
+    ],
+    "lanzamiento": "2010-02-24",
+    "dureza": "2",
+    "rol": [
+      "Coloso"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Luchador",
+      "Mago"
+    ],
+    "movilidad": "1",
+    "utilidad": "2",
+    "control_masas": "1",
+    "dificultad": "2",
+    "porcentaje_fisico": "12.3%",
+    "porcentaje_magico": "85.4%",
+    "porcentaje_verdadero": "2.4%",
+    "precio": "1350",
+    "pickrate": "7.7%",
+    "winrate": "50.7%",
+    "banrate": "9.6%",
+    "kda": "6.2/5.9/4.7",
+    "kdapromedio": "1.85",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Morgana",
+    "genero": "Femenino",
+    "posiciones": [
+      "Soporte"
+    ],
+    "especies": [
+      "Humano",
+      "Magicamente alterado",
+      "Aspect"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Demacia",
+      "Targon"
+    ],
+    "lanzamiento": "2009-02-21",
+    "dureza": "1",
+    "rol": [
+      "Captura"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Mago",
+      "Soporte"
+    ],
+    "movilidad": "1",
+    "utilidad": "2",
+    "control_masas": "3",
+    "dificultad": "1",
+    "porcentaje_fisico": "6%",
+    "porcentaje_magico": "87.9%",
+    "porcentaje_verdadero": "6.1%",
+    "precio": "1350",
+    "pickrate": "5.1%",
+    "winrate": "50.0%",
+    "banrate": "17.6%",
+    "kda": "3.2/6.1/12.6",
+    "kdapromedio": "2.59",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Naafiri",
+    "genero": "Femenino",
+    "posiciones": [
+      "Mid"
+    ],
+    "especies": [
+      "Dog",
+      "Darkin"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Shurima"
+    ],
+    "lanzamiento": "2023-07-19",
+    "dureza": "1",
+    "rol": [
+      "Asesino"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Asesino",
+      "Luchador"
+    ],
+    "movilidad": "3",
+    "utilidad": "1",
+    "control_masas": "1",
+    "dificultad": "1",
+    "porcentaje_fisico": "91.8%",
+    "porcentaje_magico": "0.4%",
+    "porcentaje_verdadero": "7.9%",
+    "precio": "6300",
+    "pickrate": "9.2%",
+    "winrate": "51.4%",
+    "banrate": "55.6%",
+    "kda": "7.6/5.1/7.1",
+    "kdapromedio": "2.88",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Nami",
+    "genero": "Femenino",
+    "posiciones": [
+      "Soporte"
+    ],
+    "especies": [
+      "Vastayan"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Runeterra",
+      "Aguasturbias"
+    ],
+    "lanzamiento": "2012-12-07",
+    "dureza": "1",
+    "rol": [
+      "Encantador"
+    ],
+    "cantidad_dano": "1",
+    "clase": [
+      "Soporte",
+      "Mago"
+    ],
+    "movilidad": "1",
+    "utilidad": "2",
+    "control_masas": "3",
+    "dificultad": "2",
+    "porcentaje_fisico": "11.2%",
+    "porcentaje_magico": "86.5%",
+    "porcentaje_verdadero": "2.3%",
+    "precio": "3150",
+    "pickrate": "11.0%",
+    "winrate": "52.0%",
+    "banrate": "1.8%",
+    "kda": "1.5/5/15.2",
+    "kdapromedio": "3.34",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Nasus",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top"
+    ],
+    "especies": [
+      "Dios-Warrior"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Shurima"
+    ],
+    "lanzamiento": "2009-10-01",
+    "dureza": "3",
+    "rol": [
+      "Coloso"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Luchador",
+      "Tanque"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "1",
+    "porcentaje_fisico": "73.2%",
+    "porcentaje_magico": "25.2%",
+    "porcentaje_verdadero": "1.6%",
+    "precio": "1350",
+    "pickrate": "4.1%",
+    "winrate": "50.9%",
+    "banrate": "4.1%",
+    "kda": "4.8/5.2/5.3",
+    "kdapromedio": "1.94",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Nautilus",
+    "genero": "Masculino",
+    "posiciones": [
+      "Soporte"
+    ],
+    "especies": [
+      "Revenant"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Aguasturbias"
+    ],
+    "lanzamiento": "2012-02-14",
+    "dureza": "3",
+    "rol": [
+      "Vanguardia"
+    ],
+    "cantidad_dano": "1",
+    "clase": [
+      "Tanque",
+      "Soporte"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "3",
+    "dificultad": "2",
+    "porcentaje_fisico": "27.6%",
+    "porcentaje_magico": "64.2%",
+    "porcentaje_verdadero": "8.2%",
+    "precio": "4800",
+    "pickrate": "9.7%",
+    "winrate": "49.3%",
+    "banrate": "13.1%",
+    "kda": "2.1/6.5/13.4",
+    "kdapromedio": "2.38",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Neeko",
+    "genero": "Femenino",
+    "posiciones": [
+      "Mid",
+      "Soporte"
+    ],
+    "especies": [
+      "Vastayan"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Ixtal"
+    ],
+    "lanzamiento": "2018-12-05",
+    "dureza": "1",
+    "rol": [
+      "Explosivo",
+      "Captura"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Mago",
+      "Soporte"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "3",
+    "dificultad": "1",
+    "porcentaje_fisico": "7.5%",
+    "porcentaje_magico": "87.8%",
+    "porcentaje_verdadero": "4.7%",
+    "precio": "4800",
+    "pickrate": "3.1%",
+    "winrate": "49.5%",
+    "banrate": "1.1%",
+    "kda": "4.1/6/9.7",
+    "kdapromedio": "2.30",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Nidalee",
+    "genero": "Femenino",
+    "posiciones": [
+      "Jungla"
+    ],
+    "especies": [
+      "Humano",
+      "Espiritualista"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo",
+      "A distancia"
+    ],
+    "regiones": [
+      "Ixtal"
+    ],
+    "lanzamiento": "2009-12-17",
+    "dureza": "1",
+    "rol": [
+      "Especialista"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Asesino",
+      "Mago"
+    ],
+    "movilidad": "3",
+    "utilidad": "2",
+    "control_masas": "1",
+    "dificultad": "2",
+    "porcentaje_fisico": "20.4%",
+    "porcentaje_magico": "72.6%",
+    "porcentaje_verdadero": "7%",
+    "precio": "3150",
+    "pickrate": "4.3%",
+    "winrate": "45.5%",
+    "banrate": "1.8%",
+    "kda": "5.9/5.4/6.8",
+    "kdapromedio": "2.35",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Nilah",
+    "genero": "Femenino",
+    "posiciones": [
+      "Inferior"
+    ],
+    "especies": [
+      "Humano",
+      "Magicamente alterado"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Aguasturbias"
+    ],
+    "lanzamiento": "2022-07-13",
+    "dureza": "1",
+    "rol": [
+      "Duelista"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Luchador",
+      "Asesino"
+    ],
+    "movilidad": "3",
+    "utilidad": "2",
+    "control_masas": "1",
+    "dificultad": "3",
+    "porcentaje_fisico": "96%",
+    "porcentaje_magico": "0.8%",
+    "porcentaje_verdadero": "3.2%",
+    "precio": "4800",
+    "pickrate": "1.9%",
+    "winrate": "53.4%",
+    "banrate": "3.5%",
+    "kda": "8.2/6.3/5.8",
+    "kdapromedio": "2.22",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Nocturne",
+    "genero": "Masculino",
+    "posiciones": [
+      "Jungla"
+    ],
+    "especies": [
+      "Demonio",
+      "Espiritu"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Runeterra"
+    ],
+    "lanzamiento": "2011-03-15",
+    "dureza": "1",
+    "rol": [
+      "Asesino"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Luchador",
+      "Asesino"
+    ],
+    "movilidad": "2",
+    "utilidad": "2",
+    "control_masas": "2",
+    "dificultad": "1",
+    "porcentaje_fisico": "85.9%",
+    "porcentaje_magico": "6.5%",
+    "porcentaje_verdadero": "7.6%",
+    "precio": "3150",
+    "pickrate": "6.9%",
+    "winrate": "52.1%",
+    "banrate": "10.5%",
+    "kda": "6.7/5.4/8.4",
+    "kdapromedio": "2.80",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Nunu Willump",
+    "genero": "Masculino",
+    "posiciones": [
+      "Jungla"
+    ],
+    "especies": [
+      "Humano",
+      "Yeti"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Freljord"
+    ],
+    "lanzamiento": "2009-02-21",
+    "dureza": "3",
+    "rol": [
+      "Vanguardia"
+    ],
+    "cantidad_dano": "1",
+    "clase": [
+      "Tanque",
+      "Mago"
+    ],
+    "movilidad": "1",
+    "utilidad": "2",
+    "control_masas": "2",
+    "dificultad": "1",
+    "porcentaje_fisico": "7.1%",
+    "porcentaje_magico": "88%",
+    "porcentaje_verdadero": "4.9%",
+    "precio": "450",
+    "pickrate": "3.3%",
+    "winrate": "49.8%",
+    "banrate": "0.9%",
+    "kda": "5.1/6.1/11.3",
+    "kdapromedio": "2.69",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Olaf",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top"
+    ],
+    "especies": [
+      "Humano",
+      "Nacido del hielo"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Freljord"
+    ],
+    "lanzamiento": "2010-06-09",
+    "dureza": "2",
+    "rol": [
+      "Iniciador"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Luchador",
+      "Tanque"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "1",
+    "porcentaje_fisico": "72.3%",
+    "porcentaje_magico": "0.4%",
+    "porcentaje_verdadero": "27.3%",
+    "precio": "3150",
+    "pickrate": "2.0%",
+    "winrate": "52.0%",
+    "banrate": "1.2%",
+    "kda": "6.9/6.2/4.6",
+    "kdapromedio": "1.85",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Orianna",
+    "genero": "Femenino",
+    "posiciones": [
+      "Mid"
+    ],
+    "especies": [
+      "Golem"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Piltover"
+    ],
+    "lanzamiento": "2011-06-01",
+    "dureza": "1",
+    "rol": [
+      "Explosivo"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Mago",
+      "Soporte"
+    ],
+    "movilidad": "1",
+    "utilidad": "2",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "6.3%",
+    "porcentaje_magico": "92.6%",
+    "porcentaje_verdadero": "1.1%",
+    "precio": "4800",
+    "pickrate": "5.7%",
+    "winrate": "49.7%",
+    "banrate": "1.2%",
+    "kda": "4.7/4.8/8.2",
+    "kdapromedio": "2.69",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Ornn",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top"
+    ],
+    "especies": [
+      "Espiritu",
+      "Dios"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Freljord"
+    ],
+    "lanzamiento": "2017-08-23",
+    "dureza": "3",
+    "rol": [
+      "Vanguardia"
+    ],
+    "cantidad_dano": "1",
+    "clase": [
+      "Tanque",
+      "Luchador"
+    ],
+    "movilidad": "1",
+    "utilidad": "2",
+    "control_masas": "3",
+    "dificultad": "2",
+    "porcentaje_fisico": "34.3%",
+    "porcentaje_magico": "64.3%",
+    "porcentaje_verdadero": "1.4%",
+    "precio": "4800",
+    "pickrate": "4.2%",
+    "winrate": "51.9%",
+    "banrate": "0.8%",
+    "kda": "3.7/4.8/8.3",
+    "kdapromedio": "2.50",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Pantheon",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top",
+      "Soporte"
+    ],
+    "especies": [
+      "Humano",
+      "Aspect"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Targon"
+    ],
+    "lanzamiento": "2010-02-02",
+    "dureza": "2",
+    "rol": [
+      "Iniciador"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Luchador",
+      "Asesino"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "1",
+    "porcentaje_fisico": "90.6%",
+    "porcentaje_magico": "3.3%",
+    "porcentaje_verdadero": "6.1%",
+    "precio": "1350",
+    "pickrate": "9.3%",
+    "winrate": "50.0%",
+    "banrate": "3.7%",
+    "kda": "7.1/6.7/7.7",
+    "kdapromedio": "2.21",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Poppy",
+    "genero": "Femenino",
+    "posiciones": [
+      "Top",
+      "Jungla",
+      "Soporte"
+    ],
+    "especies": [
+      "Yordle"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Demacia"
+    ],
+    "lanzamiento": "2010-01-13",
+    "dureza": "3",
+    "rol": [
+      "Guardian"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Tanque",
+      "Luchador"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "3",
+    "dificultad": "2",
+    "porcentaje_fisico": "80.4%",
+    "porcentaje_magico": "13.1%",
+    "porcentaje_verdadero": "6.5%",
+    "precio": "450",
+    "pickrate": "5.4%",
+    "winrate": "50.5%",
+    "banrate": "4.9%",
+    "kda": "4.4/5.8/9.5",
+    "kdapromedio": "2.40",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Pyke",
+    "genero": "Masculino",
+    "posiciones": [
+      "Soporte"
+    ],
+    "especies": [
+      "Revenant"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Aguasturbias"
+    ],
+    "lanzamiento": "2018-05-31",
+    "dureza": "1",
+    "rol": [
+      "Asesino",
+      "Captura"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Soporte",
+      "Asesino"
+    ],
+    "movilidad": "3",
+    "utilidad": "1",
+    "control_masas": "3",
+    "dificultad": "2",
+    "porcentaje_fisico": "79.6%",
+    "porcentaje_magico": "0.2%",
+    "porcentaje_verdadero": "20.2%",
+    "precio": "3150",
+    "pickrate": "6.2%",
+    "winrate": "48.4%",
+    "banrate": "18.9%",
+    "kda": "6.4/7.3/9.7",
+    "kdapromedio": "2.21",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Qiyana",
+    "genero": "Femenino",
+    "posiciones": [
+      "Mid"
+    ],
+    "especies": [
+      "Humano",
+      "Nacido con magia"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Ixtal"
+    ],
+    "lanzamiento": "2019-06-28",
+    "dureza": "1",
+    "rol": [
+      "Asesino"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Asesino",
+      "Luchador"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "3",
+    "porcentaje_fisico": "83.7%",
+    "porcentaje_magico": "8%",
+    "porcentaje_verdadero": "8.3%",
+    "precio": "4800",
+    "pickrate": "2.5%",
+    "winrate": "49.0%",
+    "banrate": "0.6%",
+    "kda": "7.9/6.3/5.8",
+    "kdapromedio": "2.17",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Quinn",
+    "genero": "Femenino",
+    "posiciones": [
+      "Top",
+      "Mid"
+    ],
+    "especies": [
+      "Humano"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Demacia"
+    ],
+    "lanzamiento": "2013-03-01",
+    "dureza": "1",
+    "rol": [
+      "Especialista"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Tirador",
+      "Asesino"
+    ],
+    "movilidad": "3",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "89.3%",
+    "porcentaje_magico": "2.5%",
+    "porcentaje_verdadero": "8.2%",
+    "precio": "4800",
+    "pickrate": "2.5%",
+    "winrate": "51.0%",
+    "banrate": "1.5%",
+    "kda": "7.8/7/6.4",
+    "kdapromedio": "2.03",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Rakan",
+    "genero": "Masculino",
+    "posiciones": [
+      "Soporte"
+    ],
+    "especies": [
+      "Vastayan"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Ionia"
+    ],
+    "lanzamiento": "2017-04-19",
+    "dureza": "2",
+    "rol": [
+      "Captura"
+    ],
+    "cantidad_dano": "1",
+    "clase": [
+      "Soporte"
+    ],
+    "movilidad": "3",
+    "utilidad": "3",
+    "control_masas": "3",
+    "dificultad": "2",
+    "porcentaje_fisico": "19.5%",
+    "porcentaje_magico": "71.1%",
+    "porcentaje_verdadero": "9.4%",
+    "precio": "4800",
+    "pickrate": "4.9%",
+    "winrate": "49.7%",
+    "banrate": "0.5%",
+    "kda": "1.4/5.4/14.3",
+    "kdapromedio": "2.91",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Rammus",
+    "genero": "Masculino",
+    "posiciones": [
+      "Jungla"
+    ],
+    "especies": [
+      "Unknown"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Shurima"
+    ],
+    "lanzamiento": "2009-07-10",
+    "dureza": "3",
+    "rol": [
+      "Vanguardia"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Tanque",
+      "Luchador"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "3",
+    "dificultad": "1",
+    "porcentaje_fisico": "18.6%",
+    "porcentaje_magico": "76.6%",
+    "porcentaje_verdadero": "4.8%",
+    "precio": "1350",
+    "pickrate": "1.8%",
+    "winrate": "49.7%",
+    "banrate": "3.7%",
+    "kda": "4.1/5.3/11.4",
+    "kdapromedio": "2.92",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Rek'Sai",
+    "genero": "Femenino",
+    "posiciones": [
+      "Jungla"
+    ],
+    "especies": [
+      "Ser del vacio"
+    ],
+    "recurso": "Furia",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Shurima",
+      "El vacio"
+    ],
+    "lanzamiento": "2014-12-11",
+    "dureza": "2",
+    "rol": [
+      "Iniciador"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Luchador",
+      "Tanque"
+    ],
+    "movilidad": "2",
+    "utilidad": "2",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "77.1%",
+    "porcentaje_magico": "15.5%",
+    "porcentaje_verdadero": "7.3%",
+    "precio": "4800",
+    "pickrate": "1.2%",
+    "winrate": "49.5%",
+    "banrate": "0.3%",
+    "kda": "7/5.2/8.1",
+    "kdapromedio": "2.90",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Rell",
+    "genero": "Femenino",
+    "posiciones": [
+      "Soporte"
+    ],
+    "especies": [
+      "Humano",
+      "Nacido con magia",
+      "Magicamente alterado"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Noxus"
+    ],
+    "lanzamiento": "2020-12-10",
+    "dureza": "3",
+    "rol": [
+      "Vanguardia"
+    ],
+    "cantidad_dano": "1",
+    "clase": [
+      "Tanque",
+      "Soporte"
+    ],
+    "movilidad": "2",
+    "utilidad": "2",
+    "control_masas": "3",
+    "dificultad": "2",
+    "porcentaje_fisico": "21.6%",
+    "porcentaje_magico": "69.5%",
+    "porcentaje_verdadero": "8.9%",
+    "precio": "4800",
+    "pickrate": "4.7%",
+    "winrate": "50.6%",
+    "banrate": "2.2%",
+    "kda": "2.1/6.1/15.5",
+    "kdapromedio": "2.89",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Renata Glasc",
+    "genero": "Femenino",
+    "posiciones": [
+      "Soporte"
+    ],
+    "especies": [
+      "Humano",
+      "Quimicamente alterado"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Zaun"
+    ],
+    "lanzamiento": "2022-02-17",
+    "dureza": "1",
+    "rol": [
+      "Encantador"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Soporte",
+      "Mago"
+    ],
+    "movilidad": "1",
+    "utilidad": "2",
+    "control_masas": "3",
+    "dificultad": "2",
+    "porcentaje_fisico": "14.8%",
+    "porcentaje_magico": "60.9%",
+    "porcentaje_verdadero": "24.3%",
+    "precio": "4800",
+    "pickrate": "1.6%",
+    "winrate": "49.5%",
+    "banrate": "0.3%",
+    "kda": "1.7/5.8/14.2",
+    "kdapromedio": "2.74",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Renekton",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top"
+    ],
+    "especies": [
+      "Dios-Warrior"
+    ],
+    "recurso": "Fury",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Shurima"
+    ],
+    "lanzamiento": "2011-01-18",
+    "dureza": "2",
+    "rol": [
+      "Iniciador"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Luchador",
+      "Tanque"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "1",
+    "porcentaje_fisico": "80.2%",
+    "porcentaje_magico": "17%",
+    "porcentaje_verdadero": "2.8%",
+    "precio": "4800",
+    "pickrate": "6.5%",
+    "winrate": "50.7%",
+    "banrate": "4.0%",
+    "kda": "5.7/5.7/5.2",
+    "kdapromedio": "1.91",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Rengar",
+    "genero": "Masculino",
+    "posiciones": [
+      "Jungla"
+    ],
+    "especies": [
+      "Vastayan"
+    ],
+    "recurso": "Ferocity",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Ixtal",
+      "Shurima"
+    ],
+    "lanzamiento": "2012-08-21",
+    "dureza": "1",
+    "rol": [
+      "Asesino",
+      "Iniciador"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Asesino",
+      "Luchador"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "87.3%",
+    "porcentaje_magico": "6.2%",
+    "porcentaje_verdadero": "6.6%",
+    "precio": "4800",
+    "pickrate": "2.8%",
+    "winrate": "46.4%",
+    "banrate": "2.0%",
+    "kda": "7.9/6.5/5.8",
+    "kdapromedio": "2.11",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Riven",
+    "genero": "Femenino",
+    "posiciones": [
+      "Top"
+    ],
+    "especies": [
+      "Humano"
+    ],
+    "recurso": "Sin mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Ionia",
+      "Noxus"
+    ],
+    "lanzamiento": "2011-09-14",
+    "dureza": "2",
+    "rol": [
+      "Duelista"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Luchador",
+      "Asesino"
+    ],
+    "movilidad": "3",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "94.6%",
+    "porcentaje_magico": "0.2%",
+    "porcentaje_verdadero": "5.2%",
+    "precio": "4800",
+    "pickrate": "4.7%",
+    "winrate": "50.2%",
+    "banrate": "2.3%",
+    "kda": "6.6/6/4.6",
+    "kdapromedio": "1.87",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Rumble",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top"
+    ],
+    "especies": [
+      "Yordle"
+    ],
+    "recurso": "Heat",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Bandle City"
+    ],
+    "lanzamiento": "2011-04-26",
+    "dureza": "2",
+    "rol": [
+      "Mago batalla"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Luchador",
+      "Mago"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "4.6%",
+    "porcentaje_magico": "93%",
+    "porcentaje_verdadero": "2.4%",
+    "precio": "4800",
+    "pickrate": "2.7%",
+    "winrate": "47.5%",
+    "banrate": "0.8%",
+    "kda": "5.5/6/6.5",
+    "kdapromedio": "2.00",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Ryze",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top",
+      "Mid"
+    ],
+    "especies": [
+      "Humano",
+      "Magicamente alterado"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Runeterra"
+    ],
+    "lanzamiento": "2009-02-21",
+    "dureza": "1",
+    "rol": [
+      "Mago batalla"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Mago",
+      "Luchador"
+    ],
+    "movilidad": "2",
+    "utilidad": "2",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "4.7%",
+    "porcentaje_magico": "94.4%",
+    "porcentaje_verdadero": "0.9%",
+    "precio": "4800",
+    "pickrate": "4.6%",
+    "winrate": "50.8%",
+    "banrate": "0.8%",
+    "kda": "5.2/5.2/6.2",
+    "kdapromedio": "2.19",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Samira",
+    "genero": "Femenino",
+    "posiciones": [
+      "Inferior"
+    ],
+    "especies": [
+      "Humano"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Shurima",
+      "Noxus"
+    ],
+    "lanzamiento": "2020-09-21",
+    "dureza": "2",
+    "rol": [
+      "Tirador"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Tirador",
+      "Asesino"
+    ],
+    "movilidad": "3",
+    "utilidad": "1",
+    "control_masas": "1",
+    "dificultad": "2",
+    "porcentaje_fisico": "86.1%",
+    "porcentaje_magico": "10.9%",
+    "porcentaje_verdadero": "3%",
+    "precio": "3150",
+    "pickrate": "4.3%",
+    "winrate": "49.1%",
+    "banrate": "6.0%",
+    "kda": "9.7/6.9/5.2",
+    "kdapromedio": "2.16",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Sejuani",
+    "genero": "Femenino",
+    "posiciones": [
+      "Jungla"
+    ],
+    "especies": [
+      "Humano",
+      "Nacido del hielo"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Freljord"
+    ],
+    "lanzamiento": "2012-01-17",
+    "dureza": "2",
+    "rol": [
+      "Vanguardia"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Tanque",
+      "Luchador"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "3",
+    "dificultad": "2",
+    "porcentaje_fisico": "56.5%",
+    "porcentaje_magico": "37.8%",
+    "porcentaje_verdadero": "5.8%",
+    "precio": "450",
+    "pickrate": "4.0%",
+    "winrate": "48.7%",
+    "banrate": "0.5%",
+    "kda": "4.3/4.9/10.7",
+    "kdapromedio": "3.06",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Senna",
+    "genero": "Femenino",
+    "posiciones": [
+      "Soporte"
+    ],
+    "especies": [
+      "Humano",
+      "No muerto"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Islas de las sombras"
+    ],
+    "lanzamiento": "2019-11-10",
+    "dureza": "1",
+    "rol": [
+      "Tirador",
+      "Encantador"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Soporte",
+      "Tirador"
+    ],
+    "movilidad": "1",
+    "utilidad": "3",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "93.5%",
+    "porcentaje_magico": "4%",
+    "porcentaje_verdadero": "2.5%",
+    "precio": "3150",
+    "pickrate": "4.8%",
+    "winrate": "49.6%",
+    "banrate": "1.1%",
+    "kda": "3.2/5.9/13.1",
+    "kdapromedio": "2.76",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Seraphine",
+    "genero": "Femenino",
+    "posiciones": [
+      "Soporte"
+    ],
+    "especies": [
+      "Humano",
+      "Nacido con magia"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Piltover",
+      "Zaun"
+    ],
+    "lanzamiento": "2020-10-29",
+    "dureza": "1",
+    "rol": [
+      "Explosivo",
+      "Encantador"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Soporte",
+      "Mago"
+    ],
+    "movilidad": "1",
+    "utilidad": "2",
+    "control_masas": "3",
+    "dificultad": "1",
+    "porcentaje_fisico": "10.1%",
+    "porcentaje_magico": "87.4%",
+    "porcentaje_verdadero": "2.5%",
+    "precio": "3150",
+    "pickrate": "4.4%",
+    "winrate": "49.4%",
+    "banrate": "0.8%",
+    "kda": "2.9/5.6/12.5",
+    "kdapromedio": "2.75",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Sett",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top"
+    ],
+    "especies": [
+      "Humano",
+      "Vastayan"
+    ],
+    "recurso": "Grit",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Ionia"
+    ],
+    "lanzamiento": "2020-01-14",
+    "dureza": "2",
+    "rol": [
+      "Coloso"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Luchador",
+      "Tanque"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "77.5%",
+    "porcentaje_magico": "0.7%",
+    "porcentaje_verdadero": "21.8%",
+    "precio": "1350",
+    "pickrate": "8.2%",
+    "winrate": "52.1%",
+    "banrate": "4.0%",
+    "kda": "5.9/6.4/5.1",
+    "kdapromedio": "1.72",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Shaco",
+    "genero": "Masculino",
+    "posiciones": [
+      "Jungla"
+    ],
+    "especies": [
+      "Espiritu"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Runeterra"
+    ],
+    "lanzamiento": "2009-10-10",
+    "dureza": "1",
+    "rol": [
+      "Asesino"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Asesino"
+    ],
+    "movilidad": "2",
+    "utilidad": "2",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "35.8%",
+    "porcentaje_magico": "52.6%",
+    "porcentaje_verdadero": "11.6%",
+    "precio": "3150",
+    "pickrate": "8.2%",
+    "winrate": "48.8%",
+    "banrate": "24.0%",
+    "kda": "7.4/5.9/8.2",
+    "kdapromedio": "2.64",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Shen",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top",
+      "Soporte"
+    ],
+    "especies": [
+      "Humano",
+      "Espiritualista"
+    ],
+    "recurso": "Energia",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Ionia"
+    ],
+    "lanzamiento": "2010-03-24",
+    "dureza": "3",
+    "rol": [
+      "Guardian"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Tanque"
+    ],
+    "movilidad": "2",
+    "utilidad": "3",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "54.7%",
+    "porcentaje_magico": "39.8%",
+    "porcentaje_verdadero": "5.5%",
+    "precio": "3150",
+    "pickrate": "5.3%",
+    "winrate": "49.7%",
+    "banrate": "0.9%",
+    "kda": "4.3/5/9.8",
+    "kdapromedio": "2.82",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Shyvana",
+    "genero": "Femenino",
+    "posiciones": [
+      "Jungla"
+    ],
+    "especies": [
+      "Dragon",
+      "Magicamente alterado"
+    ],
+    "recurso": "Fury",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Demacia"
+    ],
+    "lanzamiento": "2011-11-01",
+    "dureza": "2",
+    "rol": [
+      "Coloso"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Luchador",
+      "Mago"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "1",
+    "dificultad": "1",
+    "porcentaje_fisico": "24.3%",
+    "porcentaje_magico": "69.2%",
+    "porcentaje_verdadero": "6.5%",
+    "precio": "3150",
+    "pickrate": "1.7%",
+    "winrate": "50.2%",
+    "banrate": "0.3%",
+    "kda": "5.7/5.3/6.7",
+    "kdapromedio": "2.34",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Singed",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top"
+    ],
+    "especies": [
+      "Humano",
+      "Quimicamente alterado"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Zaun",
+      "Piltover"
+    ],
+    "lanzamiento": "2009-04-18",
+    "dureza": "3",
+    "rol": [
+      "Especialista"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Tanque",
+      "Mago"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "5.7%",
+    "porcentaje_magico": "91.8%",
+    "porcentaje_verdadero": "2.5%",
+    "precio": "4800",
+    "pickrate": "2.8%",
+    "winrate": "52.2%",
+    "banrate": "0.8%",
+    "kda": "4.4/6.3/7.7",
+    "kdapromedio": "1.92",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Sion",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top"
+    ],
+    "especies": [
+      "Revenant"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Noxus"
+    ],
+    "lanzamiento": "2009-02-21",
+    "dureza": "3",
+    "rol": [
+      "Vanguardia"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Tanque",
+      "Luchador"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "3",
+    "dificultad": "1",
+    "porcentaje_fisico": "64%",
+    "porcentaje_magico": "33.8%",
+    "porcentaje_verdadero": "2.2%",
+    "precio": "1350",
+    "pickrate": "6.7%",
+    "winrate": "49.7%",
+    "banrate": "1.3%",
+    "kda": "4.3/6.3/6.9",
+    "kdapromedio": "1.78",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Sivir",
+    "genero": "Femenino",
+    "posiciones": [
+      "Inferior"
+    ],
+    "especies": [
+      "Humano"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Shurima"
+    ],
+    "lanzamiento": "2009-02-21",
+    "dureza": "1",
+    "rol": [
+      "Tirador"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Tirador"
+    ],
+    "movilidad": "1",
+    "utilidad": "2",
+    "control_masas": "1",
+    "dificultad": "2",
+    "porcentaje_fisico": "97.2%",
+    "porcentaje_magico": "1.3%",
+    "porcentaje_verdadero": "1.6%",
+    "precio": "450",
+    "pickrate": "4.0%",
+    "winrate": "51.7%",
+    "banrate": "0.8%",
+    "kda": "5.8/5.5/7.9",
+    "kdapromedio": "2.49",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Skarner",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top",
+      "Jungla"
+    ],
+    "especies": [
+      "Brackern"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Ixtal"
+    ],
+    "lanzamiento": "2011-08-09",
+    "dureza": "3",
+    "rol": [
+      "Vanguardia"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Tanque",
+      "Luchador"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "3",
+    "dificultad": "2",
+    "porcentaje_fisico": "58.5%",
+    "porcentaje_magico": "36.9%",
+    "porcentaje_verdadero": "4.6%",
+    "precio": "4800",
+    "pickrate": "1.6%",
+    "winrate": "44.5%",
+    "banrate": "1.4%",
+    "kda": "4.1/5.2/10.4",
+    "kdapromedio": "2.79",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Smolder",
+    "genero": "Masculino",
+    "posiciones": [
+      "Inferior"
+    ],
+    "especies": [
+      "Dragon"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Camavor",
+      "Noxus"
+    ],
+    "lanzamiento": "2024-01-31",
+    "dureza": "1",
+    "rol": [
+      "Tirador"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Tirador",
+      "Mago"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "1",
+    "dificultad": "2",
+    "porcentaje_fisico": "74.5%",
+    "porcentaje_magico": "15.2%",
+    "porcentaje_verdadero": "10.4%",
+    "precio": "6300",
+    "pickrate": "6.5%",
+    "winrate": "49.4%",
+    "banrate": "1.5%",
+    "kda": "6.7/6/6.9",
+    "kdapromedio": "2.27",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Sona",
+    "genero": "Femenino",
+    "posiciones": [
+      "Soporte"
+    ],
+    "especies": [
+      "Humano",
+      "Nacido con magia"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Demacia",
+      "Ionia"
+    ],
+    "lanzamiento": "2010-09-21",
+    "dureza": "1",
+    "rol": [
+      "Encantador"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Soporte",
+      "Mago"
+    ],
+    "movilidad": "1",
+    "utilidad": "2",
+    "control_masas": "2",
+    "dificultad": "1",
+    "porcentaje_fisico": "18.3%",
+    "porcentaje_magico": "79.4%",
+    "porcentaje_verdadero": "2.3%",
+    "precio": "450",
+    "pickrate": "3.3%",
+    "winrate": "51.9%",
+    "banrate": "0.2%",
+    "kda": "2/5.5/14.1",
+    "kdapromedio": "2.93",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Soraka",
+    "genero": "Femenino",
+    "posiciones": [
+      "Soporte"
+    ],
+    "especies": [
+      "Celestial"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Targon",
+      "Ionia"
+    ],
+    "lanzamiento": "2009-02-21",
+    "dureza": "1",
+    "rol": [
+      "Encantador"
+    ],
+    "cantidad_dano": "1",
+    "clase": [
+      "Soporte",
+      "Mago"
+    ],
+    "movilidad": "1",
+    "utilidad": "3",
+    "control_masas": "2",
+    "dificultad": "1",
+    "porcentaje_fisico": "12.2%",
+    "porcentaje_magico": "82.1%",
+    "porcentaje_verdadero": "5.7%",
+    "precio": "450",
+    "pickrate": "5.0%",
+    "winrate": "51.3%",
+    "banrate": "2.2%",
+    "kda": "0.9/5.3/14.4",
+    "kdapromedio": "2.89",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Swain",
+    "genero": "Masculino",
+    "posiciones": [
+      "Soporte"
+    ],
+    "especies": [
+      "Humano",
+      "Magicamente alterado"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Noxus"
+    ],
+    "lanzamiento": "2010-10-05",
+    "dureza": "2",
+    "rol": [
+      "Mago batalla"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Mago",
+      "Soporte"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "7.1%",
+    "porcentaje_magico": "89.3%",
+    "porcentaje_verdadero": "3.6%",
+    "precio": "3150",
+    "pickrate": "5.2%",
+    "winrate": "51.0%",
+    "banrate": "2.0%",
+    "kda": "4.9/6.2/10.4",
+    "kdapromedio": "2.47",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Sylas",
+    "genero": "Masculino",
+    "posiciones": [
+      "Jungla",
+      "Mid"
+    ],
+    "especies": [
+      "Humano",
+      "Nacido con magia"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Demacia",
+      "Freljord"
+    ],
+    "lanzamiento": "2019-01-25",
+    "dureza": "2",
+    "rol": [
+      "Explosivo",
+      "Duelista"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Mago",
+      "Asesino"
+    ],
+    "movilidad": "3",
+    "utilidad": "1",
+    "control_masas": "1",
+    "dificultad": "3",
+    "porcentaje_fisico": "3.4%",
+    "porcentaje_magico": "92.1%",
+    "porcentaje_verdadero": "4.5%",
+    "precio": "3150",
+    "pickrate": "12.4%",
+    "winrate": "49.4%",
+    "banrate": "11.0%",
+    "kda": "6.5/6.4/6.7",
+    "kdapromedio": "2.06",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Syndra",
+    "genero": "Femenino",
+    "posiciones": [
+      "Mid"
+    ],
+    "especies": [
+      "Humano",
+      "Nacido con magia"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Ionia"
+    ],
+    "lanzamiento": "2012-09-13",
+    "dureza": "1",
+    "rol": [
+      "Explosivo"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Mago"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "4.1%",
+    "porcentaje_magico": "88.8%",
+    "porcentaje_verdadero": "7.1%",
+    "precio": "3150",
+    "pickrate": "5.1%",
+    "winrate": "49.9%",
+    "banrate": "3.9%",
+    "kda": "6.2/5.5/6.3",
+    "kdapromedio": "2.27",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Tahm Kench",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top",
+      "Soporte"
+    ],
+    "especies": [
+      "Demonio",
+      "Espiritu"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Aguasturbias",
+      "Runeterra"
+    ],
+    "lanzamiento": "2015-07-09",
+    "dureza": "3",
+    "rol": [
+      "Guardian"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Tanque",
+      "Soporte"
+    ],
+    "movilidad": "1",
+    "utilidad": "3",
+    "control_masas": "2",
+    "dificultad": "1",
+    "porcentaje_fisico": "22.6%",
+    "porcentaje_magico": "73.2%",
+    "porcentaje_verdadero": "4.1%",
+    "precio": "4800",
+    "pickrate": "3.6%",
+    "winrate": "49.5%",
+    "banrate": "2.2%",
+    "kda": "4.1/5.8/9.6",
+    "kdapromedio": "2.36",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Taliyah",
+    "genero": "Femenino",
+    "posiciones": [
+      "Jungla",
+      "Mid"
+    ],
+    "especies": [
+      "Humano",
+      "Nacido con magia"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Shurima"
+    ],
+    "lanzamiento": "2016-05-18",
+    "dureza": "1",
+    "rol": [
+      "Mago batalla"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Mago",
+      "Soporte"
+    ],
+    "movilidad": "1",
+    "utilidad": "3",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "4.3%",
+    "porcentaje_magico": "93.4%",
+    "porcentaje_verdadero": "2.4%",
+    "precio": "4800",
+    "pickrate": "3.5%",
+    "winrate": "51.1%",
+    "banrate": "0.8%",
+    "kda": "5.6/5.8/8.4",
+    "kdapromedio": "2.41",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Talon",
+    "genero": "Masculino",
+    "posiciones": [
+      "Jungla",
+      "Mid"
+    ],
+    "especies": [
+      "Humano"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Noxus"
+    ],
+    "lanzamiento": "2011-08-24",
+    "dureza": "1",
+    "rol": [
+      "Asesino"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Asesino"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "1",
+    "dificultad": "2",
+    "porcentaje_fisico": "92.7%",
+    "porcentaje_magico": "0.6%",
+    "porcentaje_verdadero": "6.7%",
+    "precio": "3150",
+    "pickrate": "6.3%",
+    "winrate": "50.5%",
+    "banrate": "3.4%",
+    "kda": "8.5/5.9/6.3",
+    "kdapromedio": "2.51",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Taric",
+    "genero": "Masculino",
+    "posiciones": [
+      "Soporte"
+    ],
+    "especies": [
+      "Humano",
+      "Aspect"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Targon",
+      "Demacia"
+    ],
+    "lanzamiento": "2009-08-19",
+    "dureza": "2",
+    "rol": [
+      "Encantador",
+      "Guardian"
+    ],
+    "cantidad_dano": "1",
+    "clase": [
+      "Soporte",
+      "Tanque"
+    ],
+    "movilidad": "1",
+    "utilidad": "3",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "32.4%",
+    "porcentaje_magico": "59%",
+    "porcentaje_verdadero": "8.6%",
+    "precio": "1350",
+    "pickrate": "1.4%",
+    "winrate": "52.1%",
+    "banrate": "0.2%",
+    "kda": "1.7/5.9/14.5",
+    "kdapromedio": "2.75",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Teemo",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top"
+    ],
+    "especies": [
+      "Yordle"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Bandle City"
+    ],
+    "lanzamiento": "2009-02-21",
+    "dureza": "1",
+    "rol": [
+      "Especialista"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Tirador",
+      "Mago"
+    ],
+    "movilidad": "1",
+    "utilidad": "2",
+    "control_masas": "2",
+    "dificultad": "1",
+    "porcentaje_fisico": "12%",
+    "porcentaje_magico": "82.1%",
+    "porcentaje_verdadero": "5.9%",
+    "precio": "450",
+    "pickrate": "4.9%",
+    "winrate": "50.8%",
+    "banrate": "7.5%",
+    "kda": "5.2/6.4/6.1",
+    "kdapromedio": "1.77",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Thresh",
+    "genero": "Masculino",
+    "posiciones": [
+      "Soporte"
+    ],
+    "especies": [
+      "No muerto"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Islas de las sombras"
+    ],
+    "lanzamiento": "2013-01-23",
+    "dureza": "2",
+    "rol": [
+      "Captura"
+    ],
+    "cantidad_dano": "1",
+    "clase": [
+      "Soporte",
+      "Tanque"
+    ],
+    "movilidad": "1",
+    "utilidad": "3",
+    "control_masas": "3",
+    "dificultad": "3",
+    "porcentaje_fisico": "15%",
+    "porcentaje_magico": "76.9%",
+    "porcentaje_verdadero": "8.1%",
+    "precio": "3150",
+    "pickrate": "13.3%",
+    "winrate": "50.8%",
+    "banrate": "7.1%",
+    "kda": "2.1/6/14.5",
+    "kdapromedio": "2.77",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Tristana",
+    "genero": "Femenino",
+    "posiciones": [
+      "Mid",
+      "Inferior"
+    ],
+    "especies": [
+      "Yordle"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Bandle City"
+    ],
+    "lanzamiento": "2009-02-21",
+    "dureza": "1",
+    "rol": [
+      "Tirador"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Tirador",
+      "Asesino"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "1",
+    "porcentaje_fisico": "88.2%",
+    "porcentaje_magico": "9.4%",
+    "porcentaje_verdadero": "2.3%",
+    "precio": "1350",
+    "pickrate": "10.2%",
+    "winrate": "50.6%",
+    "banrate": "8.3%",
+    "kda": "8/5.6/5.2",
+    "kdapromedio": "2.36",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Trundle",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top",
+      "Jungla"
+    ],
+    "especies": [
+      "Troll",
+      "Nacido del hielo"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Freljord"
+    ],
+    "lanzamiento": "2010-12-01",
+    "dureza": "3",
+    "rol": [
+      "Coloso"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Luchador",
+      "Tanque"
+    ],
+    "movilidad": "1",
+    "utilidad": "2",
+    "control_masas": "1",
+    "dificultad": "1",
+    "porcentaje_fisico": "84.4%",
+    "porcentaje_magico": "12.7%",
+    "porcentaje_verdadero": "2.8%",
+    "precio": "3150",
+    "pickrate": "2.9%",
+    "winrate": "50.7%",
+    "banrate": "0.9%",
+    "kda": "5/6.4/5.4",
+    "kdapromedio": "1.63",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Tryndamere",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top"
+    ],
+    "especies": [
+      "Humano",
+      "Magicamente alterado"
+    ],
+    "recurso": "Fury",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Freljord"
+    ],
+    "lanzamiento": "2009-05-01",
+    "dureza": "2",
+    "rol": [
+      "Duelista"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Luchador",
+      "Asesino"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "1",
+    "dificultad": "1",
+    "porcentaje_fisico": "94.1%",
+    "porcentaje_magico": "1.7%",
+    "porcentaje_verdadero": "4.2%",
+    "precio": "1350",
+    "pickrate": "3.1%",
+    "winrate": "49.4%",
+    "banrate": "2.2%",
+    "kda": "5.6/6/4",
+    "kdapromedio": "1.60",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Twisted Fate",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top",
+      "Mid"
+    ],
+    "especies": [
+      "Humano",
+      "Nacido con magia"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Aguasturbias"
+    ],
+    "lanzamiento": "2009-02-21",
+    "dureza": "1",
+    "rol": [
+      "Explosivo"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Mago",
+      "Tirador"
+    ],
+    "movilidad": "2",
+    "utilidad": "2",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "12.4%",
+    "porcentaje_magico": "84.5%",
+    "porcentaje_verdadero": "3.2%",
+    "precio": "4800",
+    "pickrate": "5.0%",
+    "winrate": "49.5%",
+    "banrate": "0.6%",
+    "kda": "4.5/5.4/8.3",
+    "kdapromedio": "2.37",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Twitch",
+    "genero": "Masculino",
+    "posiciones": [
+      "Inferior"
+    ],
+    "especies": [
+      "Rat",
+      "Quimicamente alterado"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Zaun"
+    ],
+    "lanzamiento": "2009-05-01",
+    "dureza": "1",
+    "rol": [
+      "Tirador"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Tirador",
+      "Asesino"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "1",
+    "dificultad": "2",
+    "porcentaje_fisico": "82.8%",
+    "porcentaje_magico": "3.6%",
+    "porcentaje_verdadero": "13.6%",
+    "precio": "3150",
+    "pickrate": "4.2%",
+    "winrate": "50.1%",
+    "banrate": "3.5%",
+    "kda": "9.4/6.7/6.2",
+    "kdapromedio": "2.33",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Udyr",
+    "genero": "Masculino",
+    "posiciones": [
+      "Jungla"
+    ],
+    "especies": [
+      "Humano",
+      "Espiritualista"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Freljord",
+      "Ionia"
+    ],
+    "lanzamiento": "2009-12-02",
+    "dureza": "3",
+    "rol": [
+      "Coloso"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Luchador",
+      "Tanque"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "1",
+    "porcentaje_fisico": "44.2%",
+    "porcentaje_magico": "51.1%",
+    "porcentaje_verdadero": "4.7%",
+    "precio": "1350",
+    "pickrate": "2.5%",
+    "winrate": "49.5%",
+    "banrate": "1.2%",
+    "kda": "5.5/5.4/7.1",
+    "kdapromedio": "2.33",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Urgot",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top"
+    ],
+    "especies": [
+      "Humano",
+      "Quimicamente alterado",
+      "Cyborg"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Noxus",
+      "Zaun"
+    ],
+    "lanzamiento": "2010-08-24",
+    "dureza": "2",
+    "rol": [
+      "Coloso"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Luchador",
+      "Tanque"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "90.9%",
+    "porcentaje_magico": "0.9%",
+    "porcentaje_verdadero": "8.3%",
+    "precio": "3150",
+    "pickrate": "3.2%",
+    "winrate": "51.6%",
+    "banrate": "1.2%",
+    "kda": "6.7/5.8/4.8",
+    "kdapromedio": "1.98",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Varus",
+    "genero": "Masculino",
+    "posiciones": [
+      "Inferior"
+    ],
+    "especies": [
+      "Darkin",
+      "Humano"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Ionia",
+      "Runeterra",
+      "Shurima"
+    ],
+    "lanzamiento": "2012-05-08",
+    "dureza": "1",
+    "rol": [
+      "Tirador",
+      "Largo alcance"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Tirador",
+      "Mago"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "68.5%",
+    "porcentaje_magico": "30%",
+    "porcentaje_verdadero": "1.5%",
+    "precio": "4800",
+    "pickrate": "10.7%",
+    "winrate": "49.1%",
+    "banrate": "2.9%",
+    "kda": "7/5.9/6.5",
+    "kdapromedio": "2.29",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Vayne",
+    "genero": "Femenino",
+    "posiciones": [
+      "Top",
+      "Inferior"
+    ],
+    "especies": [
+      "Humano"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Demacia"
+    ],
+    "lanzamiento": "2011-05-10",
+    "dureza": "1",
+    "rol": [
+      "Tirador"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Tirador",
+      "Asesino"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "72.1%",
+    "porcentaje_magico": "4.6%",
+    "porcentaje_verdadero": "23.3%",
+    "precio": "3150",
+    "pickrate": "7.6%",
+    "winrate": "51.2%",
+    "banrate": "4.9%",
+    "kda": "7.6/6.2/5.2",
+    "kdapromedio": "2.06",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Veigar",
+    "genero": "Masculino",
+    "posiciones": [
+      "Mid"
+    ],
+    "especies": [
+      "Yordle"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Runeterra",
+      "Bandle City",
+      "Islas de las sombras"
+    ],
+    "lanzamiento": "2009-07-24",
+    "dureza": "1",
+    "rol": [
+      "Explosivo"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Mago"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "3",
+    "dificultad": "2",
+    "porcentaje_fisico": "3.5%",
+    "porcentaje_magico": "94.5%",
+    "porcentaje_verdadero": "2%",
+    "precio": "1350",
+    "pickrate": "4.9%",
+    "winrate": "50.6%",
+    "banrate": "1.3%",
+    "kda": "6.3/5.5/6.3",
+    "kdapromedio": "2.29",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Vel'Koz",
+    "genero": "Masculino",
+    "posiciones": [
+      "Mid",
+      "Soporte"
+    ],
+    "especies": [
+      "Ser del vacio"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "El vacio"
+    ],
+    "lanzamiento": "2014-02-27",
+    "dureza": "1",
+    "rol": [
+      "Largo alcance"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Mago",
+      "Soporte"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "2.5%",
+    "porcentaje_magico": "72.1%",
+    "porcentaje_verdadero": "25.4%",
+    "precio": "3141",
+    "pickrate": "4.6%",
+    "winrate": "51.5%",
+    "banrate": "1.1%",
+    "kda": "5.3/6.2/9.4",
+    "kdapromedio": "2.37",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Vex",
+    "genero": "Femenino",
+    "posiciones": [
+      "Mid"
+    ],
+    "especies": [
+      "Yordle"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Islas de las sombras",
+      "Bandle City"
+    ],
+    "lanzamiento": "2021-09-23",
+    "dureza": "2",
+    "rol": [
+      "Explosivo"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Mago"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "6.9%",
+    "porcentaje_magico": "91.1%",
+    "porcentaje_verdadero": "2%",
+    "precio": "3150",
+    "pickrate": "3.1%",
+    "winrate": "50.8%",
+    "banrate": "3.5%",
+    "kda": "6.6/5.9/7.2",
+    "kdapromedio": "2.34",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Vi",
+    "genero": "Femenino",
+    "posiciones": [
+      "Jungla"
+    ],
+    "especies": [
+      "Humano"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Piltover",
+      "Zaun"
+    ],
+    "lanzamiento": "2012-12-19",
+    "dureza": "2",
+    "rol": [
+      "Iniciador"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Luchador",
+      "Asesino"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "3",
+    "dificultad": "1",
+    "porcentaje_fisico": "92.6%",
+    "porcentaje_magico": "0.4%",
+    "porcentaje_verdadero": "7%",
+    "precio": "1350",
+    "pickrate": "8.6%",
+    "winrate": "49.8%",
+    "banrate": "3.2%",
+    "kda": "6.1/5.7/8",
+    "kdapromedio": "2.47",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Viego",
+    "genero": "Masculino",
+    "posiciones": [
+      "Jungla"
+    ],
+    "especies": [
+      "No muerto"
+    ],
+    "recurso": "Sin mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Islas de las sombras",
+      "Camavor"
+    ],
+    "lanzamiento": "2021-01-21",
+    "dureza": "1",
+    "rol": [
+      "Duelista"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Luchador",
+      "Asesino"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "3",
+    "porcentaje_fisico": "84.1%",
+    "porcentaje_magico": "9.8%",
+    "porcentaje_verdadero": "6.1%",
+    "precio": "4800",
+    "pickrate": "11.8%",
+    "winrate": "49.3%",
+    "banrate": "7.9%",
+    "kda": "7.9/5.6/6.2",
+    "kdapromedio": "2.52",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Viktor",
+    "genero": "Masculino",
+    "posiciones": [
+      "Mid"
+    ],
+    "especies": [
+      "Humano",
+      "Cyborg"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Piltover",
+      "Zaun"
+    ],
+    "lanzamiento": "2011-12-29",
+    "dureza": "1",
+    "rol": [
+      "Mago batalla"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Mago"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "3",
+    "porcentaje_fisico": "3.5%",
+    "porcentaje_magico": "95.2%",
+    "porcentaje_verdadero": "1.4%",
+    "precio": "4800",
+    "pickrate": "9.8%",
+    "winrate": "50.1%",
+    "banrate": "6.8%",
+    "kda": "4.9/5.1/6.7",
+    "kdapromedio": "2.27",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Vladimir",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top",
+      "Mid"
+    ],
+    "especies": [
+      "Humano",
+      "Magicamente alterado"
+    ],
+    "recurso": "Bloodthirst",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Noxus",
+      "Islas de las sombras",
+      "Camavor"
+    ],
+    "lanzamiento": "2010-07-27",
+    "dureza": "2",
+    "rol": [
+      "Mago batalla"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Mago",
+      "Luchador"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "1",
+    "dificultad": "2",
+    "porcentaje_fisico": "4.6%",
+    "porcentaje_magico": "93.6%",
+    "porcentaje_verdadero": "1.8%",
+    "precio": "3150",
+    "pickrate": "6.4%",
+    "winrate": "50.5%",
+    "banrate": "6.2%",
+    "kda": "6/5.1/5.3",
+    "kdapromedio": "2.22",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Volibear",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top",
+      "Jungla"
+    ],
+    "especies": [
+      "Espiritu",
+      "Dios"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Freljord"
+    ],
+    "lanzamiento": "2011-11-29",
+    "dureza": "3",
+    "rol": [
+      "Coloso"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Luchador",
+      "Tanque"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "1",
+    "porcentaje_fisico": "50%",
+    "porcentaje_magico": "46.1%",
+    "porcentaje_verdadero": "3.9%",
+    "precio": "1350",
+    "pickrate": "8.4%",
+    "winrate": "50.5%",
+    "banrate": "4.8%",
+    "kda": "5.8/5.9/6.5",
+    "kdapromedio": "2.08",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Warwick",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top",
+      "Jungla"
+    ],
+    "especies": [
+      "Humano",
+      "Quimicamente alterado",
+      "Cyborg"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Zaun"
+    ],
+    "lanzamiento": "2009-02-21",
+    "dureza": "2",
+    "rol": [
+      "Iniciador"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Luchador",
+      "Tanque"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "1",
+    "porcentaje_fisico": "48.9%",
+    "porcentaje_magico": "47.2%",
+    "porcentaje_verdadero": "3.9%",
+    "precio": "450",
+    "pickrate": "6.4%",
+    "winrate": "52.3%",
+    "banrate": "5.4%",
+    "kda": "7.5/6.6/7",
+    "kdapromedio": "2.20",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Wukong",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top",
+      "Jungla"
+    ],
+    "especies": [
+      "Vastayan"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Ionia"
+    ],
+    "lanzamiento": "2011-07-26",
+    "dureza": "2",
+    "rol": [
+      "Iniciador"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Tanque",
+      "Luchador"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "1",
+    "porcentaje_fisico": "81.1%",
+    "porcentaje_magico": "12.6%",
+    "porcentaje_verdadero": "6.3%",
+    "precio": "3150",
+    "pickrate": "4.4%",
+    "winrate": "51.1%",
+    "banrate": "1.4%",
+    "kda": "6.5/5.3/7.2",
+    "kdapromedio": "2.58",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Xayah",
+    "genero": "Femenino",
+    "posiciones": [
+      "Inferior"
+    ],
+    "especies": [
+      "Vastayan"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Ionia"
+    ],
+    "lanzamiento": "2017-04-19",
+    "dureza": "2",
+    "rol": [
+      "Tirador"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Tirador"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "3",
+    "dificultad": "2",
+    "porcentaje_fisico": "97.5%",
+    "porcentaje_magico": "0.6%",
+    "porcentaje_verdadero": "1.8%",
+    "precio": "4800",
+    "pickrate": "5.6%",
+    "winrate": "50.5%",
+    "banrate": "0.9%",
+    "kda": "7/5.6/6.5",
+    "kdapromedio": "2.41",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Xerath",
+    "genero": "Masculino",
+    "posiciones": [
+      "Mid",
+      "Soporte"
+    ],
+    "especies": [
+      "Dios-Warrior"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Shurima"
+    ],
+    "lanzamiento": "2011-10-05",
+    "dureza": "1",
+    "rol": [
+      "Largo alcance"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Mago",
+      "Soporte"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "3.1%",
+    "porcentaje_magico": "95.3%",
+    "porcentaje_verdadero": "1.6%",
+    "precio": "1350",
+    "pickrate": "7.5%",
+    "winrate": "50.4%",
+    "banrate": "6.3%",
+    "kda": "5.6/5.3/9.4",
+    "kdapromedio": "2.83",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Xin Zhao",
+    "genero": "Masculino",
+    "posiciones": [
+      "Jungla"
+    ],
+    "especies": [
+      "Humano"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Demacia",
+      "Ionia",
+      "Noxus"
+    ],
+    "lanzamiento": "2010-07-13",
+    "dureza": "2",
+    "rol": [
+      "Iniciador"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Luchador",
+      "Tanque"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "1",
+    "porcentaje_fisico": "88%",
+    "porcentaje_magico": "6.8%",
+    "porcentaje_verdadero": "5.2%",
+    "precio": "1350",
+    "pickrate": "6.9%",
+    "winrate": "51.8%",
+    "banrate": "1.6%",
+    "kda": "6.2/5.7/8",
+    "kdapromedio": "2.49",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Yasuo",
+    "genero": "Masculino",
+    "posiciones": [
+      "Mid"
+    ],
+    "especies": [
+      "Humano",
+      "Nacido con magia"
+    ],
+    "recurso": "Flow",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Ionia"
+    ],
+    "lanzamiento": "2013-12-13",
+    "dureza": "1",
+    "rol": [
+      "Duelista"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Luchador",
+      "Asesino"
+    ],
+    "movilidad": "3",
+    "utilidad": "2",
+    "control_masas": "2",
+    "dificultad": "3",
+    "porcentaje_fisico": "87.4%",
+    "porcentaje_magico": "9%",
+    "porcentaje_verdadero": "3.6%",
+    "precio": "1350",
+    "pickrate": "13.3%",
+    "winrate": "49.6%",
+    "banrate": "21.8%",
+    "kda": "6/6.9/5.2",
+    "kdapromedio": "1.62",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Yone",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top",
+      "Mid"
+    ],
+    "especies": [
+      "Humano",
+      "Magicamente alterado"
+    ],
+    "recurso": "Sin mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Ionia"
+    ],
+    "lanzamiento": "2020-08-06",
+    "dureza": "1",
+    "rol": [
+      "Asesino",
+      "Duelista"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Luchador",
+      "Asesino"
+    ],
+    "movilidad": "3",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "3",
+    "porcentaje_fisico": "71.5%",
+    "porcentaje_magico": "16.5%",
+    "porcentaje_verdadero": "12%",
+    "precio": "3150",
+    "pickrate": "12.5%",
+    "winrate": "47.2%",
+    "banrate": "9.2%",
+    "kda": "5.4/6.6/4.8",
+    "kdapromedio": "1.55",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Yorick",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top"
+    ],
+    "especies": [
+      "Humano",
+      "Magicamente alterado"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Islas de las sombras"
+    ],
+    "lanzamiento": "2011-06-22",
+    "dureza": "2",
+    "rol": [
+      "Coloso"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Luchador",
+      "Tanque"
+    ],
+    "movilidad": "1",
+    "utilidad": "2",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "69.8%",
+    "porcentaje_magico": "27.9%",
+    "porcentaje_verdadero": "2.3%",
+    "precio": "3150",
+    "pickrate": "7.9%",
+    "winrate": "51.9%",
+    "banrate": "24.2%",
+    "kda": "4.9/5/5.3",
+    "kdapromedio": "2.04",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Yuumi",
+    "genero": "Femenino",
+    "posiciones": [
+      "Soporte"
+    ],
+    "especies": [
+      "Cat",
+      "Magicamente alterado"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Bandle City"
+    ],
+    "lanzamiento": "2019-05-14",
+    "dureza": "1",
+    "rol": [
+      "Encantador"
+    ],
+    "cantidad_dano": "1",
+    "clase": [
+      "Soporte",
+      "Mago"
+    ],
+    "movilidad": "3",
+    "utilidad": "3",
+    "control_masas": "1",
+    "dificultad": "1",
+    "porcentaje_fisico": "4.1%",
+    "porcentaje_magico": "92.4%",
+    "porcentaje_verdadero": "3.6%",
+    "precio": "450",
+    "pickrate": "7.0%",
+    "winrate": "49.6%",
+    "banrate": "12.7%",
+    "kda": "1.3/3.7/15.2",
+    "kdapromedio": "4.46",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Zac",
+    "genero": "Masculino",
+    "posiciones": [
+      "Top",
+      "Jungla"
+    ],
+    "especies": [
+      "Golem"
+    ],
+    "recurso": "Health costs",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Zaun"
+    ],
+    "lanzamiento": "2013-03-29",
+    "dureza": "3",
+    "rol": [
+      "Vanguardia"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Tanque",
+      "Luchador"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "3",
+    "dificultad": "1",
+    "porcentaje_fisico": "7.4%",
+    "porcentaje_magico": "86%",
+    "porcentaje_verdadero": "6.6%",
+    "precio": "4800",
+    "pickrate": "4.6%",
+    "winrate": "49.7%",
+    "banrate": "1.8%",
+    "kda": "4.8/4.9/10.4",
+    "kdapromedio": "3.10",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Zed",
+    "genero": "Masculino",
+    "posiciones": [
+      "Mid"
+    ],
+    "especies": [
+      "Humano",
+      "Magicamente alterado"
+    ],
+    "recurso": "Energia",
+    "rango": [
+      "Cuerpo a cuerpo"
+    ],
+    "regiones": [
+      "Ionia"
+    ],
+    "lanzamiento": "2012-11-13",
+    "dureza": "1",
+    "rol": [
+      "Asesino"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Asesino"
+    ],
+    "movilidad": "3",
+    "utilidad": "1",
+    "control_masas": "1",
+    "dificultad": "3",
+    "porcentaje_fisico": "89.1%",
+    "porcentaje_magico": "5.1%",
+    "porcentaje_verdadero": "5.8%",
+    "precio": "1350",
+    "pickrate": "12.5%",
+    "winrate": "48.5%",
+    "banrate": "24.6%",
+    "kda": "8.1/5.8/5.9",
+    "kdapromedio": "2.41",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Zeri",
+    "genero": "Femenino",
+    "posiciones": [
+      "Inferior"
+    ],
+    "especies": [
+      "Humano",
+      "Nacido con magia"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Zaun"
+    ],
+    "lanzamiento": "2022-01-20",
+    "dureza": "1",
+    "rol": [
+      "Tirador"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Tirador"
+    ],
+    "movilidad": "3",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "73.2%",
+    "porcentaje_magico": "24.4%",
+    "porcentaje_verdadero": "2.4%",
+    "precio": "4800",
+    "pickrate": "4.4%",
+    "winrate": "49.3%",
+    "banrate": "0.6%",
+    "kda": "7.3/5.9/6.3",
+    "kdapromedio": "2.31",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Ziggs",
+    "genero": "Masculino",
+    "posiciones": [
+      "Mid",
+      "Inferior"
+    ],
+    "especies": [
+      "Yordle"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Zaun"
+    ],
+    "lanzamiento": "2012-02-01",
+    "dureza": "1",
+    "rol": [
+      "Largo alcance"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Mago"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "3.7%",
+    "porcentaje_magico": "95%",
+    "porcentaje_verdadero": "1.3%",
+    "precio": "4800",
+    "pickrate": "2.1%",
+    "winrate": "48.5%",
+    "banrate": "0.4%",
+    "kda": "5.2/5.5/8.1",
+    "kdapromedio": "2.42",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Zilean",
+    "genero": "Masculino",
+    "posiciones": [
+      "Soporte"
+    ],
+    "especies": [
+      "Humano",
+      "Nacido con magia"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Runeterra",
+      "Icathia",
+      "Shurima"
+    ],
+    "lanzamiento": "2009-04-18",
+    "dureza": "1",
+    "rol": [
+      "Especialista"
+    ],
+    "cantidad_dano": "2",
+    "clase": [
+      "Soporte",
+      "Mago"
+    ],
+    "movilidad": "2",
+    "utilidad": "3",
+    "control_masas": "2",
+    "dificultad": "2",
+    "porcentaje_fisico": "12.1%",
+    "porcentaje_magico": "82.5%",
+    "porcentaje_verdadero": "5.4%",
+    "precio": "1350",
+    "pickrate": "2.7%",
+    "winrate": "51.4%",
+    "banrate": "0.8%",
+    "kda": "2.1/4.7/13.4",
+    "kdapromedio": "3.30",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Zoe",
+    "genero": "Femenino",
+    "posiciones": [
+      "Mid"
+    ],
+    "especies": [
+      "Humano",
+      "Aspect"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Targon"
+    ],
+    "lanzamiento": "2017-11-21",
+    "dureza": "1",
+    "rol": [
+      "Explosivo"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Mago",
+      "Soporte"
+    ],
+    "movilidad": "2",
+    "utilidad": "1",
+    "control_masas": "2",
+    "dificultad": "3",
+    "porcentaje_fisico": "8.3%",
+    "porcentaje_magico": "75.9%",
+    "porcentaje_verdadero": "15.8%",
+    "precio": "4800",
+    "pickrate": "4.6%",
+    "winrate": "49.9%",
+    "banrate": "3.2%",
+    "kda": "6.5/5.4/7.4",
+    "kdapromedio": "2.57",
+    "pings_partida": "N/A"
+  },
+  {
+    "nombre": "Zyra",
+    "genero": "Femenino",
+    "posiciones": [
+      "Soporte"
+    ],
+    "especies": [
+      "Unknown"
+    ],
+    "recurso": "Mana",
+    "rango": [
+      "A distancia"
+    ],
+    "regiones": [
+      "Ixtal"
+    ],
+    "lanzamiento": "2012-07-24",
+    "dureza": "1",
+    "rol": [
+      "Captura"
+    ],
+    "cantidad_dano": "3",
+    "clase": [
+      "Mago",
+      "Soporte"
+    ],
+    "movilidad": "1",
+    "utilidad": "1",
+    "control_masas": "3",
+    "dificultad": "2",
+    "porcentaje_fisico": "5.4%",
+    "porcentaje_magico": "89.2%",
+    "porcentaje_verdadero": "5.4%",
+    "precio": "3150",
+    "pickrate": "4.8%",
+    "winrate": "50.4%",
+    "banrate": "3.7%",
+    "kda": "3.6/6.1/10.6",
+    "kdapromedio": "2.33",
+    "pings_partida": "N/A"
+  }
 ];
+
 export default caracCampeones;

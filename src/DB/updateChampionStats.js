@@ -713,4 +713,88 @@ function sobrescribirArchivoConDatos(arrayActualizado) {
 }
 
 updateChampionStats();
-*/
+*/ import puppeteer from "puppeteer";
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+import caracCampeones from "./LolChampionsComplete copy.js";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+async function agregarPingsPartida() {
+  const browser = await puppeteer.launch({ headless: true });
+  const page = await browser.newPage();
+  const url = "https://dpm.lol/studio/pings/champion";
+
+  //   const url = `https://www.leagueofgraphs.com/es/champions/stats/${formatChampionName(
+  //     champion.nombre
+  //   )}`;
+
+  //   try {
+  //     await page.goto(url, { waitUntil: "networkidle2", timeout: 20000 });
+  //     await page.waitForSelector("#graphDD1", { timeout: 20000 });
+
+  try {
+    await page.goto(url, { waitUntil: "networkidle2" });
+
+    // Esperá un poco más manualmente
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+
+    // Guardá el HTML completo en un archivo para revisar
+    const html = await page.content();
+    fs.writeFileSync("pagina_debug.html", html);
+
+    console.log("✅ HTML guardado como pagina_debug.html");
+
+    const datosPings = await page.evaluate(() => {
+      const rows = document.querySelectorAll("table tbody tr");
+      const data = [];
+
+      rows.forEach((row) => {
+        const nombreEl = row.querySelector("td a span:nth-of-type(2)");
+        const pingsEl = row.querySelector("td:nth-of-type(2) span");
+
+        if (nombreEl && pingsEl) {
+          const nombre = nombreEl.innerText.trim();
+          const pingsTexto = pingsEl.innerText.trim().replace(",", ".");
+          const pings = parseFloat(pingsTexto);
+          data.push({ nombre, pings });
+        }
+      });
+
+      return data;
+    });
+
+    for (const champion of caracCampeones) {
+      const datos = datosPings.find(
+        (p) => normalizarNombre(p.nombre) === normalizarNombre(champion.nombre)
+      );
+      champion.pings_partida = datos ? datos.pings : "N/A";
+    }
+
+    guardarArchivoActualizado(caracCampeones);
+    console.log("✅ Datos actualizados.");
+  } catch (error) {
+    console.error("❌ Error al obtener los pings:", error);
+  } finally {
+    await browser.close();
+  }
+}
+
+function normalizarNombre(nombre) {
+  return nombre.toLowerCase().replace(/[^a-z]/g, "");
+}
+
+function guardarArchivoActualizado(arrayActualizado) {
+  const rutaArchivo = path.join(__dirname, "LolChampionsComplete copy.js");
+  const contenido = `const caracCampeones = ${JSON.stringify(
+    arrayActualizado,
+    null,
+    2
+  )};\n\nexport default caracCampeones;\n`;
+  fs.writeFileSync(rutaArchivo, contenido, "utf-8");
+  console.log("📁 Archivo actualizado.");
+}
+
+agregarPingsPartida();
